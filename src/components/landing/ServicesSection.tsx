@@ -16,7 +16,7 @@ const ServicesSection = () => {
     <section className="py-20 px-4" id="servicios">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-3">
-          <p className="text-sm text-primary font-semibold uppercase tracking-wide">Servicios</p>
+          <span className="inline-block text-xs text-primary font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10">Servicios</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nuestros servicios</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Te ofrecemos un servicio a la medida de lo que tu empresa requiere.
