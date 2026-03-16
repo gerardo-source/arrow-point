@@ -124,8 +124,11 @@ const Navbar = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-b border-border bg-background px-4 pb-4 space-y-3">
-          {/* Mobile services */}
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">Servicios</p>
+          <a href="#por-que" className="block text-sm text-foreground/80 hover:text-primary pt-2" onClick={() => setMobileOpen(false)}>
+            ¿Por qué Arrowpoint?
+          </a>
+          <div className="border-t border-border my-2" />
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Servicios</p>
           {megaMenuServices.map((s) => (
             <a
               key={s.title}
