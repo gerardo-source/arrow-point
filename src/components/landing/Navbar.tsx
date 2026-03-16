@@ -40,7 +40,6 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "¿Por qué Arrowpoint?", href: "#por-que" },
     { label: "Casos de éxito", href: "#testimonios" },
   ];
 
@@ -54,6 +53,10 @@ const Navbar = () => {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
+          <a href="#por-que" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+            ¿Por qué Arrowpoint?
+          </a>
+
           {/* Servicios mega menu trigger */}
           <div className="relative">
             <button
@@ -73,7 +76,6 @@ const Navbar = () => {
               </svg>
             </button>
 
-            {/* Mega menu dropdown */}
             {megaOpen && (
               <div
                 ref={megaRef}
@@ -111,6 +113,8 @@ const Navbar = () => {
           </Button>
         </div>
 
+
+
         {/* Mobile toggle */}
         <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -120,8 +124,11 @@ const Navbar = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-b border-border bg-background px-4 pb-4 space-y-3">
-          {/* Mobile services */}
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">Servicios</p>
+          <a href="#por-que" className="block text-sm text-foreground/80 hover:text-primary pt-2" onClick={() => setMobileOpen(false)}>
+            ¿Por qué Arrowpoint?
+          </a>
+          <div className="border-t border-border my-2" />
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Servicios</p>
           {megaMenuServices.map((s) => (
             <a
               key={s.title}
