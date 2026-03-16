@@ -53,6 +53,10 @@ const Navbar = () => {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
+          <a href="#por-que" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+            ¿Por qué Arrowpoint?
+          </a>
+
           {/* Servicios mega menu trigger */}
           <div className="relative">
             <button
@@ -72,7 +76,6 @@ const Navbar = () => {
               </svg>
             </button>
 
-            {/* Mega menu dropdown */}
             {megaOpen && (
               <div
                 ref={megaRef}
@@ -97,6 +100,18 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
+            )}
+          </div>
+
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="text-sm text-foreground/80 hover:text-primary transition-colors">
+              {l.label}
+            </a>
+          ))}
+          <Button size="sm" asChild>
+            <a href="#contacto">Contáctanos</a>
+          </Button>
+        </div>
             )}
           </div>
 
