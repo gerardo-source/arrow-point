@@ -10,25 +10,27 @@ const WhyUsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-muted/50" id="por-que">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <p className="text-sm text-primary font-semibold uppercase tracking-wide">¿Por qué Nosotros?</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Conoce los beneficios de crecer con nosotros.
-          </h2>
-          <Button asChild>
-            <a href="#contacto">Contáctanos</a>
-          </Button>
+    <section className="py-20 px-4" id="por-que">
+      <div className="max-w-7xl mx-auto">
+        <div className="rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center" style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
+          <div className="space-y-6 text-white">
+            <p className="text-sm font-semibold uppercase tracking-wide text-white/80">¿Por qué Nosotros?</p>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Conoce los beneficios de crecer con nosotros.
+            </h2>
+            <Button className="bg-white text-primary hover:bg-white/90" asChild>
+              <a href="#contacto">Contáctanos</a>
+            </Button>
+          </div>
+          <ul className="space-y-5">
+            {points.map((p, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-1.5 w-3 h-3 rounded-full bg-white shrink-0" />
+                <span className="text-white/90">{p}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className="space-y-5">
-          {points.map((p, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <span className="mt-1.5 w-3 h-3 rounded-full bg-primary shrink-0" />
-              <span className="text-muted-foreground">{p}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
