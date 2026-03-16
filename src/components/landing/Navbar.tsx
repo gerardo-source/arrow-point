@@ -40,7 +40,6 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "¿Por qué Arrowpoint?", href: "#por-que" },
     { label: "Casos de éxito", href: "#testimonios" },
   ];
 
