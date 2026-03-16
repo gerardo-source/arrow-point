@@ -30,7 +30,7 @@ const ContactSection = () => {
             </select>
           </div>
           <Textarea placeholder="Mensaje" rows={4} className="bg-white border-white/20 text-foreground placeholder:text-muted-foreground" />
-          <Button type="submit" className="w-full bg-white text-primary hover:bg-white/90" size="lg">
+          <Button type="submit" className="w-auto px-8 bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
             Enviar
           </Button>
         </form>
