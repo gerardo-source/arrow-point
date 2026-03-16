@@ -14,7 +14,7 @@ const WhyUsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center" style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
           <div className="space-y-6 text-white">
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/80">¿Por qué Nosotros?</p>
+            <span className="inline-block text-xs font-semibold uppercase tracking-wide text-white px-4 py-1.5 rounded-full border border-white/30 bg-white/10">¿Por qué Nosotros?</span>
             <h2 className="text-3xl md:text-4xl font-bold">
               Conoce los beneficios de crecer con nosotros.
             </h2>
