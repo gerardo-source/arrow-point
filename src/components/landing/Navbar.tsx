@@ -112,18 +112,8 @@ const Navbar = () => {
             <a href="#contacto">Contáctanos</a>
           </Button>
         </div>
-            )}
-          </div>
 
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-foreground/80 hover:text-primary transition-colors">
-              {l.label}
-            </a>
-          ))}
-          <Button size="sm" asChild>
-            <a href="#contacto">Contáctanos</a>
-          </Button>
-        </div>
+
 
         {/* Mobile toggle */}
         <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
