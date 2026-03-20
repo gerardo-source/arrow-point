@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Servicios */}
           <div className="space-y-4">
             <h4 className="font-semibold text-white text-base">Servicios</h4>
-            <ul className="space-y-2 text-sm text-white/60">
+            <ul className="space-y-2 text-sm text-white">
               <li><a href="/finance-as-a-service" className="hover:text-white transition-colors">Finance as a Service</a></li>
               <li><a href="/nh-by-arrowpoint" className="hover:text-white transition-colors">NH by Arrowpoint</a></li>
             </ul>
