@@ -2,6 +2,7 @@ import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Award, ChevronDown } from "lucide-react";
+import gradientBg from "@/assets/gradient-bg.png";
 import { useState } from "react";
 
 const casos = [
@@ -124,8 +125,9 @@ const CasosDeExito = () => {
 
       {/* CTA Contact Form */}
       <section className="px-4 py-0">
-        <div className="w-full overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start" style={{ background: "linear-gradient(135deg, #3888FF, #0055DD, #063D9F)" }}>
-          <div className="space-y-4 text-white">
+        <div className="w-full overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start relative">
+          <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="space-y-4 text-white relative z-10">
             <h2 className="text-2xl md:text-3xl font-bold leading-tight italic">
               Deja de adivinar.<br />Empieza a decidir<br />con confianza.
             </h2>
@@ -133,7 +135,7 @@ const CasosDeExito = () => {
               Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
             </p>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 relative z-10">
             <div className="grid grid-cols-2 gap-4">
               <input type="text" placeholder="Nombre" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
               <input type="email" placeholder="Correo" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
