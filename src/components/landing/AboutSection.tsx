@@ -18,7 +18,7 @@ const AboutSection = () => {
             <p className="text-white/80">
               Arrowpoint es una firma de Finance as a Service creada para startups en crecimiento. Combinamos experiencia en venture capital, Silicon Valley y tecnología para darte claridad financiera, acompañamiento estratégico y confianza para escalar.
             </p>
-            <Link to="/por-que-arrowpoint" className="inline-flex items-center gap-2 text-white font-medium text-sm underline hover:text-white/80">
+            <Link to="/por-que-arrowpoint" className="inline-flex items-center gap-2 text-white font-medium text-sm hover:text-white/80">
               Ver más
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
