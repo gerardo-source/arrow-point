@@ -1,12 +1,16 @@
+import { Target, Rocket } from "lucide-react";
+
 const GrowthModelSection = () => {
   const cards = [
     {
       title: "PyMES",
       description: "Entendemos a las PyMES y sus retos actuales. Somos todo un equipo profesional para llevarte al éxito.",
+      icon: Target,
     },
     {
       title: "Startups",
       description: "Atendemos startups desde pre-seed hasta serie C. Sabemos su prioridad en su escalabilidad y nosotros crecemos con ellos.",
+      icon: Rocket,
     },
   ];
 
@@ -19,15 +23,16 @@ const GrowthModelSection = () => {
             Desde early stage hasta startups en expansión, nuestros servicios se adaptan a tu etapa: visibilidad financiera mensual hoy, estrategia y acompañamiento de CFO cuando empiezas a escalar.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {cards.map((c) => (
-            <div key={c.title} className="rounded-2xl border border-border bg-card p-8 text-center space-y-4 hover:shadow-lg transition-shadow">
-              {/* Icon placeholder */}
-              <div className="w-16 h-16 mx-auto border-2 border-dashed border-muted-foreground/30 rounded-xl flex items-center justify-center text-xs text-muted-foreground">
-                Icono
+            <div key={c.title} className="rounded-2xl border border-border bg-card p-8 space-y-4 hover:shadow-lg transition-shadow text-left">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <c.icon className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground">{c.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-foreground">{c.title}</h3>
-              <p className="text-muted-foreground text-sm">{c.description}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">{c.description}</p>
             </div>
           ))}
         </div>
