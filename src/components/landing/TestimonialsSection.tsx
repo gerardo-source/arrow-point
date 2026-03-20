@@ -28,10 +28,10 @@ const TestimonialsSection = () => {
             Lo que dicen los founders que trabajan con nosotros
           </h2>
           <div className="hidden md:flex gap-2">
-            <Button variant="outline" size="icon" onClick={() => setPage(Math.max(0, page - 1))} disabled={page === 0}>
+            <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={() => setPage(Math.max(0, page - 1))} disabled={page === 0}>
               <ChevronLeft className="h-4 w-4" />
             </Button>
-            <Button variant="outline" size="icon" onClick={() => setPage(Math.min(0, page + 1))} disabled={page === 0}>
+            <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={() => setPage(Math.min(0, page + 1))} disabled={page === 0}>
               <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
