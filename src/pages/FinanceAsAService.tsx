@@ -185,7 +185,7 @@ const FinanceAsAService = () => {
             </div>
 
             {/* Estándar */}
-            <div className="rounded-2xl border-2 border-primary bg-card p-6 space-y-4 flex flex-col">
+            <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 space-y-4 flex flex-col shadow-lg shadow-primary/10">
               <div className="flex justify-center">
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
                   ★ Más popular
