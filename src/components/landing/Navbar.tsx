@@ -142,7 +142,11 @@ const Navbar = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-b border-border bg-background px-4 pb-4 space-y-3">
-          <a href="#por-que" className="block text-sm text-foreground/80 hover:text-primary pt-2" onClick={() => setMobileOpen(false)}>
+          <a
+            href="/por-que-arrowpoint"
+            className="block text-sm text-foreground/80 hover:text-primary pt-2"
+            onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); setMobileOpen(false); }}
+          >
             ¿Por qué Arrowpoint?
           </a>
           <div className="border-t border-border my-2" />
