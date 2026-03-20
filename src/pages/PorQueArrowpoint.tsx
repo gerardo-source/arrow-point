@@ -17,8 +17,8 @@ const PorQueArrowpoint = () => {
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl bg-primary overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center">
             {/* Decorative elements */}
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 rounded-full border-[3px] border-white/15 pointer-events-none" />
-            <div className="absolute top-1/2 right-8 -translate-y-1/2 w-48 h-48 rounded-full border-[3px] border-white/15 pointer-events-none" />
+            <div className="absolute top-1/2 right-[-2rem] -translate-y-1/2 w-72 h-72 rounded-full border-[3px] border-white/15 pointer-events-none" />
+            <div className="absolute top-1/2 right-[0.5rem] -translate-y-1/2 w-52 h-52 rounded-full border-[3px] border-white/15 pointer-events-none" />
             <div className="absolute bottom-8 left-8 text-white/20 pointer-events-none">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
                 <polygon points="0,60 30,0 0,30" />
