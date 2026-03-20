@@ -107,7 +107,7 @@ const FinanceAsAService = () => {
             <p className="text-foreground leading-relaxed">
               Con nuestro servicio de Finance as a Service te acompañamos como socio estratégico en el día a día financiero:
             </p>
-          
+          </div>
           {/* Numbered list items */}
           <div className="flex flex-col items-center gap-4 py-6">
             {[
