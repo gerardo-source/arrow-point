@@ -70,35 +70,37 @@ const CasosDeExito = () => {
 
       {/* Casos accordion */}
       <section className="px-4 py-16">
-        <div className="max-w-4xl mx-auto relative" style={{ paddingBottom: "2rem" }}>
-          {casos.map((caso, index) =>
-          <div
-            key={index}
-            className="rounded-2xl overflow-hidden shadow-lg relative"
-            style={{
-              background: caso.color,
-              marginTop: index === 0 ? 0 : "-1rem",
-              zIndex: index + 1
-            }}>
-            
-              <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between px-8 text-white mx-0 my-0 py-[15px]">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-3xl p-5" style={{ background: "#B8E8E8" }}>
+            {casos.map((caso, index) =>
+            <div
+              key={index}
+              className="rounded-2xl overflow-hidden shadow-lg relative"
+              style={{
+                background: caso.color,
+                marginTop: index === 0 ? 0 : "-0.75rem",
+                zIndex: index + 1
+              }}>
               
-                <span className="text-lg font-semibold">{caso.title}</span>
-                <ChevronDown
-                className={`w-6 h-6 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
-              
-              </button>
-              <div
-              className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 pb-8" : "max-h-0"}`}>
-              
-                <div className="px-8 text-white/90 text-sm leading-relaxed">
-                  {caso.content}
+                <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full flex items-center justify-between px-10 py-7 text-white">
+                
+                  <span className="text-lg font-semibold">{caso.title}</span>
+                  <ChevronDown
+                  className={`w-7 h-7 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
+                
+                </button>
+                <div
+                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 pb-8" : "max-h-0"}`}>
+                
+                  <div className="px-10 text-white/90 text-sm leading-relaxed">
+                    {caso.content}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </section>
 
