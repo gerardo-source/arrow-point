@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, TrendingUp, BarChart3 } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const megaMenuServices = [
@@ -22,6 +23,22 @@ const Navbar = () => {
   const [megaOpen, setMegaOpen] = useState(false);
   const megaRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (href.startsWith("#")) {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      } else {
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   // Close mega menu on outside click
   useEffect(() => {
@@ -53,7 +70,11 @@ const Navbar = () => {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#por-que" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+          <a
+            href="/por-que-arrowpoint"
+            onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); }}
+            className="text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer"
+          >
             ¿Por qué Arrowpoint?
           </a>
 
@@ -86,7 +107,7 @@ const Navbar = () => {
                     <a
                       key={s.title}
                       href={s.href}
-                      onClick={() => setMegaOpen(false)}
+                      onClick={(e) => { handleAnchorClick(e, s.href); setMegaOpen(false); }}
                       className="flex items-center gap-3 rounded-xl px-4 py-3 hover:bg-accent/50 transition-colors group whitespace-nowrap"
                     >
                       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors">
@@ -101,12 +122,12 @@ const Navbar = () => {
           </div>
 
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-foreground/80 hover:text-primary transition-colors">
+            <a key={l.href} href={l.href} onClick={(e) => handleAnchorClick(e, l.href)} className="text-sm text-foreground/80 hover:text-primary transition-colors">
               {l.label}
             </a>
           ))}
           <Button size="sm" asChild>
-            <a href="#contacto">Contáctanos</a>
+            <a href="#contacto" onClick={(e) => handleAnchorClick(e, "#contacto")}>Contáctanos</a>
           </Button>
         </div>
 
@@ -121,7 +142,11 @@ const Navbar = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-b border-border bg-background px-4 pb-4 space-y-3">
-          <a href="#por-que" className="block text-sm text-foreground/80 hover:text-primary pt-2" onClick={() => setMobileOpen(false)}>
+          <a
+            href="/por-que-arrowpoint"
+            className="block text-sm text-foreground/80 hover:text-primary pt-2"
+            onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); setMobileOpen(false); }}
+          >
             ¿Por qué Arrowpoint?
           </a>
           <div className="border-t border-border my-2" />
