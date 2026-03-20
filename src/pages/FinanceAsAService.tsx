@@ -90,9 +90,8 @@ const FinanceAsAService = () => {
       </section>
 
       {/* CFO Section */}
-      <section className="px-4 py-16">
+      <section className="px-4 py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="border-t border-border" />
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Un CFO que piensa contigo el crecimiento de tu startup
           </h2>
