@@ -107,7 +107,27 @@ const FinanceAsAService = () => {
             <p className="text-foreground leading-relaxed">
               Con nuestro servicio de Finance as a Service te acompañamos como socio estratégico en el día a día financiero:
             </p>
+          
+          {/* Numbered list items */}
+          <div className="flex flex-col items-center gap-4 py-6">
+            {[
+              { num: 1, text: "Reportes ejecutivos listos para board" },
+              { num: 2, text: "Modelos y proyecciones financieras" },
+              { num: 3, text: "Planeación de cash y runway" },
+              { num: 4, text: "Acompañamiento en procesos de fundraising" },
+            ].map((item) => (
+              <div key={item.num} className="flex items-center gap-4 rounded-xl border border-primary/20 px-6 py-3 w-full max-w-lg">
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <span className="text-primary font-bold text-sm">{item.num}</span>
+                </div>
+                <span className="text-primary text-sm font-medium">{item.text}</span>
+              </div>
+            ))}
           </div>
+
+          <p className="text-foreground leading-relaxed">
+            Hablamos el idioma de los founders (MRR, burn rate, ARR) y convertimos tus números en decisiones claras para escalar con bases sólidas.
+          </p>
         </div>
       </section>
 
