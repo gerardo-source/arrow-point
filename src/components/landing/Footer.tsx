@@ -13,7 +13,7 @@ const Footer = () => {
                <p className="text-white text-[10px] tracking-[0.25em] uppercase pl-1">Finance as a Service</p>
              </div>
             <div className="space-y-2">
-              <p className="text-white/60 text-sm">Síguenos en redes:</p>
+              <p className="text-white text-sm">Síguenos en redes:</p>
               <a href="#" className="inline-flex text-white hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
