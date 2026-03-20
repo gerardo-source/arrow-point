@@ -65,6 +65,27 @@ const PorQueArrowpoint = () => {
         </div>
       </section>
 
+      {/* Clarity Section - Image + Text */}
+      <section className="px-4 py-16 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Image placeholder */}
+            <div className="rounded-2xl overflow-hidden bg-muted aspect-[4/3] flex items-center justify-center text-muted-foreground text-sm">
+              Imagen
+            </div>
+            {/* Text */}
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+                Primero claridad, luego decisiones.
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Convertimos números complejos en información clara y accionable para que tomes decisiones con seguridad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
