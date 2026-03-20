@@ -107,6 +107,33 @@ const PorQueArrowpoint = () => {
         </div>
       </section>
 
+      {/* Ideal Para Section */}
+      <section className="px-4 py-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-3xl overflow-hidden px-8 md:px-14 py-12 grid md:grid-cols-[auto_1px_1fr] gap-8 md:gap-10 items-center" style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
+            <div className="flex items-center gap-3 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap">Ideal para</h2>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div className="hidden md:block w-px bg-white/30 self-stretch" />
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4">
+                <span className="mt-1.5 w-3 h-3 rounded-full bg-white/80 shrink-0" />
+                <span className="text-white/90 text-base">Founders pre-Seed, Seed y Series A.</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="mt-1.5 w-3 h-3 rounded-full bg-white/80 shrink-0" />
+                <span className="text-white/90 text-base">Startups que toman decisiones con MRR, runway y presión de crecimiento.</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="mt-1.5 w-3 h-3 rounded-full bg-white/80 shrink-0" />
+                <span className="text-white/90 text-base">Equipos que necesitan claridad para board e inversionistas.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
