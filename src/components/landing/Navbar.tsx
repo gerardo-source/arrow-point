@@ -79,47 +79,22 @@ const Navbar = () => {
           </a>
 
           {/* Servicios mega menu trigger */}
-          <div className="relative">
-            <button
-              ref={triggerRef}
-              onClick={() => setMegaOpen(!megaOpen)}
-              className="text-sm text-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
+          <button
+            ref={triggerRef}
+            onClick={() => setMegaOpen(!megaOpen)}
+            className="text-sm text-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
+          >
+            Servicios
+            <svg
+              className={`w-3.5 h-3.5 transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
             >
-              Servicios
-              <svg
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            {megaOpen && (
-              <div
-                ref={megaRef}
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-3 rounded-2xl border border-border bg-card shadow-xl p-3 animate-fade-in"
-              >
-                <div className="flex items-center gap-2">
-                  {megaMenuServices.map((s) => (
-                    <a
-                      key={s.title}
-                      href={s.href}
-                      onClick={(e) => { handleAnchorClick(e, s.href); setMegaOpen(false); }}
-                      className="flex items-center gap-3 rounded-xl px-4 py-3 hover:bg-accent/50 transition-colors group whitespace-nowrap"
-                    >
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors">
-                        <s.icon className="h-5 w-5" />
-                      </div>
-                      <span className="text-sm font-medium text-foreground">{s.title}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
 
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={(e) => handleAnchorClick(e, l.href)} className="text-sm text-foreground/80 hover:text-primary transition-colors">
