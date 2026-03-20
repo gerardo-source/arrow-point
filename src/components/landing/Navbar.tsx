@@ -57,7 +57,7 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "Casos de éxito", href: "#testimonios" },
+    { label: "Casos de éxito", href: "/casos-de-exito" },
   ];
 
   return (
@@ -97,7 +97,19 @@ const Navbar = () => {
           </button>
 
           {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={(e) => handleAnchorClick(e, l.href)} className="text-sm text-foreground/80 hover:text-primary transition-colors">
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={(e) => {
+                if (l.href.startsWith("/")) {
+                  e.preventDefault();
+                  navigate(l.href);
+                } else {
+                  handleAnchorClick(e, l.href);
+                }
+              }}
+              className="text-sm text-foreground/80 hover:text-primary transition-colors"
+            >
               {l.label}
             </a>
           ))}
