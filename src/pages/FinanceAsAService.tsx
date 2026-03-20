@@ -89,7 +89,28 @@ const FinanceAsAService = () => {
         </div>
       </section>
 
-      {/* Features */}
+      {/* CFO Section */}
+      <section className="px-4 py-16">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="border-t border-border" />
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            Un CFO que piensa contigo el crecimiento de tu startup
+          </h2>
+          {/* Image placeholder */}
+          <div className="w-full aspect-[16/7] rounded-xl border-2 border-dashed border-muted-foreground/30 bg-muted/30 flex items-center justify-center text-muted-foreground text-sm">
+            Imagen
+          </div>
+          <div className="space-y-4">
+            <p className="text-foreground leading-relaxed">
+              Estrategia financiera, claridad en tus números y acompañamiento real para tomar decisiones clave y prepararte para inversionistas.
+            </p>
+            <p className="text-foreground leading-relaxed">
+              Con nuestro servicio de Finance as a Service te acompañamos como socio estratégico en el día a día financiero:
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="px-4 py-20">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
