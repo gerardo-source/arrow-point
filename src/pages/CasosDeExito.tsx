@@ -70,9 +70,17 @@ const CasosDeExito = () => {
 
       {/* Casos accordion */}
       <section className="px-4 py-16">
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto relative" style={{ paddingBottom: "2rem" }}>
           {casos.map((caso, index) => (
-            <div key={index} className="rounded-2xl overflow-hidden" style={{ background: caso.color }}>
+            <div
+              key={index}
+              className="rounded-2xl overflow-hidden shadow-lg relative"
+              style={{
+                background: caso.color,
+                marginTop: index === 0 ? 0 : "-1rem",
+                zIndex: index + 1,
+              }}
+            >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between px-8 py-5 text-white"
