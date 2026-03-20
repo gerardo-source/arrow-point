@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import gradientBg from "@/assets/gradient-bg.png";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 px-4 bg-primary" id="contacto">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="py-20 px-4 relative overflow-hidden" id="contacto">
+      <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-4 text-primary-foreground">
           <h2 className="text-3xl md:text-4xl font-bold">Deja de adivinar.</h2>
           <h3 className="text-2xl md:text-3xl font-bold">Empieza a decidir con confianza.</h3>
