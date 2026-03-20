@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import arrowpointLogo from "@/assets/arrowpoint-logo.png";
+import arrowpointLogo from "@/assets/arrowpoint-logo-dark.png";
 
 const Footer = () => {
   return (
@@ -8,17 +8,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo + Social */}
            <div className="space-y-6">
-             <div className="space-y-1">
-               <img src={arrowpointLogo} alt="Arrowpoint" className="h-8 brightness-0 invert" />
-               <p className="text-white text-[10px] tracking-[0.25em] uppercase pl-1">Finance as a Service</p>
-             </div>
-            <div className="space-y-2">
-              <p className="text-white text-sm">Síguenos en redes:</p>
-              <a href="#" className="inline-flex text-white hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+              <div>
+                <img src={arrowpointLogo} alt="Arrowpoint" className="h-8 brightness-0 invert" />
+              </div>
+              <div className="space-y-2">
+                <p className="text-white text-sm">Síguenos en redes:</p>
+                <a href="#" className="inline-flex text-white hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
+           </div>
 
           {/* Compañía */}
           <div className="space-y-4">
