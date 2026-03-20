@@ -27,6 +27,7 @@ const App = () => (
           <Route path="/nh-by-arrowpoint" element={<NHByArrowpoint />} />
           <Route path="/casos-de-exito" element={<CasosDeExito />} />
           <Route path="/aviso-de-privacidad" element={<AvisoDePrivacidad />} />
+          <Route path="/politica-de-cookies" element={<PoliticaDeCookies />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
