@@ -274,7 +274,7 @@ const FinanceAsAService = () => {
               Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
             </p>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 relative z-10">
             <div className="grid grid-cols-2 gap-4">
               <input type="text" placeholder="Nombre" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
               <input type="email" placeholder="Correo" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
