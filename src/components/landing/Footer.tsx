@@ -31,7 +31,7 @@ const Footer = () => {
             <h4 className="font-semibold text-white text-base">Compañía</h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li><a href="/por-que-arrowpoint" className="hover:text-white transition-colors">¿Por qué nosotros?</a></li>
-              <li><a href="#testimonios" className="hover:text-white transition-colors">Casos de éxito</a></li>
+              <li><a href="/casos-de-exito" className="hover:text-white transition-colors">Casos de éxito</a></li>
             </ul>
           </div>
 
@@ -48,8 +48,8 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <span>© Arrowpoint. 2026. Todos los derechos reservados</span>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Política de cookies</a>
-            <a href="#" className="hover:text-white transition-colors">Aviso de privacidad</a>
+            <a href="/politica-de-cookies" className="hover:text-white transition-colors">Política de cookies</a>
+            <a href="/aviso-de-privacidad" className="hover:text-white transition-colors">Aviso de privacidad</a>
           </div>
         </div>
       </div>
