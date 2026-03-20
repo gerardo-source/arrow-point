@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo + Social */}
            <div className="space-y-6">
              <div className="space-y-1">
-               <img src={arrowpointLogo} alt="Arrowpoint" className="h-8" />
+               <img src={arrowpointLogo} alt="Arrowpoint" className="h-8 brightness-0 invert" />
                <p className="text-white/50 text-[10px] tracking-[0.25em] uppercase pl-1">Finance as a Service</p>
              </div>
             <div className="space-y-2">
