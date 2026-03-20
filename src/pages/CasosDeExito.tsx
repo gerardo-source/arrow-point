@@ -83,7 +83,7 @@ const CasosDeExito = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between px-8 py-5 text-white"
+                className="w-full flex items-center justify-between px-8 py-8 text-white"
               >
                 <span className="text-lg font-semibold">{caso.title}</span>
                 <ChevronDown
