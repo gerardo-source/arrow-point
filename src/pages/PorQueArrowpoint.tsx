@@ -134,6 +134,41 @@ const PorQueArrowpoint = () => {
         </div>
       </section>
 
+      {/* CTA Contact Section */}
+      <section className="px-4 py-0">
+        <div className="w-full rounded-none overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start" style={{ background: "linear-gradient(135deg, #3888FF, #0055DD, #063D9F)" }}>
+          {/* Left - Text */}
+          <div className="space-y-4 text-white">
+            <h2 className="text-2xl md:text-3xl font-bold leading-tight">
+              Deja de adivinar.<br />Empieza a decidir<br />con confianza.
+            </h2>
+            <p className="text-white/80 text-sm leading-relaxed">
+              Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
+            </p>
+          </div>
+          {/* Right - Form */}
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <input type="text" placeholder="Nombre" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
+              <input type="email" placeholder="Correo" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <input type="tel" placeholder="Teléfono" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
+              <select className="rounded-lg px-4 py-3 bg-white text-black text-sm outline-none appearance-none">
+                <option value="" disabled selected>Servicio</option>
+                <option value="faas">Finance as a Service</option>
+                <option value="nh">NH by Arrowpoint</option>
+              </select>
+            </div>
+            <textarea placeholder="Mensaje" rows={5} className="w-full rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none resize-none" />
+            <button className="inline-flex items-center gap-2 rounded-full border-2 border-white text-white px-6 py-2.5 text-sm font-medium hover:bg-white/10 transition-colors">
+              Enviar
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
