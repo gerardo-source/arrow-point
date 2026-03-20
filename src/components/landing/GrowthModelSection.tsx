@@ -25,8 +25,8 @@ const GrowthModelSection = () => {
           {cards.map((c) => (
             <div key={c.title} className="rounded-2xl border border-border bg-card p-8 space-y-4 hover:shadow-lg transition-shadow text-left">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <c.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                  <img src={arrowpointIcono} alt="Arrowpoint" className="w-8 h-8 object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">{c.title}</h3>
               </div>
