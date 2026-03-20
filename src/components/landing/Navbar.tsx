@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, TrendingUp, BarChart3 } from "lucide-react";
+import arrowpointLogo from "@/assets/arrowpoint-logo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
