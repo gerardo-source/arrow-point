@@ -32,6 +32,7 @@ const HeroSection = () => {
           <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-lg object-contain" />
         </div>
       </div>
+      </div>
     </section>
   );
 };
