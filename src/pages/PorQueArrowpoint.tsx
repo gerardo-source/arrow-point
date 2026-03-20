@@ -158,11 +158,40 @@ const PorQueArrowpoint = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <input type="tel" placeholder="Teléfono" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
-              <select className="rounded-lg px-4 py-3 bg-white text-black text-sm outline-none appearance-none">
-                <option value="" disabled selected>Servicio</option>
-                <option value="faas">Finance as a Service</option>
-                <option value="nh">NH by Arrowpoint</option>
-              </select>
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const el = document.getElementById('service-dropdown');
+                    el?.classList.toggle('hidden');
+                  }}
+                  className="w-full rounded-lg px-4 py-3 bg-white text-black text-sm outline-none text-left"
+                >
+                  {selectedService || <span className="text-muted-foreground">Servicio</span>}
+                </button>
+                <div id="service-dropdown" className="hidden absolute top-full left-0 mt-2 bg-white rounded-xl shadow-lg p-2 flex gap-2 z-50 w-max">
+                  <button
+                    type="button"
+                    onClick={() => { setSelectedService("Finance as a Service"); document.getElementById('service-dropdown')?.classList.add('hidden'); }}
+                    className={`flex items-center gap-2 rounded-lg px-4 py-3 text-sm transition-colors ${selectedService === "Finance as a Service" ? "bg-primary/10 text-primary" : "hover:bg-muted text-foreground"}`}
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center">
+                      <Users className="w-4 h-4 text-primary" />
+                    </div>
+                    Finance as a Service
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => { setSelectedService("NH by Arrowpoint"); document.getElementById('service-dropdown')?.classList.add('hidden'); }}
+                    className={`flex items-center gap-2 rounded-lg px-4 py-3 text-sm transition-colors ${selectedService === "NH by Arrowpoint" ? "bg-primary/10 text-primary" : "hover:bg-muted text-foreground"}`}
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center">
+                      <Banknote className="w-4 h-4 text-primary" />
+                    </div>
+                    NH by Arrowpoint
+                  </button>
+                </div>
+              </div>
             </div>
             <textarea placeholder="Mensaje" rows={5} className="w-full rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none resize-none" />
             <button className="inline-flex items-center gap-2 rounded-lg bg-primary text-white px-6 py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors">
