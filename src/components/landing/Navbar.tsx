@@ -8,13 +8,13 @@ const megaMenuServices = [
     icon: TrendingUp,
     title: "Finance as a Service",
     description: "Estrategia, claridad y un CFO a tu lado.",
-    href: "#servicios",
+    href: "/finance-as-a-service",
   },
   {
     icon: BarChart3,
     title: "NH by Arrowpoint",
     description: "Claridad financiera mensual, sin complejidad.",
-    href: "#servicios",
+    href: "/nh-by-arrowpoint",
   },
 ];
 

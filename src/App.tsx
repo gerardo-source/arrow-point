@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import PorQueArrowpoint from "./pages/PorQueArrowpoint.tsx";
+import FinanceAsAService from "./pages/FinanceAsAService.tsx";
+import NHByArrowpoint from "./pages/NHByArrowpoint.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -18,6 +20,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/por-que-arrowpoint" element={<PorQueArrowpoint />} />
+          <Route path="/finance-as-a-service" element={<FinanceAsAService />} />
+          <Route path="/nh-by-arrowpoint" element={<NHByArrowpoint />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
