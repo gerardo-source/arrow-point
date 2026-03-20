@@ -62,8 +62,8 @@ const PorQueArrowpoint = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Image placeholder */}
-            <div className="rounded-2xl overflow-hidden bg-muted aspect-[4/3] flex items-center justify-center text-muted-foreground text-sm">
-              Imagen
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src={porqueClarity} alt="Equipo trabajando" className="w-full h-full object-cover" />
             </div>
             {/* Text */}
             <div className="space-y-4">
