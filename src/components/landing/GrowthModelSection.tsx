@@ -5,12 +5,10 @@ const GrowthModelSection = () => {
     {
       title: "PyMES",
       description: "Entendemos a las PyMES y sus retos actuales. Somos todo un equipo profesional para llevarte al éxito.",
-      icon: Target,
     },
     {
       title: "Startups",
       description: "Atendemos startups desde pre-seed hasta serie C. Sabemos su prioridad en su escalabilidad y nosotros crecemos con ellos.",
-      icon: Rocket,
     },
   ];
 
