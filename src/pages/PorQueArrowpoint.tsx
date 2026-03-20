@@ -36,10 +36,8 @@ const PorQueArrowpoint = () => {
 
             {/* Photo circle */}
             <div className="relative z-10 mt-10">
-              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full bg-white/20 border-4 border-white/30 overflow-hidden flex items-center justify-center">
-                <div className="w-full h-full bg-muted/30 flex items-center justify-center text-white/50 text-xs">
-                  Foto
-                </div>
+              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden">
+                <img src={porqueHero} alt="Arrowpoint team" className="w-full h-full object-cover" />
               </div>
               {/* Small decorative icons around photo */}
               <div className="absolute -bottom-2 -left-4 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
