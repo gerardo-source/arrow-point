@@ -86,6 +86,27 @@ const PorQueArrowpoint = () => {
         </div>
       </section>
 
+      {/* Partner Section - Text + Image */}
+      <section className="px-4 py-16 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Text */}
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+                Más que un proveedor:<br />tu socio financiero.
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                No solo entregamos reportes. Pensamos contigo el negocio y te acompañamos como parte de tu equipo.
+              </p>
+            </div>
+            {/* Image placeholder */}
+            <div className="rounded-2xl overflow-hidden border-2 border-dashed border-muted-foreground/30 aspect-[4/3] flex items-center justify-center text-muted-foreground text-sm">
+              Imagen
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
