@@ -131,24 +131,127 @@ const FinanceAsAService = () => {
         </div>
       </section>
 
+      {/* Pricing Plans */}
       <section className="px-4 py-20">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">¿Qué incluye?</h2>
-            <p className="text-muted-foreground">
-              Un equipo financiero completo adaptado a tu etapa, sin la complejidad de un departamento interno.
-            </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Inicial */}
+            <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
+              <p className="text-sm text-muted-foreground text-center">Inicial</p>
+              <h3 className="text-lg font-bold text-foreground text-center">Reportes ejecutivos listos para board</h3>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Quieren visibilidad financiera básica</li>
+                  <li>• Necesitan entender cómo cerró el mes</li>
+                  <li>• No requieren seguimiento frecuente</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Incluye:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>✓ Entrega mensual de resultados financieros</li>
+                  <li>✓ Reportes financieros claros y ordenados</li>
+                  <li>✓ Análisis general del desempeño del mes</li>
+                  <li>✓ Finance as a Service con enfoque informativo</li>
+                </ul>
+              </div>
+              <p className="text-xs text-muted-foreground italic mt-auto pt-4">Este plan se enfoca en entregar resultados financieros mensuales, sin seguimiento o acompañamiento semanal.</p>
+            </div>
+
+            {/* Básico */}
+            <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
+              <p className="text-sm text-muted-foreground text-center">Básico</p>
+              <h3 className="text-lg font-bold text-foreground text-center">Operación con visibilidad</h3>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Están creciendo activamente</li>
+                  <li>• Necesitan orden financiero</li>
+                  <li>• Buscan acompañamiento más cercano</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Incluye:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>✓ Todo del plan Inicial</li>
+                  <li>✓ Seguimiento financiero recurrente</li>
+                  <li>✓ Análisis de resultados (qué pasó y por qué)</li>
+                  <li>✓ Finance as a Service operativo</li>
+                  <li>✓ Seguimiento de indicadores clave</li>
+                  <li>✓ Soporte financiero continuo</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Estándar */}
+            <div className="rounded-2xl border-2 border-primary bg-card p-6 space-y-4 flex flex-col">
+              <div className="flex justify-center">
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                  ★ Más popular
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground text-center">Estándar</p>
+              <h3 className="text-lg font-bold text-foreground text-center">Control y toma de decisiones</h3>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Ya toman decisiones con números</li>
+                  <li>• Necesitan mayor profundidad financiera</li>
+                  <li>• Buscan control real del negocio</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Incluye:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>✓ Todo del plan anterior</li>
+                  <li>✓ Análisis financiero más profundo</li>
+                  <li>✓ Acompañamiento en decisiones clave</li>
+                  <li>✓ Mayor visibilidad de flujo de efectivo</li>
+                  <li>✓ Finance as a Service con mayor involucramiento</li>
+                  <li>✓ Reportes más personalizados</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Custom */}
+            <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
+              <p className="text-sm text-muted-foreground text-center">Custom</p>
+              <h3 className="text-lg font-bold text-foreground text-center">Dirección financiera estratégica</h3>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Están escalando rápidamente</li>
+                  <li>• Tienen o planean levantar capital</li>
+                  <li>• Necesitan visión estratégica</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-foreground">Incluye:</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>✓ Todo del plan anterior</li>
+                  <li>✓ Finance as a Service estratégico</li>
+                  <li>✓ Análisis para crecimiento y planeación</li>
+                  <li>✓ Apoyo en decisiones de alto impacto</li>
+                  <li>✓ Mayor capacidad analítica</li>
+                  <li>✓ Preparación para inversionistas</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((f) => (
-              <div key={f.title} className="rounded-2xl border border-border bg-card p-6 space-y-3 hover:shadow-lg transition-shadow">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <f.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">{f.title}</h3>
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">{f.description}</p>
+        </div>
+      </section>
+
+      {/* Empresas que confían */}
+      <section className="px-4 py-16">
+        <div className="max-w-5xl mx-auto text-center space-y-8">
+          <h2 className="text-xl md:text-2xl font-medium text-foreground italic">
+            Empresas que ya confían en nosotros
+          </h2>
+          <div className="flex items-center justify-center gap-10 flex-wrap">
+            {["Logo 1", "Logo 2", "Logo 3", "Logo 4", "Logo 5"].map((logo, i) => (
+              <div key={i} className="w-28 h-10 border-2 border-dashed border-muted-foreground/30 rounded flex items-center justify-center text-xs text-muted-foreground">
+                {logo}
               </div>
             ))}
           </div>
