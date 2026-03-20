@@ -1,6 +1,7 @@
 import { useState } from "react";
 import porqueHero from "@/assets/porque-hero.png";
 import porqueClarity from "@/assets/porque-clarity.jpg";
+import porquePartner from "@/assets/porque-partner.jpg";
 import { Users, Banknote } from "lucide-react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
@@ -92,8 +93,8 @@ const PorQueArrowpoint = () => {
               </p>
             </div>
             {/* Image placeholder */}
-            <div className="rounded-2xl overflow-hidden border-2 border-dashed border-muted-foreground/30 aspect-[4/3] flex items-center justify-center text-muted-foreground text-sm">
-              Imagen
+            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src={porquePartner} alt="Socio financiero" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
