@@ -13,7 +13,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4" id="servicios" style={{ backgroundColor: "#021538" }}>
+    <section className="py-20 px-4 bg-muted/30" id="servicios">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-3">
           <span className="inline-block text-xs text-foreground font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full border border-border bg-background"><span className="text-primary">★</span> Servicios</span>
