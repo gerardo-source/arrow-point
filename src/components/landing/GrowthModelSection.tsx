@@ -1,4 +1,4 @@
-import { Target, Rocket } from "lucide-react";
+import arrowpointIcono from "@/assets/arrowpoint-icono.png";
 
 const GrowthModelSection = () => {
   const cards = [
