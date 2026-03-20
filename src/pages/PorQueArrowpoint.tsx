@@ -152,7 +152,7 @@ const PorQueArrowpoint = () => {
               <select
                 value={selectedService}
                 onChange={(e) => setSelectedService(e.target.value)}
-                className="rounded-lg px-4 py-3 bg-white text-black text-sm outline-none appearance-none"
+                className={`rounded-lg px-4 py-3 bg-white text-sm outline-none appearance-none ${selectedService ? 'text-black' : 'text-muted-foreground'}`}
               >
                 <option value="" disabled>Servicio</option>
                 <option value="faas">Finance as a Service</option>
