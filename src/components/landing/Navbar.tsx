@@ -122,7 +122,7 @@ const Navbar = () => {
           </div>
 
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-foreground/80 hover:text-primary transition-colors">
+            <a key={l.href} href={l.href} onClick={(e) => handleAnchorClick(e, l.href)} className="text-sm text-foreground/80 hover:text-primary transition-colors">
               {l.label}
             </a>
           ))}
