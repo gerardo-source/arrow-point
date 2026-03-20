@@ -145,6 +145,7 @@ const CasosDeExito = () => {
             </button>
           </div>
         </div>
+      </section>
 
       <Footer />
     </div>
