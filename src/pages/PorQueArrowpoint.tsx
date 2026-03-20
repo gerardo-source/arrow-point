@@ -50,11 +50,18 @@ const PorQueArrowpoint = () => {
         </div>
       </section>
 
-      {/* Placeholder for more content */}
-      <section className="px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground">Contenido próximamente</h2>
-          <p className="text-muted-foreground">Aquí irá más información sobre por qué elegir Arrowpoint.</p>
+      {/* Description + Highlight */}
+      <section className="px-4 py-16">
+        <div className="max-w-3xl mx-auto text-center space-y-8">
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+            CFOs con experiencia real en startups, background en Venture Capital y Silicon Valley, tecnología que escala contigo y un acompañamiento cercano que convierte números en decisiones.
+          </p>
+          <div className="rounded-2xl bg-primary/10 px-8 py-8">
+            <p className="text-primary text-xl md:text-2xl font-medium leading-snug">
+              El equipo financiero que todo founder quisiera tener.<br />
+              <span className="font-bold">+20 startups en México, LATAM y EE.UU.</span>
+            </p>
+          </div>
         </div>
       </section>
 
