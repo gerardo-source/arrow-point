@@ -130,7 +130,8 @@ const PorQueArrowpoint = () => {
 
       {/* CTA Contact Section */}
       <section className="px-4 py-0">
-        <div className="w-full rounded-none overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start" style={{ background: "linear-gradient(135deg, #3888FF, #0055DD, #063D9F)" }}>
+        <div className="w-full rounded-none overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start relative">
+          <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
           {/* Left - Text */}
           <div className="space-y-4 text-white">
             <h2 className="text-2xl md:text-3xl font-bold leading-tight">
