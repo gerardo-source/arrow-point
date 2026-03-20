@@ -90,6 +90,38 @@ const NHByArrowpoint = () => {
         </div>
       </section>
 
+      {/* About NH Section */}
+      <section className="px-4 py-16 bg-primary/5">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Image placeholder */}
+          <div className="w-full aspect-[16/7] rounded-xl border-2 border-dashed border-muted-foreground/30 bg-muted/30 flex items-center justify-center text-muted-foreground text-sm">
+            Imagen
+          </div>
+          <p className="text-foreground leading-relaxed">
+            NH es nuestro servicio de reporteo financiero por suscripción para startups early stage que aún no necesitan un CFO completo, pero sí visibilidad clara y constante.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            Procesamos tu información con tecnología, BI e inteligencia artificial y te entregamos un reporte ejecutivo mensual con:
+          </p>
+          {/* Numbered list items */}
+          <div className="flex flex-col items-center gap-4 py-6">
+            {[
+              { num: 1, text: "Ingresos y gastos", icon: "📋" },
+              { num: 2, text: "Flujo de caja", icon: "🏦" },
+              { num: 3, text: "Runway", icon: "💰" },
+              { num: 4, text: "Principales métricas de desempeño", icon: "📊" },
+            ].map((item) => (
+              <div key={item.num} className="flex items-center gap-4 rounded-xl border border-primary/20 px-6 py-3 w-full max-w-lg">
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <span className="text-primary font-bold text-sm">{item.num}.</span>
+                </div>
+                <span className="text-primary text-sm font-medium">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="px-4 py-20">
         <div className="max-w-6xl mx-auto space-y-12">
