@@ -31,7 +31,7 @@ const Footer = () => {
             <h4 className="font-semibold text-white text-base">Compañía</h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li><a href="/por-que-arrowpoint" className="hover:text-white transition-colors">¿Por qué nosotros?</a></li>
-              <li><a href="#testimonios" className="hover:text-white transition-colors">Casos de éxito</a></li>
+              <li><a href="/casos-de-exito" className="hover:text-white transition-colors">Casos de éxito</a></li>
             </ul>
           </div>
 
