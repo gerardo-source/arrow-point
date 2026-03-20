@@ -161,7 +161,7 @@ const PorQueArrowpoint = () => {
               </select>
             </div>
             <textarea placeholder="Mensaje" rows={5} className="w-full rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none resize-none" />
-            <button className="inline-flex items-center gap-2 rounded-full border-2 border-white text-white px-6 py-2.5 text-sm font-medium hover:bg-white/10 transition-colors">
+            <button className="inline-flex items-center gap-2 rounded-lg bg-primary text-white px-6 py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors">
               Enviar
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
