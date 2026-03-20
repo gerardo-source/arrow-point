@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-image.png";
 import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
@@ -26,8 +27,8 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Image placeholder */}
-        <div className="w-full aspect-[4/3] border-2 border-dashed border-muted-foreground/30 rounded-lg flex items-center justify-center text-sm text-muted-foreground bg-muted/30">
-          Imagen Hero
+        <div className="w-full flex items-center justify-center">
+          <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-lg object-contain" />
         </div>
       </div>
     </section>
