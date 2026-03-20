@@ -8,8 +8,8 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto border-2 border-primary rounded-3xl p-8 md:p-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
-          <Badge variant="secondary" className="text-primary font-medium">
-            Expertos en crecimiento financiero
+          <Badge variant="secondary" className="text-foreground font-medium">
+            <span className="text-primary">★</span> Expertos en crecimiento financiero
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
             Estás construyendo el futuro.{" "}
