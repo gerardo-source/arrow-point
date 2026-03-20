@@ -1,4 +1,5 @@
 import { useState } from "react";
+import porqueHero from "@/assets/porque-hero.png";
 import { Users, Banknote } from "lucide-react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
