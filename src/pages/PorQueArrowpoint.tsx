@@ -1,6 +1,7 @@
 import { useState } from "react";
 import porqueHero from "@/assets/porque-hero.png";
 import porqueClarity from "@/assets/porque-clarity.jpg";
+import porquePartner from "@/assets/porque-partner.jpg";
 import { Users, Banknote } from "lucide-react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
