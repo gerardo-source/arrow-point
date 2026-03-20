@@ -8,13 +8,13 @@ const megaMenuServices = [
     icon: TrendingUp,
     title: "Finance as a Service",
     description: "Estrategia, claridad y un CFO a tu lado.",
-    href: "#servicios",
+    href: "/finance-as-a-service",
   },
   {
     icon: BarChart3,
     title: "NH by Arrowpoint",
     description: "Claridad financiera mensual, sin complejidad.",
-    href: "#servicios",
+    href: "/nh-by-arrowpoint",
   },
 ];
 
@@ -126,7 +126,7 @@ const Navbar = () => {
                 <a
                   key={s.title}
                   href={s.href}
-                  onClick={(e) => { handleAnchorClick(e, s.href); setMegaOpen(false); }}
+                  onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
                   className="flex items-center gap-3 rounded-xl px-4 py-3 hover:bg-accent/50 transition-colors whitespace-nowrap"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
