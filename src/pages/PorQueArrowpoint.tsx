@@ -108,8 +108,8 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Ideal Para Section */}
-      <section className="px-4 py-16 max-w-[95%] mx-auto">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-4 py-16">
+        <div className="max-w-[90%] mx-auto">
           <div className="rounded-3xl overflow-hidden px-8 md:px-14 py-12 grid md:grid-cols-[auto_1px_1fr] gap-8 md:gap-10 items-center" style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
             <div className="flex items-center gap-3 text-white">
               <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap">Ideal para</h2>
