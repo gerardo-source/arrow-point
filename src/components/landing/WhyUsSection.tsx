@@ -17,7 +17,7 @@ const WhyUsSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold">
               Conoce los beneficios de crecer con nosotros.
             </h2>
-            <a href="#contacto" className="inline-flex items-center gap-2 rounded-full border-2 border-white text-white px-6 py-2.5 text-sm font-medium hover:bg-white/10 transition-colors">
+            <a href="#contacto" className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-6 py-2.5 text-sm font-medium hover:bg-white/90 transition-colors">
               Habla con equipo
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
