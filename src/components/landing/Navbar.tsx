@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, TrendingUp, BarChart3 } from "lucide-react";
+import arrowpointLogo from "@/assets/arrowpoint-logo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -64,9 +65,9 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo placeholder */}
-        <div className="w-36 h-9 border-2 border-dashed border-muted-foreground/30 rounded flex items-center justify-center text-xs text-muted-foreground">
-          Logo
-        </div>
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }}>
+          <img src={arrowpointLogo} alt="Arrowpoint" className="h-8" />
+        </a>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
