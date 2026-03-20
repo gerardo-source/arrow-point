@@ -11,14 +11,13 @@ const Footer = () => {
               <div>
                 <img src={arrowpointLogo} alt="Arrowpoint" className="h-8 brightness-0 invert" />
               </div>
-             </div>
-            <div className="space-y-2">
-              <p className="text-white text-sm">Síguenos en redes:</p>
-              <a href="#" className="inline-flex text-white hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+              <div className="space-y-2">
+                <p className="text-white text-sm">Síguenos en redes:</p>
+                <a href="#" className="inline-flex text-white hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
+           </div>
 
           {/* Compañía */}
           <div className="space-y-4">
