@@ -8,6 +8,7 @@ import PorQueArrowpoint from "./pages/PorQueArrowpoint.tsx";
 import FinanceAsAService from "./pages/FinanceAsAService.tsx";
 import NHByArrowpoint from "./pages/NHByArrowpoint.tsx";
 import CasosDeExito from "./pages/CasosDeExito.tsx";
+import AvisoDePrivacidad from "./pages/AvisoDePrivacidad.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/finance-as-a-service" element={<FinanceAsAService />} />
           <Route path="/nh-by-arrowpoint" element={<NHByArrowpoint />} />
           <Route path="/casos-de-exito" element={<CasosDeExito />} />
+          <Route path="/aviso-de-privacidad" element={<AvisoDePrivacidad />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
