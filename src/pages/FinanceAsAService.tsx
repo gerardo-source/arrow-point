@@ -281,7 +281,7 @@ const FinanceAsAService = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <input type="tel" placeholder="Teléfono" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
-              <select className="rounded-lg px-4 py-3 bg-white text-black text-sm outline-none appearance-none">
+              <select className="rounded-lg px-4 py-3 bg-white text-muted-foreground text-sm outline-none appearance-none [&:not([value=''])]:text-black" defaultValue="">
                 <option value="" disabled selected>Servicio</option>
                 <option value="faas">Finance as a Service</option>
                 <option value="nh">NH by Arrowpoint</option>
