@@ -70,7 +70,11 @@ const Navbar = () => {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#por-que" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+          <a
+            href="/por-que-arrowpoint"
+            onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); }}
+            className="text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer"
+          >
             ¿Por qué Arrowpoint?
           </a>
 
