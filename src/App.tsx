@@ -8,6 +8,7 @@ import PorQueArrowpoint from "./pages/PorQueArrowpoint.tsx";
 import FinanceAsAService from "./pages/FinanceAsAService.tsx";
 import NHByArrowpoint from "./pages/NHByArrowpoint.tsx";
 import CasosDeExito from "./pages/CasosDeExito.tsx";
+import AvisoDePrivacidad from "./pages/AvisoDePrivacidad.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
