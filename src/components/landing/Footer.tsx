@@ -7,8 +7,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo + Social */}
-          <div className="space-y-6">
-             <img src={arrowpointLogo} alt="Arrowpoint" className="h-8 brightness-0 invert" />
+           <div className="space-y-6">
+             <div className="space-y-1">
+               <img src={arrowpointLogo} alt="Arrowpoint" className="h-8 brightness-0 invert" />
+               <p className="text-white/50 text-[10px] tracking-[0.25em] uppercase pl-1">Finance as a Service</p>
+             </div>
             <div className="space-y-2">
               <p className="text-white/60 text-sm">Síguenos en redes:</p>
               <a href="#" className="inline-flex text-white hover:text-primary transition-colors">
