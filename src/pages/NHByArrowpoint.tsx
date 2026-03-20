@@ -1,7 +1,7 @@
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { BarChart3, FileCheck, Clock, Layers, Calculator, TrendingUp } from "lucide-react";
+import { BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const features = [
