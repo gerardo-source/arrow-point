@@ -5,22 +5,22 @@ import { Award, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const casos = [
-  {
-    title: "Caso #1",
-    color: "#0066FF",
-    content: "Contenido del caso de éxito #1. Descripción detallada del proyecto y los resultados obtenidos.",
-  },
-  {
-    title: "Caso #1",
-    color: "#6B9BFF",
-    content: "Contenido del caso de éxito #2. Descripción detallada del proyecto y los resultados obtenidos.",
-  },
-  {
-    title: "Caso #1",
-    color: "#5BC8C8",
-    content: "Contenido del caso de éxito #3. Descripción detallada del proyecto y los resultados obtenidos.",
-  },
-];
+{
+  title: "Caso #1",
+  color: "#0066FF",
+  content: "Contenido del caso de éxito #1. Descripción detallada del proyecto y los resultados obtenidos."
+},
+{
+  title: "Caso #1",
+  color: "#6B9BFF",
+  content: "Contenido del caso de éxito #2. Descripción detallada del proyecto y los resultados obtenidos."
+},
+{
+  title: "Caso #1",
+  color: "#5BC8C8",
+  content: "Contenido del caso de éxito #3. Descripción detallada del proyecto y los resultados obtenidos."
+}];
+
 
 const CasosDeExito = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -71,34 +71,34 @@ const CasosDeExito = () => {
       {/* Casos accordion */}
       <section className="px-4 py-16">
         <div className="max-w-4xl mx-auto relative" style={{ paddingBottom: "2rem" }}>
-          {casos.map((caso, index) => (
-            <div
-              key={index}
-              className="rounded-2xl overflow-hidden shadow-lg relative"
-              style={{
-                background: caso.color,
-                marginTop: index === 0 ? 0 : "-1rem",
-                zIndex: index + 1,
-              }}
-            >
+          {casos.map((caso, index) =>
+          <div
+            key={index}
+            className="rounded-2xl overflow-hidden shadow-lg relative"
+            style={{
+              background: caso.color,
+              marginTop: index === 0 ? 0 : "-1rem",
+              zIndex: index + 1
+            }}>
+            
               <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between px-8 py-8 text-white"
-              >
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              className="w-full flex items-center justify-between px-8 text-white mx-0 my-0 py-[15px]">
+              
                 <span className="text-lg font-semibold">{caso.title}</span>
                 <ChevronDown
-                  className={`w-6 h-6 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
-                />
+                className={`w-6 h-6 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
+              
               </button>
               <div
-                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 pb-8" : "max-h-0"}`}
-              >
+              className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 pb-8" : "max-h-0"}`}>
+              
                 <div className="px-8 text-white/90 text-sm leading-relaxed">
                   {caso.content}
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>
       </section>
 
@@ -111,13 +111,13 @@ const CasosDeExito = () => {
         </div>
         <div className="relative w-full">
           <div className="flex gap-16 animate-[scroll_20s_linear_infinite] w-max">
-            {[...Array(2)].map((_, setIdx) => (
-              ["Logo 1", "Logo 2", "Logo 3", "Logo 4", "Logo 5", "Logo 6", "Logo 7", "Logo 8"].map((logo, i) => (
-                <div key={`${setIdx}-${i}`} className="w-28 h-10 border-2 border-dashed border-muted-foreground/30 rounded flex items-center justify-center text-xs text-muted-foreground shrink-0">
+            {[...Array(2)].map((_, setIdx) =>
+            ["Logo 1", "Logo 2", "Logo 3", "Logo 4", "Logo 5", "Logo 6", "Logo 7", "Logo 8"].map((logo, i) =>
+            <div key={`${setIdx}-${i}`} className="w-28 h-10 border-2 border-dashed border-muted-foreground/30 rounded flex items-center justify-center text-xs text-muted-foreground shrink-0">
                   {logo}
                 </div>
-              ))
-            ))}
+            )
+            )}
           </div>
         </div>
       </section>
@@ -149,15 +149,15 @@ const CasosDeExito = () => {
             <textarea placeholder="Mensaje" rows={5} className="w-full rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none resize-none" />
             <button className="inline-flex items-center gap-2 rounded-lg bg-primary text-white px-6 py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors">
               Enviar
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </button>
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default CasosDeExito;
