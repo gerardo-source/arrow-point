@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo + Social */}
            <div className="space-y-6">
               <div>
-                <img src={arrowpointLogo} alt="Arrowpoint" className="h-8 brightness-0 invert" />
+                <img src={arrowpointLogo} alt="Arrowpoint" className="h-8" />
               </div>
               <div className="space-y-2">
                 <p className="text-white text-sm">Síguenos en redes:</p>
