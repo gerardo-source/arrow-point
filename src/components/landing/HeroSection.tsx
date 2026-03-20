@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 const HeroSection = () => {
   return (
     <section className="py-16 md:py-24 px-4">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto border border-primary/40 rounded-3xl p-8 md:p-12">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <Badge variant="secondary" className="text-primary font-medium">
             Expertos en crecimiento financiero
@@ -30,6 +31,7 @@ const HeroSection = () => {
         <div className="w-full flex items-center justify-center">
           <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-lg object-contain" />
         </div>
+      </div>
       </div>
     </section>
   );
