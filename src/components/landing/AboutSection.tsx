@@ -4,10 +4,10 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         <div
           className="rounded-3xl p-10 md:p-16 lg:p-20 grid md:grid-cols-2 gap-10 items-start"
-          style={{ backgroundColor: "#021538" }}
-        >
+          style={{ backgroundColor: "#021538" }}>
+          
           <div className="space-y-4">
-            <span className="inline-block text-xs font-semibold uppercase tracking-wide text-blue-400 px-4 py-1.5 rounded-full border border-blue-400/30 bg-blue-400/10">Quienes Somos</span>
+            
             <h2 className="text-3xl md:text-4xl font-bold text-white">¿Quiénes Somos?</h2>
             <p className="text-blue-200/80">
               Arrowpoint es una firma de Finance as a Service creada para startups en crecimiento.
@@ -23,8 +23,8 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
