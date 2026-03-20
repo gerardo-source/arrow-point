@@ -126,7 +126,7 @@ const Navbar = () => {
                 <a
                   key={s.title}
                   href={s.href}
-                  onClick={(e) => { handleAnchorClick(e, s.href); setMegaOpen(false); }}
+                  onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
                   className="flex items-center gap-3 rounded-xl px-4 py-3 hover:bg-accent/50 transition-colors whitespace-nowrap"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
