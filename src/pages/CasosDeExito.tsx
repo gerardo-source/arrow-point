@@ -55,7 +55,7 @@ const CasosDeExito = () => {
 
             {/* Photo */}
             <div className="relative z-10 mt-10">
-              <img src={casosHero} alt="Casos de éxito" className="w-52 md:w-64 object-contain" />
+              <img src={casosHero} alt="Casos de éxito" className="w-52 md:w-64 object-contain" fetchPriority="high" loading="eager" />
             </div>
           </div>
         </div>
