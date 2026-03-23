@@ -1,3 +1,5 @@
+import ceoIcon from "@/assets/icons/ceo.svg";
+
 const ServicesSection = () => {
   const services = [
     {
