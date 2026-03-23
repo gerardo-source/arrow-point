@@ -22,15 +22,10 @@ const PorQueArrowpoint = () => {
       <section className="px-4 pt-8 pb-20">
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl bg-primary overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center">
-            {/* Decorative elements */}
-            <div className="absolute top-1/2 right-[-2rem] -translate-y-1/2 w-72 h-72 rounded-full border-[3px] border-white/15 pointer-events-none" />
-            <div className="absolute top-1/2 right-[0.5rem] -translate-y-1/2 w-52 h-52 rounded-full border-[3px] border-white/15 pointer-events-none" />
-            <div className="absolute bottom-8 left-8 text-white/20 pointer-events-none">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
-                <polygon points="0,60 30,0 0,30" />
-                <polygon points="15,60 45,10 15,40" />
-              </svg>
-            </div>
+            {/* Decorative circles - right */}
+            <img src={decorativeCircles} alt="" className="absolute top-1/2 right-[-4rem] -translate-y-1/2 w-72 h-72 opacity-30 pointer-events-none" />
+            {/* Decorative arrows - left */}
+            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-16 h-16 opacity-60 pointer-events-none" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
               ¿Por qué Arrowpoint?
