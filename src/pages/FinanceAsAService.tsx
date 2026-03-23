@@ -63,7 +63,7 @@ const FinanceAsAService = () => {
             <img src={decorativeCircles} alt="" className="absolute top-32 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
 
             {/* Decorative arrows - bottom left */}
-            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-24 h-24 pointer-events-none brightness-0 invert" />
+            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
               Finance as a Service
