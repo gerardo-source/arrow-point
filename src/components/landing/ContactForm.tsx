@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { ChevronDown } from "lucide-react";
 
 const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
