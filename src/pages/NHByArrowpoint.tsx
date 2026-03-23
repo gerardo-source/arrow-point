@@ -56,7 +56,7 @@ const NHByArrowpoint = () => {
           </p>
           <div className="flex flex-col items-center gap-3 py-6">
             {[
-              { num: 1, text: "Ingresos y gastos", icon: null },
+              { num: 1, text: "Ingresos y gastos", icon: ingresosGastosIcon },
               { num: 2, text: "Flujo de caja", icon: null },
               { num: 3, text: "Runway", icon: null },
               { num: 4, text: "Principales métricas de desempeño", icon: null },
