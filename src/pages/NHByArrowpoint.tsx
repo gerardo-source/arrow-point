@@ -11,6 +11,7 @@ import nhSection from "@/assets/nh-section.jpg";
 import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
 import flujoCajaIcon from "@/assets/icons/flujo-caja.svg";
 import bolsaDineroIcon from "@/assets/icons/bolsa-dinero.svg";
+import metricasIcon from "@/assets/icons/metricas.svg";
 
 const NHByArrowpoint = () => {
   return (
@@ -61,7 +62,7 @@ const NHByArrowpoint = () => {
               { num: 1, text: "Ingresos y gastos", icon: ingresosGastosIcon },
               { num: 2, text: "Flujo de caja", icon: flujoCajaIcon },
               { num: 3, text: "Runway", icon: bolsaDineroIcon },
-              { num: 4, text: "Principales métricas de desempeño", icon: null },
+              { num: 4, text: "Principales métricas de desempeño", icon: metricasIcon },
             ].map((item) => (
               <div key={item.num} className="flex items-center gap-5 rounded-2xl bg-primary/5 px-6 py-4 w-full max-w-lg">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
