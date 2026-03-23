@@ -11,6 +11,7 @@ import ceoFinance from "@/assets/ceo-finance.png";
 import cfoTeam from "@/assets/cfo-team.png";
 import ceoIcon from "@/assets/icons/ceo.svg";
 import fundraisingIcon from "@/assets/icons/fundraising.svg";
+import financialIcon from "@/assets/icons/financial.svg";
 
 const features = [
   {
