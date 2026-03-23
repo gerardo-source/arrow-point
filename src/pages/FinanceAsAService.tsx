@@ -5,6 +5,10 @@ import ContactForm from "@/components/landing/ContactForm";
 import { TrendingUp, BarChart3, PieChart, FileText, Users, ShieldCheck } from "lucide-react";
 import gradientBg from "@/assets/gradient-bg.png";
 import { Button } from "@/components/ui/button";
+import decorativeArrows from "@/assets/decorative-arrows.png";
+import decorativeCircles from "@/assets/decorative-circles.png";
+import ceoFinance from "@/assets/ceo-finance.png";
+import ceoIcon from "@/assets/icons/ceo.svg";
 
 const features = [
   {
