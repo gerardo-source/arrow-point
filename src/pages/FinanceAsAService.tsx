@@ -4,7 +4,7 @@ import Footer from "@/components/landing/Footer";
 import LogosBar from "@/components/landing/LogosBar";
 import ContactForm from "@/components/landing/ContactForm";
 import { TrendingUp, BarChart3, PieChart, FileText, Users, ShieldCheck } from "lucide-react";
-import gradientBg from "@/assets/gradient-bg.png";
+import gradientBg from "@/assets/gradient-bg.jpg";
 import { Button } from "@/components/ui/button";
 import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
