@@ -74,7 +74,7 @@ const FinanceAsAService = () => {
 
             {/* Photo */}
             <div className="relative z-10 mt-10">
-              <img src={ceoFinance} alt="Finance leader" className="w-52 md:w-64 rounded-full object-cover" />
+              <img src={ceoFinance} alt="Finance leader" className="w-52 md:w-64 rounded-full object-cover" fetchPriority="high" loading="eager" />
             </div>
           </div>
         </div>
