@@ -49,7 +49,7 @@ const LogosBar = () => {
                 key={i}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-8 w-auto object-contain flex-shrink-0"
+                className="h-10 w-auto object-contain flex-shrink-0 max-h-10"
               />
             ))}
           </div>
