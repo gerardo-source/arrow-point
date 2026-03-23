@@ -25,7 +25,7 @@ const PorQueArrowpoint = () => {
             {/* Decorative circles - right, half visible */}
             <img src={decorativeCircles} alt="" className="absolute -bottom-8 -right-60 w-[28rem] h-[28rem] opacity-30 pointer-events-none" />
             {/* Decorative arrows - left, white */}
-            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-16 h-16 pointer-events-none brightness-0 invert" />
+            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-24 h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
               ¿Por qué Arrowpoint?
