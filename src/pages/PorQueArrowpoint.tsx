@@ -22,10 +22,10 @@ const PorQueArrowpoint = () => {
       <section className="px-4 pt-8 pb-20">
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl bg-primary overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center">
-            {/* Decorative circles - right */}
-            <img src={decorativeCircles} alt="" className="absolute top-1/2 right-[-4rem] -translate-y-1/2 w-72 h-72 opacity-30 pointer-events-none" />
-            {/* Decorative arrows - left */}
-            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-16 h-16 opacity-60 pointer-events-none" />
+            {/* Decorative circles - right, half visible */}
+            <img src={decorativeCircles} alt="" className="absolute top-1/2 -right-40 -translate-y-1/2 w-[28rem] h-[28rem] opacity-30 pointer-events-none" />
+            {/* Decorative arrows - left, white */}
+            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-16 h-16 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
               ¿Por qué Arrowpoint?
