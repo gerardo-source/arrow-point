@@ -8,6 +8,7 @@ import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
 import nhHero from "@/assets/nh-hero.png";
 import nhSection from "@/assets/nh-section.jpg";
+import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
 
 const NHByArrowpoint = () => {
   return (
@@ -55,7 +56,7 @@ const NHByArrowpoint = () => {
           </p>
           <div className="flex flex-col items-center gap-3 py-6">
             {[
-              { num: 1, text: "Ingresos y gastos", icon: null },
+              { num: 1, text: "Ingresos y gastos", icon: ingresosGastosIcon },
               { num: 2, text: "Flujo de caja", icon: null },
               { num: 3, text: "Runway", icon: null },
               { num: 4, text: "Principales métricas de desempeño", icon: null },
