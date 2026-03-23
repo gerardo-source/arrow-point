@@ -139,29 +139,8 @@ const PorQueArrowpoint = () => {
               Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
             </p>
           </div>
-          {/* Right - Form */}
-          <div className="space-y-4 relative z-10">
-            <div className="grid grid-cols-2 gap-4">
-              <input type="text" placeholder="Nombre" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
-              <input type="email" placeholder="Correo" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <input type="tel" placeholder="Teléfono" className="rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none" />
-              <select
-                value={selectedService}
-                onChange={(e) => setSelectedService(e.target.value)}
-                className={`rounded-lg px-4 py-3 bg-white text-sm outline-none appearance-none ${selectedService ? 'text-black' : 'text-[#9ca3af]'}`}
-              >
-                <option value="" disabled>Servicio de interés</option>
-                <option value="faas">Finance as a Service</option>
-                <option value="nh">NH by Arrowpoint</option>
-              </select>
-            </div>
-            <textarea placeholder="Mensaje" rows={5} className="w-full rounded-lg px-4 py-3 bg-white text-black placeholder:text-muted-foreground text-sm outline-none resize-none" />
-            <button className="inline-flex items-center gap-2 rounded-lg bg-primary text-white px-6 py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors">
-              Enviar
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+          <div className="relative z-10">
+            <ContactForm />
           </div>
         </div>
       </section>
