@@ -96,25 +96,7 @@ const CasosDeExito = () => {
       </section>
 
       {/* Empresas que confían */}
-      <section className="py-16 overflow-hidden">
-        <div className="text-center mb-8">
-          <h2 className="text-xl md:text-2xl font-medium text-foreground italic">
-            Empresas que ya confían en nosotros
-          </h2>
-        </div>
-        <div className="relative w-full">
-          <div className="flex gap-16 animate-[scroll_20s_linear_infinite] w-max">
-            {[...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
-              <img
-                key={i}
-                src={logo.src}
-                alt={logo.alt}
-                className="h-8 w-auto object-contain shrink-0"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogosBar />
 
       {/* CTA Contact Form */}
       <section className="px-4 py-0">
