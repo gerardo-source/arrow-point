@@ -1,4 +1,4 @@
-import gradientBg from "@/assets/gradient-bg.png";
+import gradientBg from "@/assets/gradient-bg.jpg";
 import ContactForm from "@/components/landing/ContactForm";
 
 const ContactSection = () => {
