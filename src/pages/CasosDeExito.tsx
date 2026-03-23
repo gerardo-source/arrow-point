@@ -1,10 +1,13 @@
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import LogosBar from "@/components/landing/LogosBar";
 import ContactForm from "@/components/landing/ContactForm";
-import { Award, ChevronDown } from "lucide-react";
-import { clientLogos } from "@/components/landing/LogosBar";
+import { ChevronDown } from "lucide-react";
 import gradientBg from "@/assets/gradient-bg.png";
+import decorativeArrows from "@/assets/decorative-arrows.png";
+import decorativeCircles from "@/assets/decorative-circles.png";
+import casosHero from "@/assets/casos-hero.png";
 import { useState } from "react";
 
 const casos = [
