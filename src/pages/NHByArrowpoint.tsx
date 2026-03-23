@@ -8,6 +8,7 @@ import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
 import nhHero from "@/assets/nh-hero.png";
 import nhSection from "@/assets/nh-section.jpg";
+import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
 
 const NHByArrowpoint = () => {
   return (
