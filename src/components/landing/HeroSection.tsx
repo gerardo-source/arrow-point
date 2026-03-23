@@ -19,10 +19,10 @@ const HeroSection = () => {
             Desde reportes mensuales hasta estrategia de fundraising, Arrowpoint es tu copiloto financiero para tomar decisiones con datos, no con suposiciones.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" asChild>
+            <Button size="lg" variant="outline" asChild>
               <a href="#contacto">Contáctanos</a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" asChild>
               <a href="#contacto">Agendar videollamada</a>
             </Button>
           </div>
