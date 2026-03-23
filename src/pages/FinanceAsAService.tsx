@@ -66,20 +66,10 @@ const FinanceAsAService = () => {
               Conoce más sobre nuestro servicio y experiencia.
             </p>
 
-            {/* Photo circle with icon */}
+            {/* Photo circle */}
             <div className="relative z-10 mt-10">
               <div className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-primary/40 overflow-hidden bg-muted/30">
                 <img src={ceoFinance} alt="Finance leader" className="w-full h-full object-cover" />
-              </div>
-              {/* Service icon */}
-              <div className="absolute -bottom-1 -left-3 w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-lg">
-                <img src={ceoIcon} alt="" className="w-5 h-5 brightness-0 invert" />
-              </div>
-              {/* Decorative wave */}
-              <div className="absolute -bottom-1 right-2 text-primary">
-                <svg width="28" height="14" viewBox="0 0 28 14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 12 Q7 2 14 7 Q21 12 26 2" />
-                </svg>
               </div>
             </div>
           </div>
