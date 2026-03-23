@@ -149,8 +149,8 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            {/* Image placeholder */}
-            <div className="hidden md:block w-48 h-24 rounded-xl border-2 border-dashed border-muted-foreground/30 overflow-hidden flex items-center justify-center text-xs text-muted-foreground bg-muted/30">
+            <div className="hidden md:block w-48 h-24 rounded-xl overflow-hidden">
+              <img src={heroTeam} alt="Equipo" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
