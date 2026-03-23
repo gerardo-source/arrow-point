@@ -23,7 +23,7 @@ const PorQueArrowpoint = () => {
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl bg-primary overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center">
             {/* Decorative circles - right, half visible */}
-            <img src={decorativeCircles} alt="" className="absolute -bottom-8 -right-60 w-[28rem] h-[28rem] opacity-30 pointer-events-none" />
+            <img src={decorativeCircles} alt="" className="absolute -bottom-8 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
             {/* Decorative arrows - left, white */}
             <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-24 h-24 pointer-events-none brightness-0 invert" />
 
