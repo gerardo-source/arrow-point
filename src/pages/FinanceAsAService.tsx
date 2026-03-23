@@ -106,7 +106,7 @@ const FinanceAsAService = () => {
               <div key={item.num} className="flex items-center gap-5 rounded-2xl bg-primary/5 px-6 py-4 w-full max-w-lg">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   {item.icon ? (
-                    <img src={item.icon} alt="" className="w-7 h-7" />
+                    <img src={item.icon} alt="" className="w-7 h-7" style={{ filter: "brightness(0) saturate(100%) invert(40%) sepia(85%) saturate(1500%) hue-rotate(196deg) brightness(100%) contrast(100%)" }} />
                   ) : (
                     <span className="text-primary font-bold text-base">{item.num}</span>
                   )}
