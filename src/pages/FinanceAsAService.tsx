@@ -11,6 +11,7 @@ import ceoFinance from "@/assets/ceo-finance.png";
 import cfoTeam from "@/assets/cfo-team.png";
 import ceoIcon from "@/assets/icons/ceo.svg";
 import fundraisingIcon from "@/assets/icons/fundraising.svg";
+import financialIcon from "@/assets/icons/financial.svg";
 
 const features = [
   {
@@ -98,7 +99,7 @@ const FinanceAsAService = () => {
           <div className="flex flex-col items-center gap-3 py-6">
             {[
               { num: 1, text: "Reportes ejecutivos listos para board", icon: null },
-              { num: 2, text: "Modelos y proyecciones financieras", icon: null },
+              { num: 2, text: "Modelos y proyecciones financieras", icon: financialIcon },
               { num: 3, text: "Planeación de cash y runway", icon: null },
               { num: 4, text: "Acompañamiento en procesos de fundraising", icon: fundraisingIcon },
             ].map((item) => (
