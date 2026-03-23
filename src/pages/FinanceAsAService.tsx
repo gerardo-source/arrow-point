@@ -54,7 +54,7 @@ const FinanceAsAService = () => {
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#021538" }}>
             {/* Decorative circles - bottom right */}
-            <img src={decorativeCircles} alt="" className="absolute bottom-[-20%] right-[-8%] w-72 h-72 pointer-events-none opacity-20" />
+            <img src={decorativeCircles} alt="" className="absolute -bottom-8 -right-60 w-[28rem] h-[28rem] opacity-30 pointer-events-none" />
 
             {/* Decorative arrows - bottom left */}
             <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-24 h-24 pointer-events-none brightness-0 invert" />
