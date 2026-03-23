@@ -44,8 +44,8 @@ const NHByArrowpoint = () => {
       {/* About NH Section */}
       <section className="px-4 py-16 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="w-full aspect-[16/7] rounded-xl border-2 border-dashed border-muted-foreground/30 bg-muted/30 flex items-center justify-center text-muted-foreground text-sm">
-            Imagen
+          <div className="w-full aspect-[16/7] rounded-xl overflow-hidden">
+            <img src={nhSection} alt="Análisis financiero" className="w-full h-full object-cover" />
           </div>
           <p className="text-foreground leading-relaxed">
             NH es nuestro servicio de reporteo financiero por suscripción para startups early stage que aún no necesitan un CFO completo, pero sí visibilidad clara y constante.
