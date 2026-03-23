@@ -10,6 +10,7 @@ import decorativeCircles from "@/assets/decorative-circles.png";
 import ceoFinance from "@/assets/ceo-finance.png";
 import cfoTeam from "@/assets/cfo-team.png";
 import ceoIcon from "@/assets/icons/ceo.svg";
+import fundraisingIcon from "@/assets/icons/fundraising.svg";
 
 const features = [
   {
