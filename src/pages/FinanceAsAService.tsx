@@ -97,14 +97,18 @@ const FinanceAsAService = () => {
           {/* Numbered list items */}
           <div className="flex flex-col items-center gap-3 py-6">
             {[
-              { num: 1, text: "Reportes ejecutivos listos para board" },
-              { num: 2, text: "Modelos y proyecciones financieras" },
-              { num: 3, text: "Planeación de cash y runway" },
-              { num: 4, text: "Acompañamiento en procesos de fundraising" },
+              { num: 1, text: "Reportes ejecutivos listos para board", icon: null },
+              { num: 2, text: "Modelos y proyecciones financieras", icon: null },
+              { num: 3, text: "Planeación de cash y runway", icon: null },
+              { num: 4, text: "Acompañamiento en procesos de fundraising", icon: fundraisingIcon },
             ].map((item) => (
               <div key={item.num} className="flex items-center gap-5 rounded-2xl bg-primary/5 px-6 py-4 w-full max-w-lg">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-base">{item.num}</span>
+                  {item.icon ? (
+                    <img src={item.icon} alt="" className="w-7 h-7" />
+                  ) : (
+                    <span className="text-primary font-bold text-base">{item.num}</span>
+                  )}
                 </div>
                 <span className="text-primary text-sm font-semibold">{item.num}. {item.text}</span>
               </div>
