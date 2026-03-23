@@ -13,6 +13,7 @@ import cfoTeam from "@/assets/cfo-team.png";
 import ceoIcon from "@/assets/icons/ceo.svg";
 import fundraisingIcon from "@/assets/icons/fundraising.svg";
 import financialIcon from "@/assets/icons/financial.svg";
+import reportesIcon from "@/assets/icons/reportes.svg";
 import flujoCashIcon from "@/assets/icons/flujo-cash.svg";
 
 const features = [
@@ -100,7 +101,7 @@ const FinanceAsAService = () => {
           {/* Numbered list items */}
           <div className="flex flex-col items-center gap-3 py-6">
             {[
-              { num: 1, text: "Reportes ejecutivos listos para board", icon: null },
+              { num: 1, text: "Reportes ejecutivos listos para board", icon: reportesIcon },
               { num: 2, text: "Modelos y proyecciones financieras", icon: financialIcon },
               { num: 3, text: "Planeación de cash y runway", icon: flujoCashIcon },
               { num: 4, text: "Acompañamiento en procesos de fundraising", icon: fundraisingIcon },
