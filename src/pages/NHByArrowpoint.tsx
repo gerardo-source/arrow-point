@@ -53,18 +53,22 @@ const NHByArrowpoint = () => {
           <p className="text-foreground leading-relaxed">
             Procesamos tu información con tecnología, BI e inteligencia artificial y te entregamos un reporte ejecutivo mensual con:
           </p>
-          <div className="flex flex-col items-center gap-4 py-6">
+          <div className="flex flex-col items-center gap-3 py-6">
             {[
-              { num: 1, text: "Ingresos y gastos" },
-              { num: 2, text: "Flujo de caja" },
-              { num: 3, text: "Runway" },
-              { num: 4, text: "Principales métricas de desempeño" },
+              { num: 1, text: "Ingresos y gastos", icon: null },
+              { num: 2, text: "Flujo de caja", icon: null },
+              { num: 3, text: "Runway", icon: null },
+              { num: 4, text: "Principales métricas de desempeño", icon: null },
             ].map((item) => (
-              <div key={item.num} className="flex items-center gap-4 rounded-xl border border-primary/20 px-6 py-3 w-full max-w-lg">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-sm">{item.num}.</span>
+              <div key={item.num} className="flex items-center gap-5 rounded-2xl bg-primary/5 px-6 py-4 w-full max-w-lg">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  {item.icon ? (
+                    <img src={item.icon} alt="" className="w-7 h-7" style={{ filter: "brightness(0) saturate(100%) invert(40%) sepia(85%) saturate(1500%) hue-rotate(196deg) brightness(100%) contrast(100%)" }} />
+                  ) : (
+                    <span className="text-primary font-bold text-base">{item.num}</span>
+                  )}
                 </div>
-                <span className="text-primary text-sm font-medium">{item.text}</span>
+                <span className="text-primary text-sm font-semibold">{item.num}. {item.text}</span>
               </div>
             ))}
           </div>
