@@ -5,6 +5,10 @@ import ContactForm from "@/components/landing/ContactForm";
 import { TrendingUp, BarChart3, PieChart, FileText, Users, ShieldCheck } from "lucide-react";
 import gradientBg from "@/assets/gradient-bg.png";
 import { Button } from "@/components/ui/button";
+import decorativeArrows from "@/assets/decorative-arrows.png";
+import decorativeCircles from "@/assets/decorative-circles.png";
+import ceoFinance from "@/assets/ceo-finance.png";
+import ceoIcon from "@/assets/icons/ceo.svg";
 
 const features = [
   {
@@ -49,18 +53,11 @@ const FinanceAsAService = () => {
       <section className="px-4 pt-8 pb-20">
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#021538" }}>
-            {/* Decorative circles - right */}
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-72 h-72 rounded-full border-[3px] border-white/10 pointer-events-none" />
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-56 h-56 rounded-full border-[3px] border-white/10 pointer-events-none" />
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-40 h-40 rounded-full border-[3px] border-white/10 pointer-events-none" />
+            {/* Decorative circles - bottom right */}
+            <img src={decorativeCircles} alt="" className="absolute bottom-[-20%] right-[-8%] w-72 h-72 pointer-events-none opacity-20" />
 
-            {/* Decorative arrows - left */}
-            <div className="absolute bottom-12 left-8 text-white/20 pointer-events-none">
-              <svg width="50" height="60" viewBox="0 0 50 60" fill="currentColor">
-                <polygon points="0,60 20,0 0,30" />
-                <polygon points="12,60 32,10 12,40" />
-              </svg>
-            </div>
+            {/* Decorative arrows - bottom left */}
+            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-24 h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
               Finance as a Service
@@ -71,14 +68,12 @@ const FinanceAsAService = () => {
 
             {/* Photo circle with icon */}
             <div className="relative z-10 mt-10">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-white/20 overflow-hidden bg-muted/30 flex items-center justify-center">
-                <div className="w-full h-full flex items-center justify-center text-white/50 text-xs border-2 border-dashed border-muted-foreground/30 rounded-full">
-                  Foto
-                </div>
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-primary/40 overflow-hidden bg-muted/30">
+                <img src={ceoFinance} alt="Finance leader" className="w-full h-full object-cover" />
               </div>
               {/* Service icon */}
               <div className="absolute -bottom-1 -left-3 w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-lg">
-                <Users className="w-5 h-5 text-white" />
+                <img src={ceoIcon} alt="" className="w-5 h-5 brightness-0 invert" />
               </div>
               {/* Decorative wave */}
               <div className="absolute -bottom-1 right-2 text-primary">
