@@ -1,14 +1,17 @@
 import ceoIcon from "@/assets/icons/ceo.svg";
+import moneyIcon from "@/assets/icons/money.svg";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Finance as a Service",
+      icon: ceoIcon,
       description:
         "Estrategia, claridad y un CFO a tu lado. Reportes listos para board, modelos financieros, planeación de cash y acompañamiento en fundraising. Un socio que entiende startups y habla el idioma de inversionistas.",
     },
     {
       title: "NH by Arrowpoint",
+      icon: moneyIcon,
       description:
         "Claridad financiera mensual, sin complejidad. Procesamos tus números con BI y AI y te entregamos un reporte ejecutivo con las métricas que importan. Ideal para founders early stage que quieren control sin armar un equipo financiero.",
     },
@@ -27,7 +30,7 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((s) => (
             <div key={s.title} className="rounded-2xl border border-primary/30 bg-transparent p-8 space-y-5 hover:shadow-lg transition-shadow">
-              <img src={ceoIcon} alt="Icono" className="w-14 h-14" />
+              <img src={s.icon} alt={s.title} className="w-14 h-14" />
               <h3 className="text-xl font-bold text-foreground">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
               <a href="#" className="inline-flex items-center text-primary font-medium text-sm hover:underline">
