@@ -30,7 +30,7 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((s) => (
             <div key={s.title} className="rounded-2xl border border-primary/30 bg-transparent p-8 space-y-5 hover:shadow-lg transition-shadow">
-              <img src={ceoIcon} alt="Icono" className="w-14 h-14" />
+              <img src={s.icon} alt={s.title} className="w-14 h-14" />
               <h3 className="text-xl font-bold text-foreground">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
               <a href="#" className="inline-flex items-center text-primary font-medium text-sm hover:underline">
