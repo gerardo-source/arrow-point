@@ -1,6 +1,17 @@
 import { useEffect, useRef } from "react";
+import pontem from "@/assets/logos/pontem.png";
+import drivana from "@/assets/logos/drivana.png";
+import sora from "@/assets/logos/sora.png";
+import queridaadela from "@/assets/logos/queridaadela.png";
+import mentatickets from "@/assets/logos/mentatickets.png";
 
-const logos = Array.from({ length: 8 }, (_, i) => `Logo ${i + 1}`);
+export const clientLogos = [
+  { src: pontem, alt: "Pontem" },
+  { src: drivana, alt: "Drivana" },
+  { src: sora, alt: "Sora" },
+  { src: queridaadela, alt: "Querida Adela" },
+  { src: mentatickets, alt: "Menta Tickets" },
+];
 
 const LogosBar = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -32,14 +43,14 @@ const LogosBar = () => {
           Equipos que crecen con Arrowpoint
         </p>
         <div className="overflow-hidden">
-          <div ref={scrollRef} className="flex items-center gap-12 w-max will-change-transform">
-            {[...logos, ...logos].map((label, i) => (
-              <div
+          <div ref={scrollRef} className="flex items-center gap-16 w-max will-change-transform">
+            {[...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
+              <img
                 key={i}
-                className="w-28 h-10 border-2 border-dashed border-muted-foreground/30 rounded flex-shrink-0 flex items-center justify-center text-xs text-muted-foreground"
-              >
-                {label}
-              </div>
+                src={logo.src}
+                alt={logo.alt}
+                className="h-8 w-auto object-contain flex-shrink-0"
+              />
             ))}
           </div>
         </div>
