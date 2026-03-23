@@ -80,15 +80,18 @@ const ContactForm = () => {
           />
           {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
         </div>
-        <select
-          value={service}
-          onChange={(e) => setService(e.target.value)}
-          className={`rounded-lg px-4 py-3 bg-white text-sm outline-none appearance-none ${service ? "text-black" : "text-[#9ca3af]"}`}
-        >
-          <option value="" disabled>Servicio de interés</option>
-          <option value="faas">Finance as a Service</option>
-          <option value="nh">NH by Arrowpoint</option>
-        </select>
+        <div className="relative">
+          <select
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+            className={`rounded-lg px-4 py-3 pr-10 bg-white text-sm outline-none appearance-none w-full ${service ? "text-black" : "text-[#9ca3af]"}`}
+          >
+            <option value="" disabled>Servicio de interés</option>
+            <option value="faas">Finance as a Service</option>
+            <option value="nh">NH by Arrowpoint</option>
+          </select>
+          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9ca3af] pointer-events-none" />
+        </div>
       </div>
       <div>
         <textarea
