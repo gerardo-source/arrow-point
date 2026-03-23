@@ -11,6 +11,7 @@ import nhSection from "@/assets/nh-section.jpg";
 import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
 import flujoCajaIcon from "@/assets/icons/flujo-caja.svg";
 import bolsaDineroIcon from "@/assets/icons/bolsa-dinero.svg";
+import metricasIcon from "@/assets/icons/metricas.svg";
 
 const NHByArrowpoint = () => {
   return (
