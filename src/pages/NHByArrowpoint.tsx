@@ -60,7 +60,7 @@ const NHByArrowpoint = () => {
             {[
               { num: 1, text: "Ingresos y gastos", icon: ingresosGastosIcon },
               { num: 2, text: "Flujo de caja", icon: flujoCajaIcon },
-              { num: 3, text: "Runway", icon: null },
+              { num: 3, text: "Runway", icon: bolsaDineroIcon },
               { num: 4, text: "Principales métricas de desempeño", icon: null },
             ].map((item) => (
               <div key={item.num} className="flex items-center gap-5 rounded-2xl bg-primary/5 px-6 py-4 w-full max-w-lg">
