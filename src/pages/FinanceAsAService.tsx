@@ -12,6 +12,7 @@ import cfoTeam from "@/assets/cfo-team.png";
 import ceoIcon from "@/assets/icons/ceo.svg";
 import fundraisingIcon from "@/assets/icons/fundraising.svg";
 import financialIcon from "@/assets/icons/financial.svg";
+import flujoCashIcon from "@/assets/icons/flujo-cash.svg";
 
 const features = [
   {
