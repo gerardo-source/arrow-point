@@ -81,8 +81,8 @@ const FinanceAsAService = () => {
             Un CFO que piensa contigo el crecimiento de tu startup
           </h2>
           {/* Image placeholder */}
-          <div className="w-full aspect-[16/7] rounded-xl border-2 border-dashed border-muted-foreground/30 bg-muted/30 flex items-center justify-center text-muted-foreground text-sm">
-            Imagen
+          <div className="w-full aspect-[16/7] rounded-xl overflow-hidden">
+            <img src={cfoTeam} alt="Equipo CFO trabajando" className="w-full h-full object-cover" />
           </div>
           <div className="space-y-4">
             <p className="text-foreground leading-relaxed">
