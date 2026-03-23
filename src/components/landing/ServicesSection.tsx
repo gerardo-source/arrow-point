@@ -1,14 +1,17 @@
 import ceoIcon from "@/assets/icons/ceo.svg";
+import moneyIcon from "@/assets/icons/money.svg";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Finance as a Service",
+      icon: ceoIcon,
       description:
         "Estrategia, claridad y un CFO a tu lado. Reportes listos para board, modelos financieros, planeación de cash y acompañamiento en fundraising. Un socio que entiende startups y habla el idioma de inversionistas.",
     },
     {
       title: "NH by Arrowpoint",
+      icon: moneyIcon,
       description:
         "Claridad financiera mensual, sin complejidad. Procesamos tus números con BI y AI y te entregamos un reporte ejecutivo con las métricas que importan. Ideal para founders early stage que quieren control sin armar un equipo financiero.",
     },
