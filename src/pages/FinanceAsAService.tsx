@@ -235,24 +235,7 @@ const FinanceAsAService = () => {
       </section>
 
       {/* Empresas que confían */}
-      <section className="py-16 overflow-hidden">
-        <div className="text-center mb-8">
-          <h2 className="text-xl md:text-2xl font-medium text-foreground italic">
-            Empresas que ya confían en nosotros
-          </h2>
-        </div>
-        <div className="relative w-full">
-          <div className="flex gap-16 animate-[scroll_20s_linear_infinite] w-max">
-            {[...Array(2)].map((_, setIdx) => (
-              ["Logo 1", "Logo 2", "Logo 3", "Logo 4", "Logo 5", "Logo 6", "Logo 7", "Logo 8"].map((logo, i) => (
-                <div key={`${setIdx}-${i}`} className="w-28 h-10 border-2 border-dashed border-muted-foreground/30 rounded flex items-center justify-center text-xs text-muted-foreground shrink-0">
-                  {logo}
-                </div>
-              ))
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogosBar />
 
       {/* CTA Contact Form */}
       <section className="px-4 py-0">
