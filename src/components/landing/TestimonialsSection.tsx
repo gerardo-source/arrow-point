@@ -1,19 +1,25 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const testimonials = [
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
     name: "Nombre",
+    photo: testimonial1,
   },
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
     name: "Nombre",
+    photo: testimonial2,
   },
   {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
     name: "Nombre",
+    photo: testimonial3,
   },
 ];
 
@@ -42,9 +48,7 @@ const TestimonialsSection = () => {
               <Quote className="h-8 w-8 text-primary rotate-180" />
               <p className="text-muted-foreground text-sm leading-relaxed">{t.text}</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full border-2 border-dashed border-muted-foreground/30 flex items-center justify-center text-[10px] text-muted-foreground">
-                  Foto
-                </div>
+                <img src={t.photo} alt={t.name} className="w-10 h-10 rounded-full object-cover" loading="lazy" width={40} height={40} />
                 <span className="font-semibold text-foreground text-sm">{t.name}</span>
               </div>
             </div>
