@@ -10,6 +10,7 @@ import nhHero from "@/assets/nh-hero.png";
 import nhSection from "@/assets/nh-section.jpg";
 import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
 import flujoCajaIcon from "@/assets/icons/flujo-caja.svg";
+import bolsaDineroIcon from "@/assets/icons/bolsa-dinero.svg";
 
 const NHByArrowpoint = () => {
   return (
