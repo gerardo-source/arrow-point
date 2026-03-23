@@ -1,6 +1,7 @@
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import ContactForm from "@/components/landing/ContactForm";
 import { Award, ChevronDown } from "lucide-react";
 import { clientLogos } from "@/components/landing/LogosBar";
 import gradientBg from "@/assets/gradient-bg.png";

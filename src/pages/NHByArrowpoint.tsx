@@ -1,6 +1,7 @@
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import ContactForm from "@/components/landing/ContactForm";
 import { BarChart3 } from "lucide-react";
 import gradientBg from "@/assets/gradient-bg.png";
 
