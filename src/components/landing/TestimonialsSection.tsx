@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
   const [page, setPage] = useState(0);
 
   return (
-    <section className="py-14 px-6 bg-primary/5" id="testimonios">
+    <section className="py-24 px-6 bg-primary/5" id="testimonios">
       <div className="mx-auto space-y-12">
         <div className="flex items-end justify-between pl-4 md:pl-8">
           <h2 className="text-3xl md:text-4xl text-foreground max-w-lg tracking-tight font-medium" style={{ fontFamily: "'Metropolis', sans-serif" }}>
@@ -44,7 +44,7 @@ const TestimonialsSection = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="rounded-2xl border border-border bg-card p-6 space-y-4">
+            <div key={i} className="rounded-2xl border border-border bg-card p-4 space-y-3 max-w-xs">
               <Quote className="h-8 w-8 text-primary rotate-180" />
               <p className="text-muted-foreground text-sm leading-relaxed">{t.text}</p>
               <div className="flex items-center gap-3">
