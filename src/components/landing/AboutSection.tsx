@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <section className="py-20 px-6" id="about">
-      <div className="max-w-[84rem] mx-auto">
+      <div className="mx-auto">
         <div
           className="rounded-3xl p-12 md:p-16 lg:p-24 grid md:grid-cols-[auto_1px_1fr] gap-10 md:gap-14 items-center"
           style={{ backgroundColor: "#021538" }}>
