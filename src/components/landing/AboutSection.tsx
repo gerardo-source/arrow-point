@@ -26,7 +26,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="py-20 px-6" id="about">
+    <section className="py-14 px-6" id="about">
       <div className="mx-auto space-y-12">
         {/* Logos bar */}
         <div className="text-center space-y-8">
