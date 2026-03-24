@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 const HeroSection = () => {
   return (
     <section className="py-16 md:py-24 px-4">
-      <div className="max-w-[82rem] mx-auto border-2 border-primary rounded-3xl p-8 md:p-12">
+      <div className="max-w-[84rem] mx-auto border-2 border-primary rounded-3xl p-8 md:p-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <Badge variant="secondary" className="text-foreground font-medium">
