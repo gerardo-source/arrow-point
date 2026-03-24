@@ -15,7 +15,7 @@ const megaMenuServices = [
     href: "/finance-as-a-service",
   },
   {
-    icon: BarChart3,
+    customIcon: moneyIcon,
     title: "NH by Arrowpoint",
     description: "Claridad financiera mensual, sin complejidad.",
     href: "/nh-by-arrowpoint",
