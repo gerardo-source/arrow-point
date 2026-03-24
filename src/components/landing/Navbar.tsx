@@ -148,7 +148,7 @@ const Navbar = () => {
           ref={megaRef}
           className="w-full border-b border-border bg-background animate-fade-in"
         >
-          <div className="mx-auto px-6 py-3 flex items-stretch gap-4">
+          <div className="mx-auto px-6 py-3 flex items-stretch justify-between gap-4">
             <div className="flex items-center gap-4">
               {megaMenuServices.map((s) => (
                 <a
