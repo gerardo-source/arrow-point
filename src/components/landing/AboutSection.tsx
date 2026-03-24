@@ -26,10 +26,10 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 py-8" id="about">
-      <div className="mx-auto w-full space-y-8">
+    <section className="py-14 px-6" id="about">
+      <div className="mx-auto space-y-12">
         {/* Logos bar */}
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-8">
           <p className="text-sm text-muted-foreground font-medium tracking-wide uppercase">
             Equipos que crecen con Arrowpoint
           </p>
@@ -48,17 +48,17 @@ const AboutSection = () => {
         </div>
 
         <div
-          className="rounded-3xl p-8 md:p-12 lg:p-16 grid md:grid-cols-[auto_1px_1fr] gap-8 md:gap-10 items-center"
+          className="rounded-3xl p-12 md:p-16 lg:p-24 grid md:grid-cols-[auto_1px_1fr] gap-10 md:gap-14 items-center"
           style={{ backgroundColor: "#021538" }}>
           
           <div className="flex items-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">¿Quiénes Somos?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">¿Quiénes Somos?</h2>
           </div>
 
           <div className="hidden md:block w-px bg-white/30 self-stretch" />
 
-          <div className="space-y-4">
-            <p className="text-base md:text-lg text-white/80 leading-relaxed">
+          <div className="space-y-5">
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
               Arrowpoint es una firma de Finance as a Service creada para startups en crecimiento. Combinamos experiencia en venture capital, Silicon Valley y tecnología para darte claridad financiera, acompañamiento estratégico y confianza para escalar.
             </p>
             <Link to="/por-que-arrowpoint" className="inline-flex items-center gap-2 text-white font-medium text-base hover:text-white/80 transition-colors">
