@@ -123,7 +123,7 @@ const PorQueArrowpoint = () => {
         <div className="max-w-full mx-auto">
           <div
             ref={idealRef}
-            className={`rounded-3xl overflow-hidden px-8 md:px-14 py-16 md:py-20 grid md:grid-cols-[auto_1px_1fr] gap-8 md:gap-10 items-center transition-all duration-700 ${idealVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
+            className={`rounded-3xl overflow-hidden px-8 md:px-14 py-20 md:py-28 grid md:grid-cols-[auto_1px_1fr] gap-8 md:gap-10 items-center transition-all duration-700 ${idealVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
             style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}
           >
             <div className="flex items-center gap-3 text-white">
