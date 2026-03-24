@@ -3,7 +3,7 @@ import ContactForm from "@/components/landing/ContactForm";
 
 const ContactSection = () => {
   return (
-    <section className="min-h-screen flex items-center py-14 px-6 relative overflow-hidden" id="contacto">
+    <section className="py-14 px-6 relative overflow-hidden" id="contacto">
       <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start relative z-10">
         <div className="space-y-4 text-white pl-4 md:pl-8" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
