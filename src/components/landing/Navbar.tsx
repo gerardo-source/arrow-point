@@ -148,19 +148,19 @@ const Navbar = () => {
           ref={megaRef}
           className="w-full border-b border-border bg-background animate-fade-in"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between gap-8">
-            <div className="flex items-center gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-center gap-6">
+            <div className="flex items-center gap-6">
               {megaMenuServices.map((s) => (
                 <a
                   key={s.title}
                   href={s.href}
                   onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
-                  className="flex items-center gap-3 rounded-xl px-4 py-3 hover:bg-accent/50 transition-colors whitespace-nowrap"
+                  className="flex items-center gap-4 rounded-xl px-6 py-5 hover:bg-accent/50 transition-colors whitespace-nowrap"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <s.icon className="h-5 w-5" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <s.icon className="h-6 w-6" />
                   </div>
-                  <span className="text-sm font-medium text-foreground">{s.title}</span>
+                  <span className="text-base font-medium text-foreground">{s.title}</span>
                 </a>
               ))}
             </div>
