@@ -30,7 +30,7 @@ const HeroSection = () => {
         </div>
         {/* Image placeholder */}
         <div className="w-full flex items-center justify-center relative">
-          <img src={circlesBg} alt="" className="absolute w-[140%] h-[140%] object-contain" />
+          <img src={circlesBg} alt="" className="absolute w-[200%] h-[200%] object-contain" />
           <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-lg object-contain relative z-10" fetchPriority="high" loading="eager" />
         </div>
       </div>
