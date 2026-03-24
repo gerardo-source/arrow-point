@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const testimonials = [
   {
@@ -25,11 +26,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [page, setPage] = useState(0);
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollReveal();
 
   return (
     <section className="py-24 px-6 bg-primary/5" id="testimonios">
       <div className="mx-auto space-y-12">
-        <div className="flex items-end justify-between pl-4 md:pl-8">
+        <div ref={headerRef} className={`flex items-end justify-between pl-4 md:pl-8 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-3xl md:text-4xl text-foreground max-w-lg tracking-tight font-medium" style={{ fontFamily: "'Metropolis', sans-serif" }}>
             Lo que dicen los founders que trabajan con nosotros
           </h2>
@@ -42,9 +45,9 @@ const TestimonialsSection = () => {
             </Button>
           </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {testimonials.map((t, i) => (
-            <div key={i} className="rounded-2xl border border-border bg-card p-5 space-y-3">
+            <div key={i} className={`rounded-2xl border border-border bg-card p-5 space-y-3 transition-all duration-700 ${cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: `${i * 150}ms` }}>
               <Quote className="h-8 w-8 text-primary rotate-180" />
               <p className="text-muted-foreground text-sm leading-relaxed">{t.text}</p>
               <div className="flex items-center gap-3">

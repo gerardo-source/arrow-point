@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { clientLogos } from "@/components/landing/LogosBar";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const AboutSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { ref: logosRevealRef, isVisible: logosVisible } = useScrollReveal();
+  const { ref: cardRef, isVisible: cardVisible } = useScrollReveal();
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -29,7 +32,7 @@ const AboutSection = () => {
     <section className="py-14 px-6" id="about">
       <div className="mx-auto space-y-12">
         {/* Logos bar */}
-        <div className="text-center space-y-8">
+        <div ref={logosRevealRef} className={`text-center space-y-8 transition-all duration-700 ${logosVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <p className="text-sm text-muted-foreground font-medium tracking-wide uppercase">
             Equipos que crecen con Arrowpoint
           </p>
@@ -48,7 +51,8 @@ const AboutSection = () => {
         </div>
 
         <div
-          className="rounded-3xl p-12 md:p-16 lg:p-24 grid md:grid-cols-[auto_1px_1fr] gap-10 md:gap-14 items-center"
+          ref={cardRef}
+          className={`rounded-3xl p-12 md:p-16 lg:p-24 grid md:grid-cols-[auto_1px_1fr] gap-10 md:gap-14 items-center transition-all duration-700 ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ backgroundColor: "#021538" }}>
           
           <div className="flex items-center">

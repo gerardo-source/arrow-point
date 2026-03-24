@@ -1,4 +1,8 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const WhyUsSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   const points = [
     "Por qué los founders eligen Arrowpoint",
     "Hablamos el idioma de las startups: MRR, runway, burn rate, ARR.",
@@ -11,7 +15,7 @@ const WhyUsSection = () => {
   return (
     <section className="py-14 px-6" id="por-que">
       <div className="mx-auto">
-        <div className="rounded-3xl p-12 md:p-16 lg:p-20 grid md:grid-cols-[1fr_1px_1fr] gap-10 md:gap-14 items-center" style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
+        <div ref={ref} className={`rounded-3xl p-12 md:p-16 lg:p-20 grid md:grid-cols-[1fr_1px_1fr] gap-10 md:gap-14 items-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`} style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
           <div className="space-y-6 text-white">
             <h2 className="text-4xl md:text-5xl font-bold">¿Por qué Nosotros?</h2>
             <p className="text-white/80 text-lg md:text-xl leading-relaxed">
