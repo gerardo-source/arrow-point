@@ -3,9 +3,9 @@ import ContactForm from "@/components/landing/ContactForm";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 px-4 relative overflow-hidden" id="contacto">
+    <section className="py-14 px-6 relative overflow-hidden" id="contacto">
       <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start relative z-10">
+      <div className="mx-auto grid md:grid-cols-2 gap-12 items-start relative z-10">
         <div className="space-y-4 text-white" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
           <h2 className="text-2xl md:text-3xl font-bold leading-tight">
             Deja de adivinar.<br />Empieza a decidir<br />con confianza.
