@@ -19,7 +19,7 @@ const PorQueArrowpoint = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="px-4 pt-8 pb-20">
+      <section className="px-4 pt-28 pb-20">
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl bg-primary overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center">
             {/* Decorative circles - right, half visible */}
