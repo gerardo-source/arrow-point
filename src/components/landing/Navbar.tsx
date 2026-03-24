@@ -164,7 +164,7 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            <div className="hidden md:block flex-1 h-44 rounded-lg overflow-hidden">
+            <div className="hidden md:block w-[45%] h-44 rounded-lg overflow-hidden">
               <img src={heroTeam} alt="Equipo" className="w-full h-full object-cover" />
             </div>
           </div>
