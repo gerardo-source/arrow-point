@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.png";
-import decorativeCircles from "@/assets/decorative-circles.png";
+import circlesBg from "@/assets/circles-bg.png";
 import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
@@ -30,7 +30,7 @@ const HeroSection = () => {
         </div>
         {/* Image placeholder */}
         <div className="w-full flex items-center justify-center relative">
-          <img src={decorativeCircles} alt="" className="absolute w-[130%] h-[130%] object-contain opacity-30" />
+          <img src={circlesBg} alt="" className="absolute w-[140%] h-[140%] object-contain" />
           <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-lg object-contain relative z-10" fetchPriority="high" loading="eager" />
         </div>
       </div>
