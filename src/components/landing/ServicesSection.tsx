@@ -19,7 +19,7 @@ const ServicesSection = () => {
 
   return (
     <section className="py-14 px-6 bg-primary/5" id="servicios">
-      <div className="mx-auto space-y-12">
+      <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-3">
           <span className="inline-block text-xs text-foreground font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full border border-border bg-background"><span className="text-primary">★</span> Servicios</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nuestros servicios</h2>
