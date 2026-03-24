@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, BarChart3 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ceoIcon from "@/assets/icons/ceo-2.svg";
+import moneyIcon from "@/assets/icons/money-2.svg";
 import arrowpointLogo from "@/assets/arrowpoint-logo.png";
 import heroTeam from "@/assets/hero-team.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -14,7 +15,7 @@ const megaMenuServices = [
     href: "/finance-as-a-service",
   },
   {
-    icon: BarChart3,
+    customIcon: moneyIcon,
     title: "NH by Arrowpoint",
     description: "Claridad financiera mensual, sin complejidad.",
     href: "/nh-by-arrowpoint",
@@ -158,8 +159,8 @@ const Navbar = () => {
                   onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
                   className="flex items-center gap-4 rounded-xl px-5 py-4 hover:bg-accent/50 transition-colors whitespace-nowrap"
                 >
-                  <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${s.customIcon ? "bg-primary" : "bg-primary/10 text-primary"}`}>
-                    {s.customIcon ? <img src={s.customIcon} alt="" className="h-6 w-6" /> : s.icon && <s.icon className="h-6 w-6" />}
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary">
+                    <img src={s.customIcon} alt="" className="h-6 w-6" />
                   </div>
                   <span className="text-base font-medium text-foreground">{s.title}</span>
                 </a>
@@ -191,7 +192,7 @@ const Navbar = () => {
               className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary pl-2"
               onClick={() => setMobileOpen(false)}
             >
-              {s.customIcon ? <img src={s.customIcon} alt="" className="h-4 w-4" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} /> : s.icon && <s.icon className="h-4 w-4 text-primary" />}
+              <img src={s.customIcon} alt="" className="h-4 w-4" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} />
               {s.title}
             </a>
           ))}
