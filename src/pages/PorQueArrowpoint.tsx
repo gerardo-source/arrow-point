@@ -119,8 +119,8 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Ideal Para Section */}
-      <section className="px-4 py-16">
-        <div className="max-w-[90%] mx-auto">
+      <section className="px-6 py-16">
+        <div className="max-w-full mx-auto">
           <div
             ref={idealRef}
             className={`rounded-3xl overflow-hidden px-8 md:px-14 py-16 md:py-20 grid md:grid-cols-[auto_1px_1fr] gap-8 md:gap-10 items-center transition-all duration-700 ${idealVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
