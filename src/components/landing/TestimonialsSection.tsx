@@ -25,37 +25,48 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  const [page, setPage] = useState(0);
-  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
-  const { ref: cardsRef, isVisible: cardsVisible } = useScrollReveal();
+  const [current, setCurrent] = useState(0);
+  const { ref: sectionRef, isVisible } = useScrollReveal();
+
+  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+
+  const t = testimonials[current];
 
   return (
     <section className="py-24 px-6 bg-primary/5" id="testimonios">
-      <div className="mx-auto space-y-12">
-        <div ref={headerRef} className={`flex items-end justify-between pl-4 md:pl-8 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h2 className="text-3xl md:text-4xl text-foreground max-w-lg tracking-tight font-medium" style={{ fontFamily: "'Metropolis', sans-serif" }}>
-            Lo que dicen los founders que trabajan con nosotros
-          </h2>
-          <div className="hidden md:flex gap-2">
-            <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={() => setPage(Math.max(0, page - 1))} disabled={page === 0}>
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={() => setPage(Math.min(0, page + 1))} disabled={page === 0}>
-              <ChevronRight className="h-4 w-4" />
-            </Button>
+      <div ref={sectionRef} className={`mx-auto space-y-10 max-w-2xl transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <h2 className="text-3xl md:text-4xl text-foreground tracking-tight font-medium text-center" style={{ fontFamily: "'Metropolis', sans-serif" }}>
+          Lo que dicen los founders que trabajan con nosotros
+        </h2>
+
+        <div className="relative overflow-hidden">
+          <div className="rounded-2xl border border-border bg-card p-8 md:p-10 space-y-5 transition-all duration-500">
+            <Quote className="h-8 w-8 text-primary rotate-180" />
+            <p className="text-muted-foreground text-base leading-relaxed">{t.text}</p>
+            <div className="flex items-center gap-3">
+              <img src={t.photo} alt={t.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" width={48} height={48} />
+              <span className="font-semibold text-foreground">{t.name}</span>
+            </div>
           </div>
         </div>
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-          {testimonials.map((t, i) => (
-            <div key={i} className={`rounded-2xl border border-border bg-card p-5 space-y-3 transition-all duration-700 ${cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: `${i * 150}ms` }}>
-              <Quote className="h-8 w-8 text-primary rotate-180" />
-              <p className="text-muted-foreground text-sm leading-relaxed">{t.text}</p>
-              <div className="flex items-center gap-3">
-                <img src={t.photo} alt={t.name} className="w-10 h-10 rounded-full object-cover" loading="lazy" width={40} height={40} />
-                <span className="font-semibold text-foreground text-sm">{t.name}</span>
-              </div>
-            </div>
-          ))}
+
+        <div className="flex items-center justify-center gap-4">
+          <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={prev}>
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          <div className="flex gap-2">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-border"}`}
+              />
+            ))}
+          </div>
+          <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={next}>
+            <ChevronRight className="h-4 w-4" />
+          </Button>
         </div>
       </div>
     </section>
