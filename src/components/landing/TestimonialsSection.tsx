@@ -6,9 +6,6 @@ import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import circlesBg from "@/assets/circles-testimonials.png";
-import testimonial2 from "@/assets/testimonial-2.jpg";
-import testimonial3 from "@/assets/testimonial-3.jpg";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const testimonials = [
   {
