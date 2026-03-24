@@ -57,7 +57,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Clarity Section - Image + Text */}
-      <section className="px-4 py-16 bg-muted/30">
+      <section className="px-4 py-16 bg-primary/5">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Image placeholder */}
