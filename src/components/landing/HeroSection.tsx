@@ -17,7 +17,7 @@ const HeroSection = () => {
           <Badge variant="secondary" className="text-foreground font-medium opacity-0 animate-reveal-up" style={{ animationDelay: "0.1s" }}>
             <span className="text-primary">★</span> Expertos en crecimiento financiero
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground opacity-0 animate-reveal-up" style={{ animationDelay: "0.2s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.2s" }}>
             Estás construyendo el futuro.{" "}
             <span className="text-primary">Tus finanzas deben ir al mismo ritmo.</span>
           </h1>
