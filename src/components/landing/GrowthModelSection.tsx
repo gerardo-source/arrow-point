@@ -14,14 +14,14 @@ const GrowthModelSection = () => {
 
   return (
     <section className="py-14 px-6">
-      <div className="mx-auto space-y-12">
+      <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">Un modelo que crece contigo</h2>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
             Desde early stage hasta startups en expansión, nuestros servicios se adaptan a tu etapa: visibilidad financiera mensual hoy, estrategia y acompañamiento de CFO cuando empiezas a escalar.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8">
           {cards.map((c) => (
             <div key={c.title} className="rounded-2xl border border-border bg-card p-10 space-y-5 hover:shadow-lg transition-shadow text-left">
               <div className="flex items-center gap-3">

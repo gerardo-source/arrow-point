@@ -10,7 +10,7 @@ const WhyUsSection = () => {
 
   return (
     <section className="py-14 px-6" id="por-que">
-      <div className="mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="rounded-3xl p-12 md:p-16 lg:p-20 grid md:grid-cols-[1fr_1px_1fr] gap-10 md:gap-14 items-center" style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
           <div className="space-y-6 text-white">
             <h2 className="text-4xl md:text-5xl font-bold">¿Por qué Nosotros?</h2>
