@@ -23,10 +23,17 @@ const megaMenuServices = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const megaRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -63,7 +70,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+    <nav className={`sticky top-0 z-50 bg-background/95 backdrop-blur transition-shadow ${scrolled ? "border-b border-border shadow-sm" : ""}`}>
       <div className="mx-auto px-[22px] flex items-center justify-between h-16">
         {/* Logo placeholder */}
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }}>
