@@ -30,8 +30,10 @@ const HeroSection = () => {
         </div>
         {/* Image placeholder */}
         <div className="w-full flex items-center justify-center relative">
-          <img src={decorativeCircles} alt="" className="absolute inset-0 w-full h-full object-contain opacity-20 scale-110" style={{ filter: 'brightness(1.3) saturate(0.5)' }} />
-          <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-lg object-contain relative z-10" fetchPriority="high" loading="eager" />
+          {/* Concentric circles */}
+          <div className="absolute w-[130%] h-[130%] rounded-full border-[3px] border-primary/10" />
+          <div className="absolute w-[110%] h-[110%] rounded-full bg-primary/5" />
+          <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-lg object-contain relative z-10 rounded-full" fetchPriority="high" loading="eager" />
         </div>
       </div>
       </div>
