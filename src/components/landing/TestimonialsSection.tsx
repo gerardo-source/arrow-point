@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
     <section className="py-14 px-6 bg-primary/5" id="testimonios">
       <div className="mx-auto space-y-12">
         <div className="flex items-end justify-between pl-4 md:pl-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground max-w-lg tracking-tight" style={{ fontFamily: "'Metropolis', sans-serif" }}>
+          <h2 className="text-3xl md:text-4xl text-foreground max-w-lg tracking-tight font-medium" style={{ fontFamily: "'Metropolis', sans-serif" }}>
             Lo que dicen los founders que trabajan con nosotros
           </h2>
           <div className="hidden md:flex gap-2">
