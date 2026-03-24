@@ -9,7 +9,7 @@ const WhyUsSection = () => {
     "Acompañamiento de nivel CFO bajo un modelo de suscripción flexible.",
     "Tecnología, BI y AI para reportes rápidos, claros y confiables.",
     "Información lista para board e inversionistas desde el día uno.",
-    "Más que un proveedor: un socio que piensa como founder, no un back-office lejano.",
+    "Más que un proveedor: un socio que piensa como founder, no un back-office lejano",
   ];
 
   return (
