@@ -42,7 +42,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Description + Highlight */}
-      <section className="px-4 py-16">
+      <section className="px-4 py-16 bg-primary/5">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
             CFOs con experiencia real en startups, background en Venture Capital y Silicon Valley, tecnología que escala contigo y un acompañamiento cercano que convierte números en decisiones.
