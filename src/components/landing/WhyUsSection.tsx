@@ -9,7 +9,7 @@ const WhyUsSection = () => {
   ];
 
   return (
-    <section className="py-14 px-6" id="por-que">
+    <section className="min-h-screen flex flex-col justify-center py-14 px-6" id="por-que">
       <div className="mx-auto">
         <div className="rounded-3xl p-12 md:p-16 lg:p-20 grid md:grid-cols-[1fr_1px_1fr] gap-10 md:gap-14 items-center" style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
           <div className="space-y-6 text-white">
