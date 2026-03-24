@@ -14,7 +14,7 @@ const GrowthModelSection = () => {
 
   return (
     <section className="py-14 px-6">
-      <div className="mx-auto space-y-12">
+      <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">Un modelo que crece contigo</h2>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
