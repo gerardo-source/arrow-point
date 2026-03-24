@@ -122,7 +122,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <Button size="default" asChild>
+          <Button size="lg" asChild>
             <a href="#contacto" onClick={(e) => handleAnchorClick(e, "#contacto")}>Contáctanos</a>
           </Button>
         </div>
