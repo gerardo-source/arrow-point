@@ -70,7 +70,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+    <nav className={`sticky top-0 z-50 bg-background/95 backdrop-blur transition-shadow ${scrolled ? "border-b border-border shadow-sm" : ""}`}>
       <div className="mx-auto px-[22px] flex items-center justify-between h-16">
         {/* Logo placeholder */}
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }}>
