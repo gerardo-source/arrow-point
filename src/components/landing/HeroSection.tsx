@@ -21,7 +21,7 @@ const HeroSection = () => {
             Estás construyendo el futuro.{" "}
             <span className="text-primary">Tus finanzas deben ir al mismo ritmo.</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0 opacity-0 animate-reveal-up" style={{ animationDelay: "0.35s" }}>
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0 opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.35s" }}>
             Desde reportes mensuales hasta estrategia de fundraising, Arrowpoint es tu copiloto financiero para tomar decisiones con datos, no con suposiciones.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start opacity-0 animate-reveal-up" style={{ animationDelay: "0.5s" }}>
