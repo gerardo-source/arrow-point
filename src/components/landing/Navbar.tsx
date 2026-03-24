@@ -75,7 +75,7 @@ const Navbar = () => {
           <a
             href="/por-que-arrowpoint"
             onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); }}
-            className="text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer"
+            className="text-base text-foreground/80 hover:text-primary transition-colors cursor-pointer"
           >
             ¿Por qué Arrowpoint?
           </a>
@@ -84,7 +84,7 @@ const Navbar = () => {
           <button
             ref={triggerRef}
             onClick={() => setMegaOpen(!megaOpen)}
-            className="text-sm text-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
+            className="text-base text-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
           >
             Servicios
             <svg
@@ -110,12 +110,12 @@ const Navbar = () => {
                   handleAnchorClick(e, l.href);
                 }
               }}
-              className="text-sm text-foreground/80 hover:text-primary transition-colors"
+              className="text-base text-foreground/80 hover:text-primary transition-colors"
             >
               {l.label}
             </a>
           ))}
-          <Button size="sm" asChild>
+          <Button size="default" asChild>
             <a href="#contacto" onClick={(e) => handleAnchorClick(e, "#contacto")}>Contáctanos</a>
           </Button>
         </div>
