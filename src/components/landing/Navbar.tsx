@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const megaMenuServices = [
   {
-    icon: TrendingUp,
+    customIcon: ceoIcon,
     title: "Finance as a Service",
     description: "Estrategia, claridad y un CFO a tu lado.",
     href: "/finance-as-a-service",
