@@ -56,7 +56,7 @@ const FinanceAsAService = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-4 pt-24 pb-20">
+      <section className="px-4 pt-20 pb-20">
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#021538" }}>
             {/* Decorative circles - bottom right */}
