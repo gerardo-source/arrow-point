@@ -75,7 +75,7 @@ const Navbar = () => {
           <a
             href="/por-que-arrowpoint"
             onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); }}
-            className="text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer"
+            className="text-base text-foreground/80 hover:text-primary transition-colors cursor-pointer"
           >
             ¿Por qué Arrowpoint?
           </a>
