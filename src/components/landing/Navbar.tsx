@@ -24,13 +24,20 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const megaRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 10);
+      setVisible(currentY < lastScrollY.current || currentY < 10);
+      lastScrollY.current = currentY;
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -70,7 +77,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`sticky top-0 z-50 bg-background/95 backdrop-blur transition-shadow ${scrolled ? "border-b border-border shadow-sm" : ""}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur transition-all duration-300 ${scrolled ? "border-b border-border shadow-sm" : ""} ${visible ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="mx-auto px-[22px] flex items-center justify-between h-16">
         {/* Logo placeholder */}
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }}>
