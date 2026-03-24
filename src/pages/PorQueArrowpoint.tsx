@@ -27,7 +27,7 @@ const PorQueArrowpoint = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="px-4 pt-28 pb-20">
+      <section className="px-4 pt-24 pb-20">
         <div className="max-w-6xl mx-auto">
           <div
             ref={heroRef}
