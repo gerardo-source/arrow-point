@@ -27,8 +27,8 @@ const TestimonialsSection = () => {
   const [page, setPage] = useState(0);
 
   return (
-    <section className="py-20 px-4 bg-muted/30" id="testimonios">
-      <div className="max-w-7xl mx-auto space-y-12">
+    <section className="py-20 px-6 bg-primary/5" id="testimonios">
+      <div className="mx-auto space-y-12">
         <div className="flex items-end justify-between">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground max-w-md">
             Lo que dicen los founders que trabajan con nosotros
