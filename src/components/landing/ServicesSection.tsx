@@ -19,7 +19,7 @@ const ServicesSection = () => {
 
   return (
     <section className="py-14 px-6 bg-primary/5" id="servicios">
-      <div className="max-w-7xl mx-auto space-y-12">
+      <div className="mx-auto space-y-12">
         <div className="text-center space-y-3">
           <span className="inline-block text-xs text-foreground font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full border border-border bg-background"><span className="text-primary">★</span> Servicios</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nuestros servicios</h2>
@@ -29,7 +29,7 @@ const ServicesSection = () => {
         </div>
         <div className="flex flex-col gap-8 items-center">
           {services.map((s) => (
-            <div key={s.title} className="w-full rounded-2xl border border-primary/30 bg-background p-10 space-y-5 hover:shadow-lg transition-shadow">
+            <div key={s.title} className="w-full max-w-4xl rounded-2xl border border-primary/30 bg-background p-10 space-y-5 hover:shadow-lg transition-shadow">
               <img src={s.icon} alt={s.title} className="w-14 h-14" />
               <h3 className="text-2xl font-bold text-foreground">{s.title}</h3>
               <p className="text-muted-foreground text-base leading-relaxed">{s.description}</p>

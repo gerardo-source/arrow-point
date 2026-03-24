@@ -78,7 +78,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur transition-all duration-300 ${scrolled ? "border-b border-border shadow-sm" : ""} ${visible ? "translate-y-0" : "-translate-y-full"}`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo placeholder */}
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }}>
           <img src={arrowpointLogo} alt="Arrowpoint" className="h-8" />

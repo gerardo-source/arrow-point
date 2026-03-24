@@ -4,7 +4,7 @@ import arrowpointLogo from "@/assets/arrowpoint-logo-footer.png";
 const Footer = () => {
   return (
     <footer className="py-14 px-6" style={{ background: "#021538" }}>
-      <div className="max-w-7xl mx-auto space-y-12">
+      <div className="mx-auto space-y-12">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo + Social */}
            <div className="space-y-6">
