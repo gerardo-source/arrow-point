@@ -117,7 +117,7 @@ const Navbar = () => {
                   handleAnchorClick(e, l.href);
                 }
               }}
-              className="text-base text-foreground/80 hover:text-primary transition-colors"
+              className="text-lg text-foreground/80 hover:text-primary transition-colors"
             >
               {l.label}
             </a>
