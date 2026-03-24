@@ -148,7 +148,7 @@ const Navbar = () => {
           ref={megaRef}
           className="w-full border-b border-border bg-background animate-fade-in"
         >
-          <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3 flex items-stretch justify-between gap-4">
+          <div className="mx-auto px-6 py-3 flex items-stretch gap-4">
             <div className="flex items-center gap-4">
               {megaMenuServices.map((s) => (
                 <a
@@ -164,7 +164,7 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            <div className="hidden md:block w-60 h-44 rounded-lg overflow-hidden">
+            <div className="hidden md:block flex-1 h-44 rounded-lg overflow-hidden">
               <img src={heroTeam} alt="Equipo" className="w-full h-full object-cover" />
             </div>
           </div>
