@@ -192,7 +192,7 @@ const Navbar = () => {
               className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary pl-2"
               onClick={() => setMobileOpen(false)}
             >
-              {s.customIcon ? <img src={s.customIcon} alt="" className="h-4 w-4" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} /> : s.icon && <s.icon className="h-4 w-4 text-primary" />}
+              <img src={s.customIcon} alt="" className="h-4 w-4" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} />
               {s.title}
             </a>
           ))}
