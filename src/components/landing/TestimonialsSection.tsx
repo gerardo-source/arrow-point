@@ -42,9 +42,9 @@ const TestimonialsSection = () => {
             </Button>
           </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {testimonials.map((t, i) => (
-            <div key={i} className="rounded-2xl border border-border bg-card p-4 space-y-3 max-w-xs">
+            <div key={i} className="rounded-2xl border border-border bg-card p-5 space-y-3">
               <Quote className="h-8 w-8 text-primary rotate-180" />
               <p className="text-muted-foreground text-sm leading-relaxed">{t.text}</p>
               <div className="flex items-center gap-3">
