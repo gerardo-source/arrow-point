@@ -148,14 +148,14 @@ const Navbar = () => {
           ref={megaRef}
           className="w-full border-b border-border bg-background animate-fade-in"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-center gap-6">
-            <div className="flex items-center gap-6">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3 flex items-stretch justify-center gap-4">
+            <div className="flex items-center gap-4">
               {megaMenuServices.map((s) => (
                 <a
                   key={s.title}
                   href={s.href}
                   onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
-                  className="flex items-center gap-4 rounded-xl px-6 py-5 hover:bg-accent/50 transition-colors whitespace-nowrap"
+                  className="flex items-center gap-4 rounded-xl px-5 py-4 hover:bg-accent/50 transition-colors whitespace-nowrap"
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <s.icon className="h-6 w-6" />
@@ -164,7 +164,7 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            <div className="hidden md:block flex-1 h-36 rounded-xl overflow-hidden">
+            <div className="hidden md:block w-60 h-44 rounded-lg overflow-hidden">
               <img src={heroTeam} alt="Equipo" className="w-full h-full object-cover" />
             </div>
           </div>
