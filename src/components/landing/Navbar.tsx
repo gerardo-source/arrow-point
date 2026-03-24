@@ -24,13 +24,20 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const megaRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 10);
+      setVisible(currentY < lastScrollY.current || currentY < 10);
+      lastScrollY.current = currentY;
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
