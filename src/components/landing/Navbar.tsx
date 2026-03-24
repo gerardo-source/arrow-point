@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, BarChart3 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ceoIcon from "@/assets/icons/ceo-2.svg";
+import moneyIcon from "@/assets/icons/money-2.svg";
 import arrowpointLogo from "@/assets/arrowpoint-logo.png";
 import heroTeam from "@/assets/hero-team.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
