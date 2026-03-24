@@ -84,7 +84,7 @@ const Navbar = () => {
           <button
             ref={triggerRef}
             onClick={() => setMegaOpen(!megaOpen)}
-            className="text-sm text-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
+            className="text-base text-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
           >
             Servicios
             <svg
