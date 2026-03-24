@@ -42,53 +42,57 @@ const ContactForm = () => {
 
   return (
     <form className="space-y-4" onSubmit={handleSubmit} noValidate>
-      <div>
-        <input
-          type="text"
-          placeholder="Nombre"
-          value={name}
-          onChange={(e) => {
-            const v = e.target.value;
-            if (v === "" || nameRegex.test(v)) setName(v);
-          }}
-          className={`${inputBase} w-full ${errors.name ? errorClass : ""}`}
-        />
-        {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <input
+            type="text"
+            placeholder="Nombre"
+            value={name}
+            onChange={(e) => {
+              const v = e.target.value;
+              if (v === "" || nameRegex.test(v)) setName(v);
+            }}
+            className={`${inputBase} w-full ${errors.name ? errorClass : ""}`}
+          />
+          {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
+        </div>
+        <div>
+          <input
+            type="email"
+            placeholder="Correo"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={`${inputBase} w-full ${errors.email ? errorClass : ""}`}
+          />
+          {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+        </div>
       </div>
-      <div>
-        <input
-          type="email"
-          placeholder="Correo"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className={`${inputBase} w-full ${errors.email ? errorClass : ""}`}
-        />
-        {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
-      </div>
-      <div>
-        <input
-          type="tel"
-          placeholder="Teléfono"
-          value={phone}
-          onChange={(e) => {
-            const v = e.target.value.replace(/\D/g, "").slice(0, 10);
-            setPhone(v);
-          }}
-          className={`${inputBase} w-full ${errors.phone ? errorClass : ""}`}
-        />
-        {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
-      </div>
-      <div className="relative">
-        <select
-          value={service}
-          onChange={(e) => setService(e.target.value)}
-          className={`rounded-lg px-4 py-3 pr-10 bg-white text-sm outline-none appearance-none w-full ${service ? "text-black" : "text-[#9ca3af]"}`}
-        >
-          <option value="" disabled>Servicio de interés</option>
-          <option value="faas">Finance as a Service</option>
-          <option value="nh">NH by Arrowpoint</option>
-        </select>
-        <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9ca3af] pointer-events-none" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <input
+            type="tel"
+            placeholder="Teléfono"
+            value={phone}
+            onChange={(e) => {
+              const v = e.target.value.replace(/\D/g, "").slice(0, 10);
+              setPhone(v);
+            }}
+            className={`${inputBase} w-full ${errors.phone ? errorClass : ""}`}
+          />
+          {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
+        </div>
+        <div className="relative">
+          <select
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+            className={`rounded-lg px-4 py-3 pr-10 bg-white text-sm outline-none appearance-none w-full ${service ? "text-black" : "text-[#9ca3af]"}`}
+          >
+            <option value="" disabled>Servicio de interés</option>
+            <option value="faas">Finance as a Service</option>
+            <option value="nh">NH by Arrowpoint</option>
+          </select>
+          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9ca3af] pointer-events-none" />
+        </div>
       </div>
       <div>
         <textarea
@@ -102,7 +106,7 @@ const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className="w-full flex items-center justify-center gap-2 rounded-lg bg-primary text-white px-6 py-3 text-sm font-medium hover:bg-primary/90 transition-colors"
+        className="flex items-center justify-center gap-2 rounded-lg bg-primary text-white px-6 py-3 text-sm font-medium hover:bg-primary/90 transition-colors w-full md:w-auto"
       >
         Enviar
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
