@@ -18,7 +18,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-14 px-6 bg-primary/5" id="servicios">
+    <section className="min-h-screen flex flex-col justify-center py-14 px-6 bg-primary/5" id="servicios">
       <div className="mx-auto space-y-12">
         <div className="text-center space-y-3">
           <span className="inline-block text-xs text-foreground font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full border border-border bg-background"><span className="text-primary">★</span> Servicios</span>
