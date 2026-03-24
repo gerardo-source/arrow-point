@@ -21,7 +21,7 @@ const GrowthModelSection = () => {
             Desde early stage hasta startups en expansión, nuestros servicios se adaptan a tu etapa: visibilidad financiera mensual hoy, estrategia y acompañamiento de CFO cuando empiezas a escalar.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8">
           {cards.map((c) => (
             <div key={c.title} className="rounded-2xl border border-border bg-card p-10 space-y-5 hover:shadow-lg transition-shadow text-left">
               <div className="flex items-center gap-3">

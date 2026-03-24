@@ -27,7 +27,7 @@ const AboutSection = () => {
 
   return (
     <section className="py-14 px-6" id="about">
-      <div className="mx-auto space-y-12">
+      <div className="max-w-7xl mx-auto space-y-12">
         {/* Logos bar */}
         <div className="text-center space-y-8">
           <p className="text-sm text-muted-foreground font-medium tracking-wide uppercase">
