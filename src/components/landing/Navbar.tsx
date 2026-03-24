@@ -158,8 +158,8 @@ const Navbar = () => {
                   onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
                   className="flex items-center gap-4 rounded-xl px-5 py-4 hover:bg-accent/50 transition-colors whitespace-nowrap"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <s.icon className="h-6 w-6" />
+                  <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${s.customIcon ? "bg-primary" : "bg-primary/10 text-primary"}`}>
+                    {s.customIcon ? <img src={s.customIcon} alt="" className="h-6 w-6" /> : s.icon && <s.icon className="h-6 w-6" />}
                   </div>
                   <span className="text-base font-medium text-foreground">{s.title}</span>
                 </a>
