@@ -30,7 +30,7 @@ const AboutSection = () => {
 
   return (
     <>
-      <section className="py-14 px-6" id="about-logos">
+      <section className="py-6 px-6" id="about-logos">
         <div ref={logosRevealRef} className={`text-center space-y-8 transition-all duration-700 ${logosVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <p className="text-sm text-muted-foreground font-medium tracking-wide uppercase">
             Equipos que crecen con Arrowpoint
@@ -50,7 +50,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="py-14 px-6" id="about">
+      <section className="py-10 px-6" id="about">
         <div
           ref={cardRef}
           className={`rounded-3xl p-12 md:p-16 lg:p-24 grid md:grid-cols-[auto_1px_1fr] gap-10 md:gap-14 items-center transition-all duration-700 ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}

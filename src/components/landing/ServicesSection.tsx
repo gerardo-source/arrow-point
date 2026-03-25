@@ -22,7 +22,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-14 px-6 bg-primary/5" id="servicios">
+    <section className="py-10 px-6 bg-primary/5" id="servicios">
       <div className="mx-auto space-y-12">
         <div ref={headerRef} className={`text-center space-y-3 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="inline-block text-xs text-foreground font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full border border-border bg-background"><span className="text-primary">★</span> Servicios</span>

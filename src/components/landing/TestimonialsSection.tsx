@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
   const t = testimonials[current];
 
   return (
-    <section className="py-24 px-6 bg-primary/5 relative overflow-hidden" id="testimonios">
+    <section className="py-10 px-6 bg-primary/5 relative overflow-hidden" id="testimonios">
       <img src={circlesBg} alt="" className="absolute bottom-0 left-0 w-80 md:w-[500px] -translate-x-1/4 translate-y-1/4 opacity-60 pointer-events-none" />
       <div ref={sectionRef} className={`mx-auto space-y-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <h2 className="text-3xl md:text-4xl text-foreground tracking-tight text-center font-bold" style={{ fontFamily: "'Metropolis', sans-serif" }}>
