@@ -15,6 +15,7 @@ import fundraisingIcon from "@/assets/icons/fundraising.svg";
 import financialIcon from "@/assets/icons/financial.svg";
 import reportesIcon from "@/assets/icons/reportes.svg";
 import flujoCashIcon from "@/assets/icons/flujo-cash.svg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
   {
@@ -50,6 +51,14 @@ const features = [
 ];
 
 const FinanceAsAService = () => {
+  const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
+  const { ref: cfoRef, isVisible: cfoVisible } = useScrollReveal();
+  const { ref: cfoImgRef, isVisible: cfoImgVisible } = useScrollReveal();
+  const { ref: cfoListRef, isVisible: cfoListVisible } = useScrollReveal();
+  const { ref: pricingRef, isVisible: pricingVisible } = useScrollReveal();
+  const { ref: ctaTextRef, isVisible: ctaTextVisible } = useScrollReveal();
+  const { ref: ctaFormRef, isVisible: ctaFormVisible } = useScrollReveal();
+
   return (
     <div className="min-h-screen bg-background">
       <TopBanner />
@@ -58,11 +67,12 @@ const FinanceAsAService = () => {
       {/* Hero */}
       <section className="px-4 pt-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#021538" }}>
-            {/* Decorative circles - bottom right */}
+          <div
+            ref={heroRef}
+            className={`relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
+            style={{ background: "#021538" }}
+          >
             <img src={decorativeCircles} alt="" className="absolute top-32 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
-
-            {/* Decorative arrows - bottom left */}
             <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
@@ -72,7 +82,6 @@ const FinanceAsAService = () => {
               Conoce más sobre nuestro servicio y experiencia.
             </p>
 
-            {/* Photo */}
             <div className="relative z-10 mt-10">
               <img src={ceoFinance} alt="Finance leader" className="w-52 md:w-64 rounded-full object-cover" fetchPriority="high" loading="eager" />
             </div>
@@ -83,14 +92,19 @@ const FinanceAsAService = () => {
       {/* CFO Section */}
       <section className="px-4 py-16 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+          <h2
+            ref={cfoRef}
+            className={`text-2xl md:text-3xl font-bold text-foreground text-center transition-all duration-700 ${cfoVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
             Un CFO que piensa contigo el crecimiento de tu startup
           </h2>
-          {/* Image placeholder */}
-          <div className="w-full aspect-[16/8] rounded-xl overflow-hidden">
+          <div
+            ref={cfoImgRef}
+            className={`w-full aspect-[16/8] rounded-xl overflow-hidden transition-all duration-700 ${cfoImgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
             <img src={cfoTeam} alt="Equipo CFO trabajando" className="w-full h-full object-cover" />
           </div>
-          <div className="space-y-4">
+          <div className={`space-y-4 transition-all duration-700 ${cfoImgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <p className="text-foreground leading-relaxed">
               Estrategia financiera, claridad en tus números y acompañamiento real para tomar decisiones clave y prepararte para inversionistas.
             </p>
@@ -98,8 +112,10 @@ const FinanceAsAService = () => {
               Con nuestro servicio de Finance as a Service te acompañamos como socio estratégico en el día a día financiero:
             </p>
           </div>
-          {/* Numbered list items */}
-          <div className="flex flex-col items-center gap-3 py-6">
+          <div
+            ref={cfoListRef}
+            className={`flex flex-col items-center gap-3 py-6 transition-all duration-700 ${cfoListVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
             {[
               { num: 1, text: "Reportes ejecutivos listos para board", icon: reportesIcon },
               { num: 2, text: "Modelos y proyecciones financieras", icon: financialIcon },
@@ -127,7 +143,10 @@ const FinanceAsAService = () => {
 
       {/* Pricing Plans */}
       <section className="px-4 py-20">
-        <div className="max-w-7xl mx-auto">
+        <div
+          ref={pricingRef}
+          className={`max-w-7xl mx-auto transition-all duration-700 ${pricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Inicial */}
             <div className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col">
@@ -244,7 +263,11 @@ const FinanceAsAService = () => {
       <section className="py-0">
         <div className="w-full overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start relative">
           <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="space-y-4 text-white relative z-10" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+          <div
+            ref={ctaTextRef}
+            className={`space-y-4 text-white relative z-10 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+          >
             <h2 className="text-2xl md:text-3xl font-bold leading-tight">
               Deja de adivinar.<br />Empieza a decidir<br />con confianza.
             </h2>
@@ -252,7 +275,10 @@ const FinanceAsAService = () => {
               Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
             </p>
           </div>
-          <div className="relative z-10">
+          <div
+            ref={ctaFormRef}
+            className={`relative z-10 transition-all duration-700 delay-200 ${ctaFormVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+          >
             <ContactForm />
           </div>
         </div>
