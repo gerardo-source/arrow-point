@@ -14,17 +14,17 @@ const casos = [
 {
   title: "Caso #1",
   color: "#0066FF",
-  content: "Contenido del caso de éxito #1. Descripción detallada del proyecto y los resultados obtenidos."
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 },
 {
   title: "Caso #1",
   color: "#6B9BFF",
-  content: "Contenido del caso de éxito #2. Descripción detallada del proyecto y los resultados obtenidos."
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo."
 },
 {
   title: "Caso #1",
   color: "#5BC8C8",
-  content: "Contenido del caso de éxito #3. Descripción detallada del proyecto y los resultados obtenidos."
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
 }];
 
 
