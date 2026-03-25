@@ -9,6 +9,7 @@ import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
 import casosHero from "@/assets/casos-hero.png";
 import { useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const casos = [
 {
@@ -30,6 +31,10 @@ const casos = [
 
 const CasosDeExito = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
+  const { ref: acordeonRef, isVisible: acordeonVisible } = useScrollReveal();
+  const { ref: ctaTextRef, isVisible: ctaTextVisible } = useScrollReveal();
+  const { ref: ctaFormRef, isVisible: ctaFormVisible } = useScrollReveal();
 
   return (
     <div className="min-h-screen bg-background">
@@ -39,11 +44,12 @@ const CasosDeExito = () => {
       {/* Hero */}
       <section className="px-6 pt-20 pb-20">
         <div className="max-w-full mx-auto">
-          <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#5BC8C8" }}>
-            {/* Decorative circles - bottom right */}
+          <div
+            ref={heroRef}
+            className={`relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
+            style={{ background: "#5BC8C8" }}
+          >
             <img src={decorativeCircles} alt="" className="absolute top-24 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
-
-            {/* Decorative arrows - bottom left */}
             <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10 italic">
@@ -53,7 +59,6 @@ const CasosDeExito = () => {
               Conoce más sobre nuestro equipo y experiencia
             </p>
 
-            {/* Photo */}
             <div className="relative z-10 mt-10">
               <img src={casosHero} alt="Casos de éxito" className="w-52 md:w-64 object-contain" fetchPriority="high" loading="eager" />
             </div>
@@ -63,7 +68,10 @@ const CasosDeExito = () => {
 
       {/* Casos accordion */}
       <section className="px-6 py-16 bg-primary/5">
-        <div className="max-w-full mx-auto">
+        <div
+          ref={acordeonRef}
+          className={`max-w-full mx-auto transition-all duration-700 ${acordeonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
             {casos.map((caso, index) =>
             <div
               key={index}
@@ -102,7 +110,11 @@ const CasosDeExito = () => {
       <section className="py-0">
         <div className="w-full overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start relative">
           <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="space-y-4 text-white relative z-10" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+          <div
+            ref={ctaTextRef}
+            className={`space-y-4 text-white relative z-10 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+          >
             <h2 className="text-2xl leading-tight font-normal md:text-4xl">
               Deja de adivinar.<br />Empieza a decidir<br />con confianza.
             </h2>
@@ -110,7 +122,10 @@ const CasosDeExito = () => {
               Agenda una llamada y ve cómo <br />Arrowpoint puede ser tu copiloto <br />financiero.
             </p>
           </div>
-          <div className="relative z-10">
+          <div
+            ref={ctaFormRef}
+            className={`relative z-10 transition-all duration-700 delay-200 ${ctaFormVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+          >
             <ContactForm />
           </div>
         </div>
