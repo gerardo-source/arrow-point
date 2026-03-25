@@ -142,7 +142,7 @@ const FinanceAsAService = () => {
       </section>
 
       {/* Pricing Plans */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 md:py-20">
         <div
           ref={pricingRef}
           className={`max-w-7xl mx-auto transition-all duration-700 ${pricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
