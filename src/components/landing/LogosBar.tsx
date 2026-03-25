@@ -39,7 +39,7 @@ const LogosBar = () => {
   return (
     <section className="py-6 md:py-12 px-4 bg-muted/50 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center space-y-8">
-        <p className="tracking-wide uppercase font-semibold text-black text-lg">
+        <p className="tracking-wide uppercase font-semibold text-black text-base">
           Empresas que ya confían en nosotros
         </p>
         <div className="overflow-hidden">
