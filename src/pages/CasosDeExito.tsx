@@ -76,7 +76,7 @@ const CasosDeExito = () => {
               
                 <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between px-10 py-7 text-white">
+                className="w-full flex items-center justify-between px-10 py-10 text-white">
                 
                   <span className="text-lg font-semibold">{caso.title}</span>
                   <ChevronDown
