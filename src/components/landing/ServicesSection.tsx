@@ -10,12 +10,14 @@ const ServicesSection = () => {
     {
       title: "Finance as a Service",
       icon: ceoIcon,
+      link: "/finance-as-a-service",
       description:
         "Estrategia, claridad y un CFO a tu lado. Reportes listos para board, modelos financieros, planeación de cash y acompañamiento en fundraising. Un socio que entiende startups y habla el idioma de inversionistas.",
     },
     {
       title: "NH by Arrowpoint",
       icon: moneyIcon,
+      link: "/nh-by-arrowpoint",
       description:
         "Claridad financiera mensual, sin complejidad. Procesamos tus números con BI y AI y te entregamos un reporte ejecutivo con las métricas que importan. Ideal para founders early stage que quieren control sin armar un equipo financiero.",
     },
@@ -37,7 +39,7 @@ const ServicesSection = () => {
               <img src={s.icon} alt={s.title} className="w-14 h-14" />
               <h3 className="text-2xl font-bold text-foreground">{s.title}</h3>
               <p className="text-muted-foreground text-base leading-relaxed">{s.description}</p>
-              <a href="#" className="inline-flex items-center text-primary font-medium text-base hover:underline">
+              <a href={s.link} className="inline-flex items-center text-primary font-medium text-base hover:underline">
                 Ver más →
               </a>
             </div>
