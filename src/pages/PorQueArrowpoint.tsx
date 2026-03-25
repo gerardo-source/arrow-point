@@ -51,7 +51,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Description + Highlight */}
-      <section className="px-4 py-8 md:py-16 bg-primary/5">
+      <section className="px-4 py-4 md:py-16 bg-primary/5">
         <div
           ref={descRef}
           className={`max-w-3xl mx-auto text-center space-y-8 transition-all duration-700 ${descVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
