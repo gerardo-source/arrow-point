@@ -56,7 +56,7 @@ const AboutSection = () => {
           style={{ backgroundColor: "#021538" }}>
           
           <div className="flex items-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">¿Quiénes Somos?</h2>
+            <h2 className="text-4xl font-bold text-white md:text-4xl">¿Quiénes Somos?</h2>
           </div>
 
           <div className="hidden md:block w-px bg-white/30 self-stretch" />
