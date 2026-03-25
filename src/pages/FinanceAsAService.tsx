@@ -119,7 +119,7 @@ const FinanceAsAService = () => {
             ))}
           </div>
 
-          <p className="text-foreground leading-relaxed">
+          <p className="text-foreground leading-relaxed font-medium">
             Hablamos el idioma de los founders (MRR, burn rate, ARR) y convertimos tus números en decisiones claras para escalar con bases sólidas.
           </p>
         </div>
