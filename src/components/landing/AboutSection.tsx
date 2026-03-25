@@ -32,7 +32,7 @@ const AboutSection = () => {
     <>
       <section className="py-10 px-6" id="about-logos">
         <div ref={logosRevealRef} className={`text-center space-y-8 transition-all duration-700 ${logosVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <p className="text-sm text-muted-foreground font-medium tracking-wide uppercase">
+          <p className="tracking-wide uppercase font-semibold text-black text-base">
             Equipos que crecen con Arrowpoint
           </p>
           <div className="overflow-hidden">
