@@ -42,7 +42,15 @@ const TestimonialsSection = () => {
           Lo que dicen los founders que trabajan con nosotros
         </h2>
 
-        {/* Desktop: 3 cards grid */}
+        {/* Desktop: arrows + 3 cards grid */}
+        <div className="hidden md:flex justify-end gap-3 -mt-4 mb-2">
+          <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={prev}>
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          <Button variant="outline" size="icon" className="rounded-full border-primary text-primary hover:bg-primary/10" onClick={next}>
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+        </div>
         <div className="hidden md:grid md:grid-cols-3 gap-6">
           {testimonials.map((item, i) => (
             <div key={i} className="rounded-2xl border border-border bg-card p-8 space-y-5">
