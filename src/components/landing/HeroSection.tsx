@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center px-6 pt-4 pb-4">
+    <section className="flex items-center px-6 py-10">
       <div className="max-w-full mx-auto border-2 border-primary rounded-3xl p-8 md:p-10">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Image - shows first on mobile via order */}
