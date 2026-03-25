@@ -75,7 +75,7 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "Casos de éxito", href: "/casos-de-exito" },
+    { label: "Casos de éxitos", href: "/casos-de-exito" },
   ];
 
   return (
