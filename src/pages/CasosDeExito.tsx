@@ -53,7 +53,7 @@ const CasosDeExito = () => {
             <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10 italic">
-              Casos de éxito
+              Casos de éxitos
             </h1>
             <p className="text-white/80 text-base md:text-lg max-w-xl relative z-10">
               Conoce más sobre nuestro equipo y experiencia
