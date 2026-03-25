@@ -65,7 +65,7 @@ const FinanceAsAService = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-4 pt-20 pb-20">
+      <section className="px-4 pt-20 pb-8 md:pb-20">
         <div className="max-w-6xl mx-auto">
           <div
             ref={heroRef}
