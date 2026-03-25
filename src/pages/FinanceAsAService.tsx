@@ -65,7 +65,7 @@ const FinanceAsAService = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-4 pt-20 pb-20">
+      <section className="px-4 pt-20 pb-8 md:pb-20">
         <div className="max-w-6xl mx-auto">
           <div
             ref={heroRef}
@@ -90,7 +90,7 @@ const FinanceAsAService = () => {
       </section>
 
       {/* CFO Section */}
-      <section className="px-4 py-16 bg-primary/5">
+      <section className="px-4 py-8 md:py-16 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2
             ref={cfoRef}
