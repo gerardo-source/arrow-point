@@ -46,7 +46,7 @@ const NHByArrowpoint = () => {
       </section>
 
       {/* About NH Section */}
-      <section className="px-4 py-16 bg-primary/5">
+      <section className="px-4 py-10 md:py-12 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="w-full aspect-[16/8] rounded-xl overflow-hidden">
             <img src={nhSection} alt="Análisis financiero" className="w-full h-full object-cover" />
