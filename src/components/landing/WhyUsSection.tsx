@@ -18,7 +18,7 @@ const WhyUsSection = () => {
         <div ref={ref} className={`rounded-3xl p-8 md:p-16 lg:p-20 flex flex-col gap-10 overflow-hidden transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`} style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
           <div className="flex flex-col md:grid md:grid-cols-[1fr_1px_1fr] gap-10 md:gap-14 items-stretch">
             <div className="text-white flex flex-col gap-6 md:justify-center md:items-start md:text-left">
-              <h2 className="text-3xl font-normal md:text-4xl text-left">¿Por qué Nosotros?</h2>
+              <h2 className="text-3xl md:text-4xl text-left font-bold">¿Por qué Nosotros?</h2>
               <div className="md:hidden w-full h-px bg-white/30" />
               <p className="text-white/80 text-lg md:text-xl leading-relaxed text-left">
                 Conoce los beneficios de crecer con nosotros.
