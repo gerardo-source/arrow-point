@@ -82,7 +82,7 @@ const PorQueArrowpoint = () => {
               ref={clarityTextRef}
               className={`space-y-4 transition-all duration-700 delay-200 ${clarityTextVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+              <h2 className="text-2xl font-bold text-foreground leading-tight md:text-3xl">
                 Primero claridad, luego decisiones.
               </h2>
               <p className="text-muted-foreground text-base leading-relaxed">
@@ -127,7 +127,7 @@ const PorQueArrowpoint = () => {
             style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}
           >
             <div className="flex flex-col md:flex-row items-center gap-3 text-white">
-              <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap text-center md:text-left">Ideal para</h2>
+              <h2 className="text-2xl font-bold whitespace-nowrap text-center md:text-left md:text-4xl">Ideal para</h2>
               <svg className="hidden md:block" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
             <div className="block md:hidden w-full h-px bg-white/40" />
