@@ -90,7 +90,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           <a
             href="/por-que-arrowpoint"
             onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); }}
@@ -142,7 +142,7 @@ const Navbar = () => {
 
 
         {/* Mobile toggle */}
-        <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
+        <button className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
@@ -169,7 +169,7 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            <div className="hidden md:block w-[45%] h-44 rounded-lg overflow-hidden">
+            <div className="hidden lg:block w-[45%] h-44 rounded-lg overflow-hidden">
               <img src={heroTeam} alt="Equipo" className="w-full h-full object-cover" />
             </div>
           </div>
@@ -178,7 +178,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-b border-border bg-background px-4 pb-4 space-y-3">
+        <div className="lg:hidden border-b border-border bg-background px-4 pb-4 space-y-3">
           <a
             href="/por-que-arrowpoint"
             className="block text-sm text-foreground/80 hover:text-primary pt-2"
