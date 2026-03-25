@@ -98,19 +98,19 @@ const NHByArrowpoint = () => {
       <LogosBar />
 
       {/* CTA Contact Form */}
-      <section className="py-0">
-        <div className="w-full overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start relative">
-          <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <section className="py-24 px-6 relative overflow-hidden">
+        <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
           <div
             ref={ctaTextRef}
-            className={`space-y-4 text-white relative z-10 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+            className={`space-y-6 text-white pl-4 md:pl-8 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold leading-tight">
+            <h2 className="text-2xl leading-tight font-normal md:text-4xl">
               Deja de adivinar.<br />Empieza a decidir<br />con confianza.
             </h2>
-            <p className="text-white/80 text-sm leading-relaxed">
-              Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
+            <p className="text-white/80 leading-relaxed text-base">
+              Agenda una llamada y ve cómo <br />Arrowpoint puede ser tu copiloto <br />financiero.
             </p>
           </div>
           <div
