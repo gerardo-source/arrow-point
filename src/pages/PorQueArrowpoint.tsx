@@ -126,10 +126,11 @@ const PorQueArrowpoint = () => {
             className={`rounded-3xl overflow-hidden px-8 md:px-14 py-20 md:py-28 grid md:grid-cols-[auto_1px_1fr] gap-8 md:gap-10 items-center transition-all duration-700 ${idealVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
             style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}
           >
-            <div className="flex items-center gap-3 text-white">
-              <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap">Ideal para</h2>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <div className="flex flex-col md:flex-row items-center gap-3 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap text-center md:text-left">Ideal para</h2>
+              <svg className="hidden md:block" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
+            <div className="block md:hidden w-16 h-px bg-white/40 mx-auto" />
             <div className="hidden md:block w-px bg-white/30 self-stretch" />
             <ul className="space-y-6">
               <li className="flex items-start gap-4">
