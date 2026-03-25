@@ -27,7 +27,7 @@ const NHByArrowpoint = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-6 pt-20 pb-10 md:pb-14">
+      <section className="px-6 pt-32 pb-10" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
         <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
@@ -53,7 +53,7 @@ const NHByArrowpoint = () => {
       </section>
 
       {/* About NH Section */}
-      <section className="px-4 py-10 md:py-12 bg-primary/5">
+      <section className="px-4 py-10 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
           <div
             ref={imgRef}
@@ -98,7 +98,7 @@ const NHByArrowpoint = () => {
       <LogosBar />
 
       {/* CTA Contact Form */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-10 px-6 relative overflow-hidden">
         <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
           <div
