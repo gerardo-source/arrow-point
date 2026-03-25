@@ -169,12 +169,12 @@ const FinanceAsAService = () => {
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Incluye:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>✓ Todo del plan Inicial</li>
-                  <li>✓ Seguimiento financiero recurrente</li>
-                  <li>✓ Análisis de resultados (qué pasó y por qué)</li>
-                  <li>✓ Finance as a Service operativo</li>
-                  <li>✓ Seguimiento de indicadores clave</li>
-                  <li>✓ Soporte financiero continuo</li>
+                  <li><span className="text-primary">✓</span> Todo del plan Inicial</li>
+                  <li><span className="text-primary">✓</span> Seguimiento financiero recurrente</li>
+                  <li><span className="text-primary">✓</span> Análisis de resultados (qué pasó y por qué)</li>
+                  <li><span className="text-primary">✓</span> Finance as a Service operativo</li>
+                  <li><span className="text-primary">✓</span> Seguimiento de indicadores clave</li>
+                  <li><span className="text-primary">✓</span> Soporte financiero continuo</li>
                 </ul>
               </div>
             </div>
