@@ -57,7 +57,7 @@ const NHByArrowpoint = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <div
             ref={imgRef}
-            className={`w-full aspect-[16/8] rounded-xl overflow-hidden transition-all duration-700 ${imgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`w-full aspect-[4/3] rounded-xl overflow-hidden transition-all duration-700 ${imgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <img src={nhSection} alt="Análisis financiero" className="w-full h-full object-cover" />
           </div>
