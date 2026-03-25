@@ -159,8 +159,8 @@ const Navbar = () => {
                   onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
                   className="flex items-center gap-4 rounded-xl px-8 py-6 hover:bg-accent/50 transition-colors whitespace-nowrap"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white">
-                    <img src={s.customIcon} alt="" className="h-6 w-6" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} />
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white shadow-md">
+                    <img src={s.customIcon} alt="" className="h-9 w-9" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} />
                   </div>
                   <span className="text-base font-medium text-foreground">{s.title}</span>
                 </a>
