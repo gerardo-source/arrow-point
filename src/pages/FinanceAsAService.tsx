@@ -100,7 +100,7 @@ const FinanceAsAService = () => {
           </h2>
           <div
             ref={cfoImgRef}
-            className={`w-full aspect-[4/3] rounded-xl overflow-hidden transition-all duration-700 ${cfoImgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`w-full aspect-[16/9] rounded-xl overflow-hidden transition-all duration-700 ${cfoImgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <img src={cfoTeam} alt="Equipo CFO trabajando" className="w-full h-full object-cover" />
           </div>
