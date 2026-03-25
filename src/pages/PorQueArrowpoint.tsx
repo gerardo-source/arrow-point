@@ -119,7 +119,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Ideal Para Section */}
-      <section className="px-6 py-8 md:py-16">
+      <section className="px-6 py-4 md:py-16">
         <div className="max-w-full mx-auto">
           <div
             ref={idealRef}
