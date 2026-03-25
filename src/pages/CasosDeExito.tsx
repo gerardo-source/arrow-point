@@ -70,7 +70,7 @@ const CasosDeExito = () => {
               className="rounded-2xl overflow-hidden shadow-lg relative"
               style={{
                 background: caso.color,
-                marginTop: index === 0 ? 0 : "-0.75rem",
+                marginTop: index === 0 ? 0 : "-2.5rem",
                 zIndex: index + 1
               }}>
               
