@@ -20,7 +20,7 @@ const NHByArrowpoint = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-4 pt-20 pb-20">
+      <section className="px-4 pt-20 pb-10 md:pb-14">
         <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#021538" }}>
             {/* Decorative circles - bottom right */}
@@ -46,7 +46,7 @@ const NHByArrowpoint = () => {
       </section>
 
       {/* About NH Section */}
-      <section className="px-4 py-16 bg-primary/5">
+      <section className="px-4 py-10 md:py-12 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="w-full aspect-[16/8] rounded-xl overflow-hidden">
             <img src={nhSection} alt="Análisis financiero" className="w-full h-full object-cover" />
