@@ -76,11 +76,11 @@ const CasosDeExito = () => {
               
                 <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between px-10 py-10 text-white">
+                className="w-full flex items-center justify-between px-14 py-14 text-white">
                 
-                  <span className="text-lg font-semibold">{caso.title}</span>
+                  <span className="text-xl font-semibold">{caso.title}</span>
                   <ChevronDown
-                  className={`w-7 h-7 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
+                  className={`w-10 h-10 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
                 
                 </button>
                 <div
