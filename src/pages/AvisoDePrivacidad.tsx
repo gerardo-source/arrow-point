@@ -14,7 +14,7 @@ const AvisoDePrivacidad = () => {
       <TopBanner />
       <Navbar />
 
-      <section className="px-4 py-12 md:py-16">
+      <section className="px-6 py-12 md:py-16">
         <div className="max-w-4xl mx-auto">
           <h1
             ref={titleRef}
