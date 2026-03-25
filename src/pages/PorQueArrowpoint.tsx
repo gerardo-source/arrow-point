@@ -44,7 +44,7 @@ const PorQueArrowpoint = () => {
             </p>
 
             <div className="relative z-10 mt-10">
-              <img src={porqueHero} alt="Arrowpoint team" className="w-52 md:w-64" fetchPriority="high" loading="eager" />
+              <img src={porqueHero} alt="Arrowpoint team" className="w-60 md:w-72" fetchPriority="high" loading="eager" />
             </div>
           </div>
         </div>
