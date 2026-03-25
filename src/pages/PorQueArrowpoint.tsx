@@ -151,7 +151,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* CTA Contact Section */}
-      <section className="py-0">
+      <section className="py-24 px-6 relative overflow-hidden">
         <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
           <div
