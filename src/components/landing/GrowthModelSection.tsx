@@ -20,7 +20,7 @@ const GrowthModelSection = () => {
     <section className="py-14 px-6">
       <div className="mx-auto space-y-12">
         <div ref={headerRef} className={`text-center space-y-4 max-w-3xl mx-auto transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">Un modelo que crece contigo</h2>
+          <h2 className="text-4xl font-bold text-foreground md:text-4xl">Un modelo que crece contigo</h2>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
             Desde early stage hasta startups en expansión, nuestros servicios se adaptan a tu etapa: visibilidad financiera mensual hoy, estrategia y acompañamiento de CFO cuando empiezas a escalar.
           </p>
