@@ -12,8 +12,15 @@ import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
 import flujoCajaIcon from "@/assets/icons/flujo-caja.svg";
 import bolsaDineroIcon from "@/assets/icons/bolsa-dinero.svg";
 import metricasIcon from "@/assets/icons/metricas.svg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const NHByArrowpoint = () => {
+  const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
+  const { ref: imgRef, isVisible: imgVisible } = useScrollReveal();
+  const { ref: listRef, isVisible: listVisible } = useScrollReveal();
+  const { ref: ctaTextRef, isVisible: ctaTextVisible } = useScrollReveal();
+  const { ref: ctaFormRef, isVisible: ctaFormVisible } = useScrollReveal();
+
   return (
     <div className="min-h-screen bg-background">
       <TopBanner />
@@ -22,11 +29,12 @@ const NHByArrowpoint = () => {
       {/* Hero */}
       <section className="px-4 pt-20 pb-10 md:pb-14">
         <div className="max-w-6xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#021538" }}>
-            {/* Decorative circles - bottom right */}
+          <div
+            ref={heroRef}
+            className={`relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
+            style={{ background: "#021538" }}
+          >
             <img src={decorativeCircles} alt="" className="absolute top-48 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
-
-            {/* Decorative arrows - bottom left */}
             <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
@@ -37,7 +45,6 @@ const NHByArrowpoint = () => {
               El primer paso para entender tus números y empezar a tomar decisiones con métricas reales.
             </p>
 
-            {/* Photo */}
             <div className="relative z-10 mt-10">
               <img src={nhHero} alt="NH by Arrowpoint" className="w-52 md:w-64 object-contain" fetchPriority="high" loading="eager" />
             </div>
@@ -48,16 +55,24 @@ const NHByArrowpoint = () => {
       {/* About NH Section */}
       <section className="px-4 py-10 md:py-12 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="w-full aspect-[16/8] rounded-xl overflow-hidden">
+          <div
+            ref={imgRef}
+            className={`w-full aspect-[16/8] rounded-xl overflow-hidden transition-all duration-700 ${imgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
             <img src={nhSection} alt="Análisis financiero" className="w-full h-full object-cover" />
           </div>
-          <p className="text-foreground leading-relaxed">
-            NH es nuestro servicio de reporteo financiero por suscripción para startups early stage que aún no necesitan un CFO completo, pero sí visibilidad clara y constante.
-          </p>
-          <p className="text-foreground leading-relaxed">
-            Procesamos tu información con tecnología, BI e inteligencia artificial y te entregamos un reporte ejecutivo mensual con:
-          </p>
-          <div className="flex flex-col items-center gap-3 py-6">
+          <div className={`space-y-4 transition-all duration-700 ${imgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <p className="text-foreground leading-relaxed">
+              NH es nuestro servicio de reporteo financiero por suscripción para startups early stage que aún no necesitan un CFO completo, pero sí visibilidad clara y constante.
+            </p>
+            <p className="text-foreground leading-relaxed">
+              Procesamos tu información con tecnología, BI e inteligencia artificial y te entregamos un reporte ejecutivo mensual con:
+            </p>
+          </div>
+          <div
+            ref={listRef}
+            className={`flex flex-col items-center gap-3 py-6 transition-all duration-700 ${listVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
             {[
               { num: 1, text: "Ingresos y gastos", icon: ingresosGastosIcon },
               { num: 2, text: "Flujo de caja", icon: flujoCajaIcon },
@@ -86,7 +101,11 @@ const NHByArrowpoint = () => {
       <section className="py-0">
         <div className="w-full overflow-hidden px-8 md:px-16 py-16 grid md:grid-cols-2 gap-10 items-start relative">
           <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="space-y-4 text-white relative z-10" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
+          <div
+            ref={ctaTextRef}
+            className={`space-y-4 text-white relative z-10 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+          >
             <h2 className="text-2xl md:text-3xl font-bold leading-tight">
               Deja de adivinar.<br />Empieza a decidir<br />con confianza.
             </h2>
@@ -94,7 +113,10 @@ const NHByArrowpoint = () => {
               Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
             </p>
           </div>
-          <div className="relative z-10">
+          <div
+            ref={ctaFormRef}
+            className={`relative z-10 transition-all duration-700 delay-200 ${ctaFormVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+          >
             <ContactForm />
           </div>
         </div>
