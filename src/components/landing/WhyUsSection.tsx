@@ -17,14 +17,14 @@ const WhyUsSection = () => {
       <div className="mx-auto">
         <div ref={ref} className={`rounded-3xl p-8 md:p-16 lg:p-20 flex flex-col gap-10 overflow-hidden transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`} style={{ background: "linear-gradient(135deg, #3888FF, #063D9F)" }}>
           <div className="flex flex-col md:grid md:grid-cols-[1fr_1px_1fr] gap-10 md:gap-14 items-stretch">
-            <div className="text-white flex flex-col gap-6 md:justify-center md:items-center md:text-center">
+            <div className="text-white flex flex-col gap-6 md:justify-center md:items-start md:text-left">
               <h2 className="text-3xl font-normal md:text-4xl text-left">¿Por qué Nosotros?</h2>
               <p className="text-white/80 text-lg md:text-xl leading-relaxed text-left">
                 Conoce los beneficios de crecer con nosotros.
               </p>
-              <a href="#contacto" className="hidden md:inline-flex items-center gap-2 rounded-lg bg-white text-black w-auto px-5 py-2 text-sm font-medium hover:bg-white/90 transition-colors mt-2">
+              <a href="#contacto" className="hidden md:inline-flex items-center gap-2 rounded-lg bg-white text-black w-auto px-6 py-2.5 text-base font-medium hover:bg-white/90 transition-colors mt-2 self-start">
                 Habla con equipo
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3888FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3888FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
             <div className="hidden md:block w-px bg-white/30" />
