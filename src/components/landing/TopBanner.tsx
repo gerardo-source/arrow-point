@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
+const BANNER_HEIGHT = 40;
+
 const TopBanner = () => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    document.documentElement.style.setProperty("--top-banner-offset", visible ? "40px" : "0px");
-    return () => document.documentElement.style.setProperty("--top-banner-offset", "0px");
+    document.documentElement.style.setProperty(
+      "--top-banner-height",
+      visible ? `${BANNER_HEIGHT}px` : "0px"
+    );
+    return () => document.documentElement.style.setProperty("--top-banner-height", "0px");
   }, [visible]);
 
   if (!visible) return null;
 
   return (
-    <div className="relative z-[60] bg-primary text-primary-foreground py-2.5 px-4 text-center text-sm">
+    <div
+      className="fixed top-0 left-0 right-0 z-[60] bg-primary text-primary-foreground py-2.5 px-4 text-center text-sm"
+      style={{ height: `${BANNER_HEIGHT}px` }}
+    >
       <span>Hola, aquí puedes poner alguna promoción o novedad.</span>
       <button
         onClick={() => setVisible(false)}
