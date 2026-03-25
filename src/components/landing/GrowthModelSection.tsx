@@ -17,7 +17,7 @@ const GrowthModelSection = () => {
   ];
 
   return (
-    <section className="py-14 px-6">
+    <section className="py-10 px-6">
       <div className="mx-auto space-y-12">
         <div ref={headerRef} className={`text-center space-y-4 max-w-3xl mx-auto transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-4xl font-bold text-foreground md:text-4xl">Un modelo que crece contigo</h2>
