@@ -130,7 +130,7 @@ const FinanceAsAService = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Inicial */}
-            <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
+            <div className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground text-center">Inicial</p>
               <h3 className="text-lg font-bold text-primary text-center">Reportes ejecutivos listos para board</h3>
               <div className="space-y-2">
@@ -154,7 +154,7 @@ const FinanceAsAService = () => {
             </div>
 
             {/* Básico */}
-            <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
+            <div className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground text-center">Básico</p>
               <h3 className="text-lg font-bold text-primary text-center">Operación con visibilidad</h3>
               <div className="space-y-2">
@@ -209,7 +209,7 @@ const FinanceAsAService = () => {
             </div>
 
             {/* Custom */}
-            <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
+            <div className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground text-center">Custom</p>
               <h3 className="text-lg font-bold text-primary text-center">Dirección financiera estratégica</h3>
               <div className="space-y-2">
