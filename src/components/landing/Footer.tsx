@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white">
+        <div className="border-t-2 border-white/40 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white">
           <span>© Arrowpoint. 2026. Todos los derechos reservados</span>
           <div className="flex gap-6">
             <a href="/politica-de-cookies" className="hover:text-white transition-colors">Política de cookies</a>
