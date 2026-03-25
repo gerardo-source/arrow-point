@@ -62,7 +62,7 @@ const CasosDeExito = () => {
       </section>
 
       {/* Casos accordion */}
-      <section className="px-4 py-16">
+      <section className="px-4 py-16 bg-primary/5">
         <div className="max-w-4xl mx-auto">
             {casos.map((caso, index) =>
             <div
