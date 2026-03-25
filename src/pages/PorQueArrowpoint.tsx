@@ -27,7 +27,7 @@ const PorQueArrowpoint = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="px-6 pt-20 pb-20">
+      <section className="px-6 pt-32 pb-20" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
         <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
