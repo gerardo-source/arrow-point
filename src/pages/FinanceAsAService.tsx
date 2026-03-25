@@ -132,7 +132,7 @@ const FinanceAsAService = () => {
             {/* Inicial */}
             <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground text-center">Inicial</p>
-              <h3 className="text-lg font-bold text-foreground text-center">Reportes ejecutivos listos para board</h3>
+              <h3 className="text-lg font-bold text-primary text-center">Reportes ejecutivos listos para board</h3>
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
@@ -156,7 +156,7 @@ const FinanceAsAService = () => {
             {/* Básico */}
             <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground text-center">Básico</p>
-              <h3 className="text-lg font-bold text-foreground text-center">Operación con visibilidad</h3>
+              <h3 className="text-lg font-bold text-primary text-center">Operación con visibilidad</h3>
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
@@ -186,7 +186,7 @@ const FinanceAsAService = () => {
                 </span>
               </div>
               <p className="text-sm text-muted-foreground text-center">Estándar</p>
-              <h3 className="text-lg font-bold text-foreground text-center">Control y toma de decisiones</h3>
+              <h3 className="text-lg font-bold text-primary text-center">Control y toma de decisiones</h3>
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
@@ -211,7 +211,7 @@ const FinanceAsAService = () => {
             {/* Custom */}
             <div className="rounded-2xl border border-border bg-card p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground text-center">Custom</p>
-              <h3 className="text-lg font-bold text-foreground text-center">Dirección financiera estratégica</h3>
+              <h3 className="text-lg font-bold text-primary text-center">Dirección financiera estratégica</h3>
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Ideal para empresas que:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
