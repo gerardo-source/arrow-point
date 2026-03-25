@@ -27,8 +27,8 @@ const NHByArrowpoint = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-4 pt-20 pb-10 md:pb-14">
-        <div className="max-w-6xl mx-auto">
+      <section className="px-6 pt-20 pb-10 md:pb-14">
+        <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
             className={`relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
