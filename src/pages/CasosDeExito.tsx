@@ -37,8 +37,8 @@ const CasosDeExito = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-4 pt-20 pb-20">
-        <div className="max-w-6xl mx-auto">
+      <section className="px-6 pt-20 pb-20">
+        <div className="max-w-full mx-auto">
           <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center" style={{ background: "#5BC8C8" }}>
             {/* Decorative circles - bottom right */}
             <img src={decorativeCircles} alt="" className="absolute top-24 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
