@@ -159,11 +159,11 @@ const PorQueArrowpoint = () => {
             className={`space-y-4 text-white relative z-10 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold leading-tight">
+            <h2 className="text-2xl leading-tight font-normal md:text-4xl">
               Deja de adivinar.<br />Empieza a decidir<br />con confianza.
             </h2>
-            <p className="text-white/80 text-sm leading-relaxed">
-              Agenda una llamada y ve cómo Arrowpoint puede ser tu copiloto financiero.
+            <p className="text-white/80 leading-relaxed text-base">
+              Agenda una llamada y ve cómo <br />Arrowpoint puede ser tu copiloto <br />financiero.
             </p>
           </div>
           <div
