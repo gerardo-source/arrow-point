@@ -65,7 +65,7 @@ const FinanceAsAService = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-6 pt-32 pb-8 md:pb-20" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
+      <section className="px-6 pt-32 pb-10" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
         <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
@@ -90,7 +90,7 @@ const FinanceAsAService = () => {
       </section>
 
       {/* CFO Section */}
-      <section className="px-4 py-8 md:py-16 bg-primary/5">
+      <section className="px-4 py-10 bg-primary/5">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2
             ref={cfoRef}
@@ -142,7 +142,7 @@ const FinanceAsAService = () => {
       </section>
 
       {/* Pricing Plans */}
-      <section className="px-4 py-8 md:py-20">
+      <section className="px-4 py-10">
         <div
           ref={pricingRef}
           className={`max-w-7xl mx-auto transition-all duration-700 ${pricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
