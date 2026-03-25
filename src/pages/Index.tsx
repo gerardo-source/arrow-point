@@ -15,7 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <TopBanner />
       <Navbar />
-      <div className="pt-20">
+      <div style={{ paddingTop: "calc(5rem + var(--top-banner-height, 0px))" }}>
         <HeroSection />
         <AboutSection />
         <ServicesSection />
