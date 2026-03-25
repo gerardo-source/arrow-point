@@ -150,6 +150,7 @@ const FinanceAsAService = () => {
                   <li>✓ Finance as a Service con enfoque informativo</li>
                 </ul>
               </div>
+              <hr className="border-t border-primary/30" />
               <p className="text-xs text-muted-foreground italic mt-auto pt-4">Este plan se enfoca en entregar resultados financieros mensuales, sin seguimiento o acompañamiento semanal.</p>
             </div>
 
