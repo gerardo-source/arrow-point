@@ -67,11 +67,11 @@ const CasosDeExito = () => {
             {casos.map((caso, index) =>
             <div
               key={index}
-              className="rounded-2xl overflow-hidden shadow-lg relative"
+              className="rounded-2xl overflow-hidden shadow-lg relative transition-all duration-300"
               style={{
                 background: caso.color,
                 marginTop: index === 0 ? 0 : "-2.5rem",
-                zIndex: index + 1
+                zIndex: openIndex === index ? 10 : index + 1
               }}>
               
                 <button
