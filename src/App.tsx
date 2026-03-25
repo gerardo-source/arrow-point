@@ -11,6 +11,7 @@ import CasosDeExito from "./pages/CasosDeExito.tsx";
 import AvisoDePrivacidad from "./pages/AvisoDePrivacidad.tsx";
 import PoliticaDeCookies from "./pages/PoliticaDeCookies.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/por-que-arrowpoint" element={<PorQueArrowpoint />} />
