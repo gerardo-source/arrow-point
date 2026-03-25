@@ -19,6 +19,7 @@ const WhyUsSection = () => {
           <div className="flex flex-col md:grid md:grid-cols-[1fr_1px_1fr] gap-10 md:gap-14 items-stretch">
             <div className="text-white flex flex-col gap-6 md:justify-center md:items-start md:text-left">
               <h2 className="text-3xl font-normal md:text-4xl text-left">¿Por qué Nosotros?</h2>
+              <div className="md:hidden w-full h-px bg-white/30" />
               <p className="text-white/80 text-lg md:text-xl leading-relaxed text-left">
                 Conoce los beneficios de crecer con nosotros.
               </p>
@@ -27,7 +28,6 @@ const WhyUsSection = () => {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3888FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
-            <div className="md:hidden w-full h-px bg-white/30" />
             <div className="hidden md:block w-px bg-white/30" />
             <ul className="space-y-5">
               {points.map((p, i) => (
