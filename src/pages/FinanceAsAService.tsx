@@ -144,10 +144,10 @@ const FinanceAsAService = () => {
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Incluye:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>✓ Entrega mensual de resultados financieros</li>
-                  <li>✓ Reportes financieros claros y ordenados</li>
-                  <li>✓ Análisis general del desempeño del mes</li>
-                  <li>✓ Finance as a Service con enfoque informativo</li>
+                  <li><span className="text-primary">✓</span> Entrega mensual de resultados financieros</li>
+                  <li><span className="text-primary">✓</span> Reportes financieros claros y ordenados</li>
+                  <li><span className="text-primary">✓</span> Análisis general del desempeño del mes</li>
+                  <li><span className="text-primary">✓</span> Finance as a Service con enfoque informativo</li>
                 </ul>
               </div>
               <hr className="border-t border-primary/30" />
@@ -169,12 +169,12 @@ const FinanceAsAService = () => {
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Incluye:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>✓ Todo del plan Inicial</li>
-                  <li>✓ Seguimiento financiero recurrente</li>
-                  <li>✓ Análisis de resultados (qué pasó y por qué)</li>
-                  <li>✓ Finance as a Service operativo</li>
-                  <li>✓ Seguimiento de indicadores clave</li>
-                  <li>✓ Soporte financiero continuo</li>
+                  <li><span className="text-primary">✓</span> Todo del plan Inicial</li>
+                  <li><span className="text-primary">✓</span> Seguimiento financiero recurrente</li>
+                  <li><span className="text-primary">✓</span> Análisis de resultados (qué pasó y por qué)</li>
+                  <li><span className="text-primary">✓</span> Finance as a Service operativo</li>
+                  <li><span className="text-primary">✓</span> Seguimiento de indicadores clave</li>
+                  <li><span className="text-primary">✓</span> Soporte financiero continuo</li>
                 </ul>
               </div>
             </div>
@@ -199,12 +199,12 @@ const FinanceAsAService = () => {
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Incluye:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>✓ Todo del plan anterior</li>
-                  <li>✓ Análisis financiero más profundo</li>
-                  <li>✓ Acompañamiento en decisiones clave</li>
-                  <li>✓ Mayor visibilidad de flujo de efectivo</li>
-                  <li>✓ Finance as a Service con mayor involucramiento</li>
-                  <li>✓ Reportes más personalizados</li>
+                  <li><span className="text-primary">✓</span> Todo del plan anterior</li>
+                  <li><span className="text-primary">✓</span> Análisis financiero más profundo</li>
+                  <li><span className="text-primary">✓</span> Acompañamiento en decisiones clave</li>
+                  <li><span className="text-primary">✓</span> Mayor visibilidad de flujo de efectivo</li>
+                  <li><span className="text-primary">✓</span> Finance as a Service con mayor involucramiento</li>
+                  <li><span className="text-primary">✓</span> Reportes más personalizados</li>
                 </ul>
               </div>
             </div>
@@ -224,12 +224,12 @@ const FinanceAsAService = () => {
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-foreground">Incluye:</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>✓ Todo del plan anterior</li>
-                  <li>✓ Finance as a Service estratégico</li>
-                  <li>✓ Análisis para crecimiento y planeación</li>
-                  <li>✓ Apoyo en decisiones de alto impacto</li>
-                  <li>✓ Mayor capacidad analítica</li>
-                  <li>✓ Preparación para inversionistas</li>
+                  <li><span className="text-primary">✓</span> Todo del plan anterior</li>
+                  <li><span className="text-primary">✓</span> Finance as a Service estratégico</li>
+                  <li><span className="text-primary">✓</span> Análisis para crecimiento y planeación</li>
+                  <li><span className="text-primary">✓</span> Apoyo en decisiones de alto impacto</li>
+                  <li><span className="text-primary">✓</span> Mayor capacidad analítica</li>
+                  <li><span className="text-primary">✓</span> Preparación para inversionistas</li>
                 </ul>
               </div>
             </div>
