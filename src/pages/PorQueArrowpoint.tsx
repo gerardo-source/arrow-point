@@ -51,7 +51,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Description + Highlight */}
-      <section className="px-4 py-16 bg-primary/5">
+      <section className="px-4 py-8 md:py-16 bg-primary/5">
         <div
           ref={descRef}
           className={`max-w-3xl mx-auto text-center space-y-8 transition-all duration-700 ${descVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
@@ -69,7 +69,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Clarity Section - Image + Text */}
-      <section className="px-4 py-16 bg-primary/5">
+      <section className="px-4 py-8 md:py-16 bg-primary/5">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div
@@ -94,7 +94,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Partner Section - Text + Image */}
-      <section className="px-4 py-16 bg-primary/5">
+      <section className="px-4 py-8 md:py-16 bg-primary/5">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div
@@ -119,7 +119,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* Ideal Para Section */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-8 md:py-16">
         <div className="max-w-full mx-auto">
           <div
             ref={idealRef}
