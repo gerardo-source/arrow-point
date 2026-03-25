@@ -65,7 +65,7 @@ const FinanceAsAService = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-6 pt-20 pb-8 md:pb-20">
+      <section className="px-6 pt-32 pb-8 md:pb-20" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
         <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
