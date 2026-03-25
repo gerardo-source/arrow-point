@@ -42,7 +42,7 @@ const CasosDeExito = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-6 pt-20 pb-20">
+      <section className="px-6 pt-32 pb-10" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
         <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
@@ -67,7 +67,7 @@ const CasosDeExito = () => {
       </section>
 
       {/* Casos accordion */}
-      <section className="px-6 py-16 bg-primary/5">
+      <section className="px-6 py-10 bg-primary/5">
         <div
           ref={acordeonRef}
           className={`max-w-full mx-auto transition-all duration-700 ${acordeonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
