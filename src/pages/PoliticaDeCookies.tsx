@@ -14,7 +14,7 @@ const PoliticaDeCookies = () => {
       <TopBanner />
       <Navbar />
 
-      <section className="px-6 pt-32 pb-10" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
+      <section className="px-6 py-10" style={{ marginTop: "calc(var(--top-banner-height, 0px) + 5rem)" }}>
         <div className="max-w-full mx-auto">
           <h1
             ref={titleRef}
