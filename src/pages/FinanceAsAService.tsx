@@ -8,7 +8,7 @@ import gradientBg from "@/assets/gradient-bg.webp";
 import { Button } from "@/components/ui/button";
 import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
-import ceoFinance from "@/assets/ceo-finance.png";
+import ceoFinance from "@/assets/ceo-finance.webp";
 import cfoTeam from "@/assets/cfo-team.webp";
 import ceoIcon from "@/assets/icons/ceo.svg";
 import fundraisingIcon from "@/assets/icons/fundraising.svg";
