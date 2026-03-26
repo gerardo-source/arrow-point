@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.png";
+import heroImage from "@/assets/hero-image.webp";
 import circlesBg from "@/assets/circles-bg.png";
 import { Badge } from "@/components/ui/badge";
 
