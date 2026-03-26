@@ -1,6 +1,6 @@
 import ContactForm from "@/components/landing/ContactForm";
 import porqueHero from "@/assets/porque-hero.webp";
-import porqueClarity from "@/assets/porque-clarity.jpg";
+import porqueClarity from "@/assets/porque-clarity.webp";
 import porquePartner from "@/assets/porque-partner.jpg";
 import gradientBg from "@/assets/gradient-bg.webp";
 import decorativeArrows from "@/assets/decorative-arrows.png";
