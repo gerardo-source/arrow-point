@@ -2,7 +2,7 @@ import ContactForm from "@/components/landing/ContactForm";
 import porqueHero from "@/assets/porque-hero.png";
 import porqueClarity from "@/assets/porque-clarity.jpg";
 import porquePartner from "@/assets/porque-partner.jpg";
-import gradientBg from "@/assets/gradient-bg.jpg";
+import gradientBg from "@/assets/gradient-bg.webp";
 import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
 import TopBanner from "@/components/landing/TopBanner";

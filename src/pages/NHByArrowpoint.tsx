@@ -3,7 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import LogosBar from "@/components/landing/LogosBar";
 import ContactForm from "@/components/landing/ContactForm";
-import gradientBg from "@/assets/gradient-bg.jpg";
+import gradientBg from "@/assets/gradient-bg.webp";
 import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
 import nhHero from "@/assets/nh-hero.png";
