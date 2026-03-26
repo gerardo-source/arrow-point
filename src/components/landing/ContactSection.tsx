@@ -1,4 +1,4 @@
-import gradientBg from "@/assets/gradient-bg.jpg";
+import gradientBg from "@/assets/gradient-bg.webp";
 import ContactForm from "@/components/landing/ContactForm";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
