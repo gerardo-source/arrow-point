@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import ceoIcon from "@/assets/icons/ceo-2.svg";
 import moneyIcon from "@/assets/icons/money-2.svg";
 import arrowpointLogo from "@/assets/arrowpoint-logo.png";
-import heroTeam from "@/assets/hero-team.jpg";
+import heroTeam from "@/assets/navbar-dropdown-image.webp";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
