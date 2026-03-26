@@ -7,7 +7,7 @@ import gradientBg from "@/assets/gradient-bg.webp";
 import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
 import nhHero from "@/assets/nh-hero.webp";
-import nhSection from "@/assets/nh-section.jpg";
+import nhSection from "@/assets/nh-section.webp";
 import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
 import flujoCajaIcon from "@/assets/icons/flujo-caja.svg";
 import bolsaDineroIcon from "@/assets/icons/bolsa-dinero.svg";
