@@ -1,7 +1,7 @@
 import ContactForm from "@/components/landing/ContactForm";
 import porqueHero from "@/assets/porque-hero.webp";
 import porqueClarity from "@/assets/porque-clarity.webp";
-import porquePartner from "@/assets/porque-partner.jpg";
+import porquePartner from "@/assets/porque-partner.webp";
 import gradientBg from "@/assets/gradient-bg.webp";
 import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
@@ -112,7 +112,7 @@ const PorQueArrowpoint = () => {
               ref={partnerImgRef}
               className={`rounded-2xl overflow-hidden aspect-[4/3] transition-all duration-700 delay-200 ${partnerImgVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
             >
-              <img src={porquePartner} alt="Socio financiero" className="w-full h-full object-cover" />
+              <img src={porquePartner} alt="Socio financiero" className="w-full h-full object-cover object-top" />
             </div>
           </div>
         </div>
