@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 import gradientBg from "@/assets/gradient-bg.webp";
 import decorativeArrows from "@/assets/decorative-arrows.png";
 import decorativeCircles from "@/assets/decorative-circles.png";
-import casosHero from "@/assets/casos-hero.png";
+import casosHero from "@/assets/casos-hero.webp";
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
