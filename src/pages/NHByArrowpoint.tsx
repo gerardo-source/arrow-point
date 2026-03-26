@@ -46,7 +46,7 @@ const NHByArrowpoint = () => {
             </p>
 
             <div className="relative z-10 mt-10">
-              <img src={nhHero} alt="NH by Arrowpoint" className="w-52 md:w-64 object-contain" fetchPriority="high" loading="eager" />
+              <img src={nhHero} alt="NH by Arrowpoint" className="w-60 md:w-72 object-contain" fetchPriority="high" loading="eager" />
             </div>
           </div>
         </div>
