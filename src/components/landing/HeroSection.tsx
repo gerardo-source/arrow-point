@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.webp";
-import circlesBg from "@/assets/circles-bg.png";
+import circlesBg from "@/assets/circles-bg.webp";
 import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {

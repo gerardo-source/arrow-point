@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import arrowpointLogo from "@/assets/arrowpoint-logo-footer.png";
+import arrowpointLogo from "@/assets/arrowpoint-logo-footer.webp";
 
 const Footer = () => {
   return (

@@ -8,7 +8,7 @@ import testimonial4 from "@/assets/testimonial-4.jpg";
 import testimonial5 from "@/assets/testimonial-5.jpg";
 import testimonial6 from "@/assets/testimonial-6.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import circlesBg from "@/assets/circles-testimonials.png";
+import circlesBg from "@/assets/circles-testimonials.webp";
 
 const testimonials = [
   {

@@ -1,4 +1,4 @@
-import arrowpointIcono from "@/assets/arrowpoint-icono.png";
+import arrowpointIcono from "@/assets/arrowpoint-icono.webp";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const GrowthModelSection = () => {
