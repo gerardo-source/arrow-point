@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -15,6 +16,7 @@ import metricasIcon from "@/assets/icons/metricas.svg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const NHByArrowpoint = () => {
+  useEffect(() => { document.title = "NH by Arrowpoint │ Arrowpoint"; }, []);
   const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
   const { ref: imgRef, isVisible: imgVisible } = useScrollReveal();
   const { ref: listRef, isVisible: listVisible } = useScrollReveal();

@@ -13,7 +13,7 @@ const Footer = () => {
               </div>
               <div className="space-y-2">
                 <p className="text-white text-sm">Síguenos en redes:</p>
-                <a href="#" className="inline-flex text-white hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/company/arrow-point-financial/" target="_blank" rel="noopener noreferrer" className="inline-flex text-white hover:text-primary transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -30,6 +31,7 @@ const casos = [
 
 
 const CasosDeExito = () => {
+  useEffect(() => { document.title = "Casos de Éxito │ Arrowpoint"; }, []);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
   const { ref: acordeonRef, isVisible: acordeonVisible } = useScrollReveal();

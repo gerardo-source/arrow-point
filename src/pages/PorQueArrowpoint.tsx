@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ContactForm from "@/components/landing/ContactForm";
 import porqueHero from "@/assets/porque-hero.webp";
 import porqueClarity from "@/assets/porque-clarity.webp";
@@ -11,6 +12,7 @@ import Footer from "@/components/landing/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const PorQueArrowpoint = () => {
+  useEffect(() => { document.title = "Por Qué Arrowpoint │ Arrowpoint"; }, []);
   const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
   const { ref: descRef, isVisible: descVisible } = useScrollReveal();
   const { ref: clarityImgRef, isVisible: clarityImgVisible } = useScrollReveal();

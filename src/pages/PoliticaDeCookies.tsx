@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -6,6 +7,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const loremBlock = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
 
 const PoliticaDeCookies = () => {
+  useEffect(() => { document.title = "Política de Cookies │ Arrowpoint"; }, []);
   const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
   const { ref: contentRef, isVisible: contentVisible } = useScrollReveal();
 

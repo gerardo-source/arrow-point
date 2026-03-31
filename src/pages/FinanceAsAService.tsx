@@ -15,6 +15,7 @@ import fundraisingIcon from "@/assets/icons/fundraising.svg";
 import financialIcon from "@/assets/icons/financial.svg";
 import reportesIcon from "@/assets/icons/reportes.svg";
 import flujoCashIcon from "@/assets/icons/flujo-cash.svg";
+import { useEffect } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
@@ -51,6 +52,7 @@ const features = [
 ];
 
 const FinanceAsAService = () => {
+  useEffect(() => { document.title = "Finance as a Service │ Arrowpoint"; }, []);
   const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
   const { ref: cfoRef, isVisible: cfoVisible } = useScrollReveal();
   const { ref: cfoImgRef, isVisible: cfoImgVisible } = useScrollReveal();

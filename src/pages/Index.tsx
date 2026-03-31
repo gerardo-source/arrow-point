@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
@@ -11,6 +12,7 @@ import ContactSection from "@/components/landing/ContactSection";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
+  useEffect(() => { document.title = "Arrowpoint │ Finance as a Service"; }, []);
   return (
     <div className="min-h-screen bg-background">
       <TopBanner />
