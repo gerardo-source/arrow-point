@@ -34,7 +34,12 @@ const ContactForm = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    // TODO: enviar datos
+
+    const subject = encodeURIComponent("Contacto desde ArrowPoint");
+    const body = encodeURIComponent(
+      `Nombre: ${name}\nCorreo: ${email}\nTeléfono: ${phone}\nServicio: ${service || "No especificado"}\n\nMensaje:\n${message}`
+    );
+    window.location.href = `mailto:contacto@arrowpoint.com?subject=${subject}&body=${body}`;
   };
 
   const inputBase = "rounded-lg px-4 py-3 bg-white text-black placeholder:text-[#9ca3af] text-sm outline-none";

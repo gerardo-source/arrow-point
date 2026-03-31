@@ -1,16 +1,20 @@
 import { useEffect, useRef } from "react";
-import pontem from "@/assets/logos/pontem.png";
-import drivana from "@/assets/logos/drivana.png";
-import sora from "@/assets/logos/sora.png";
-import queridaadela from "@/assets/logos/queridaadela.png";
-import mentatickets from "@/assets/logos/mentatickets.png";
+import aentatech from "@/assets/logos/LOGO-AENTATECH.svg";
+import cana from "@/assets/logos/LOGO-CANA.svg";
+import drivana from "@/assets/logos/LOGO-DRIVANA.png";
+import karmapulse from "@/assets/logos/LOGO-KARMAPULSE.png";
+import kinedu from "@/assets/logos/LOGO-KINEDU.png";
+import michemix from "@/assets/logos/LOGO-MICHEMIX.png";
+import sora from "@/assets/logos/LOGO-SORA.png";
 
 export const clientLogos = [
-  { src: pontem, alt: "Pontem" },
-  { src: drivana, alt: "Drivana" },
-  { src: sora, alt: "Sora" },
-  { src: queridaadela, alt: "Querida Adela" },
-  { src: mentatickets, alt: "Menta Tickets" },
+  { src: aentatech, alt: "Aentatech", className: "h-10" },
+  { src: cana, alt: "Caña", className: "h-10" },
+  { src: drivana, alt: "Drivana", className: "h-10" },
+  { src: karmapulse, alt: "Karma Pulse", className: "h-10" },
+  { src: kinedu, alt: "Kinedu", className: "h-10" },
+  { src: michemix, alt: "Michemix", className: "h-10" },
+  { src: sora, alt: "Sora", className: "h-10" },
 ];
 
 const LogosBar = () => {
@@ -49,7 +53,7 @@ const LogosBar = () => {
                 key={i}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-10 w-auto object-contain flex-shrink-0 max-h-10"
+                className={`${logo.className} w-auto object-contain flex-shrink-0`}
               />
             ))}
           </div>

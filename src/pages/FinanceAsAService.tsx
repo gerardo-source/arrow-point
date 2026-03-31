@@ -149,7 +149,7 @@ const FinanceAsAService = () => {
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Inicial */}
-            <div className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col">
+            <div onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })} className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200">
               <p className="text-sm text-muted-foreground text-center">Inicial</p>
               <h3 className="text-lg font-bold text-primary text-center">Reportes ejecutivos listos para board</h3>
               <div className="space-y-2">
@@ -174,7 +174,7 @@ const FinanceAsAService = () => {
             </div>
 
             {/* Básico */}
-            <div className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col">
+            <div onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })} className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200">
               <p className="text-sm text-muted-foreground text-center">Básico</p>
               <h3 className="text-lg font-bold text-primary text-center">Operación con visibilidad</h3>
               <div className="space-y-2">
@@ -199,7 +199,7 @@ const FinanceAsAService = () => {
             </div>
 
             {/* Estándar */}
-            <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 space-y-4 flex flex-col shadow-lg shadow-primary/10">
+            <div onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })} className="rounded-2xl border-2 border-primary bg-primary/5 p-6 space-y-4 flex flex-col shadow-lg shadow-primary/10 cursor-pointer hover:shadow-primary/25 transition-all duration-200">
               <div className="flex justify-center">
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
                   ★ Más popular
@@ -229,7 +229,7 @@ const FinanceAsAService = () => {
             </div>
 
             {/* Custom */}
-            <div className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col">
+            <div onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })} className="rounded-2xl border border-primary/30 bg-card p-6 space-y-4 flex flex-col cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200">
               <p className="text-sm text-muted-foreground text-center">Custom</p>
               <h3 className="text-lg font-bold text-primary text-center">Dirección financiera estratégica</h3>
               <div className="space-y-2">
@@ -260,7 +260,7 @@ const FinanceAsAService = () => {
       <LogosBar />
 
       {/* CTA Contact Form */}
-      <section className="py-10 px-6 relative overflow-hidden">
+      <section id="contacto" className="py-10 px-6 relative overflow-hidden">
         <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
           <div

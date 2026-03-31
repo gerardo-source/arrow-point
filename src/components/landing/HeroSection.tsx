@@ -29,7 +29,7 @@ const HeroSection = () => {
               <a href="#contacto">Contáctanos</a>
             </Button>
             <Button size="lg" className="w-full sm:w-auto" asChild>
-              <a href="#contacto">Agendar videollamada</a>
+              <a href="https://calendly.com/arrowpoint/arrowpoint-meeting" target="_blank" rel="noopener noreferrer">Agendar videollamada</a>
             </Button>
           </div>
         </div>
