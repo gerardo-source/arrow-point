@@ -32,7 +32,7 @@ const TopBanner = () => {
       className={`fixed top-0 left-0 right-0 z-[60] bg-primary text-primary-foreground py-2.5 px-4 text-center text-sm transition-transform duration-300 ${hidden ? "-translate-y-full" : "translate-y-0"}`}
       style={{ height: `${BANNER_HEIGHT}px` }}
     >
-      <span>Hola, aquí puedes poner alguna promoción o novedad.</span>
+      <span>Un aliado que busca acompañarte en tu crecimiento financiero</span>
       <button
         onClick={() => setDismissed(true)}
         className="absolute right-4 top-1/2 -translate-y-1/2 hover:opacity-70 transition-opacity"
