@@ -12,33 +12,33 @@ import circlesBg from "@/assets/circles-testimonials.webp";
 
 const testimonials = [
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
-    name: "Nombre",
+    text: "Trabajar con Arrow Point fue transformacional. Redujimos nuestro time-to-market en un 40% y el equipo fue incredibly receptivo a nuestras necesidades específicas. Definitivamente recomendado.",
+    name: "Carlos Mendez",
     photo: testimonial1,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
-    name: "Nombre",
+    text: "Me impresionó la calidad del servicio desde el primer día. Su experiencia en el sector es evidente y el resultado superó nuestras expectativas. Es raro encontrar partners tan comprometidos.",
+    name: "Sofia Reyes",
     photo: testimonial2,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
-    name: "Nombre",
+    text: "El mejor decision que tomamos fue asociarnos con Arrow Point. El ROI fue evidente en los primeros 3 meses. Su equipo entiende la urgencia del startup life.",
+    name: "Miguel Torres",
     photo: testimonial3,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
-    name: "Nombre",
+    text: "Increíble atención al detalle y profesionalismo. Completaron el proyecto on-time y on-budget, cosa rara en esta industria. Definitivamente volvemos a trabajar con ellos.",
+    name: "Laura Gutiérrez",
     photo: testimonial4,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
-    name: "Nombre",
+    text: "Arrow Point no solo nos ayudó a escalar nuestra plataforma, sino que también nos asesoró en decisiones arquitectónicas críticas. Son partners reales, no solo proveedores.",
+    name: "Juan Ortega",
     photo: testimonial5,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat urna sit amet ex blandit tincidunt.",
-    name: "Nombre",
+    text: "Desde startups hasta empresas consolidadas, todos encontrarán valor aquí. Su flexibility y expertise en diferentes stacks los hace únicos en el mercado.",
+    name: "Andrea López",
     photo: testimonial6,
   },
 ];
