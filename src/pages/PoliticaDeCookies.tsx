@@ -88,7 +88,7 @@ const PoliticaDeCookies = () => {
             </p>
             <p>
               Para ejercer estos derechos, puede contactarnos en:<br />
-              📩 contacto@arrowpoint.com
+              📩 contacto@arrwpoint.com
             </p>
           </div>
         </div>
