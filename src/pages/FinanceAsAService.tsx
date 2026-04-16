@@ -71,7 +71,7 @@ const FinanceAsAService = () => {
         <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
-            className={`relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
+            className={`relative rounded-3xl overflow-hidden px-8 py-10 md:py-16 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
             style={{ background: "#021538" }}
           >
             <img src={decorativeCircles} alt="" className="absolute top-32 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
@@ -84,8 +84,8 @@ const FinanceAsAService = () => {
               Conoce más sobre nuestro servicio y experiencia.
             </p>
 
-            <div className="relative z-10 mt-10">
-              <img src={ceoFinance} alt="Finance leader" className="w-60 md:w-72 object-contain" fetchPriority="high" loading="eager" />
+            <div className="relative z-10 mt-6">
+              <img src={ceoFinance} alt="Finance leader" className="w-48 md:w-60 object-contain" fetchPriority="high" loading="eager" />
             </div>
           </div>
         </div>
