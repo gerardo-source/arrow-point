@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 const HeroSection = () => {
   return (
     <section className="flex items-center px-6 py-10">
-      <div className="max-w-full mx-auto border-2 border-primary rounded-3xl p-8 md:p-10">
+      <div className="max-w-full mx-auto rounded-3xl p-8 md:p-10 bg-gradient-to-br from-primary/5 via-transparent to-transparent shadow-xl shadow-primary/10 backdrop-blur-sm">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Image - shows first on mobile via order */}
         <div className="w-full flex items-center justify-center relative order-first md:order-last opacity-0 animate-reveal-right" style={{ animationDelay: "0.3s" }}>
