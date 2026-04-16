@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.webp";
-import circlesBg from "@/assets/circles-bg.webp";
+import heroImage from "@/assets/hero-modern-finance.webp";
 import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
@@ -10,8 +9,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Image - shows first on mobile via order */}
         <div className="w-full flex items-center justify-center relative order-first md:order-last opacity-0 animate-reveal-right" style={{ animationDelay: "0.3s" }}>
-          <img src={circlesBg} alt="" className="absolute w-[110%] h-[110%] object-contain" />
-          <img src={heroImage} alt="Equipo colaborando" className="w-full max-w-xs md:max-w-lg object-contain relative z-10" fetchPriority="high" loading="eager" />
+          <img src={heroImage} alt="Análisis financiero profesional" className="w-full max-w-xs md:max-w-lg object-cover rounded-2xl" fetchPriority="high" loading="eager" />
         </div>
         <div className="space-y-6 text-center md:text-left">
           <Badge variant="secondary" className="text-foreground font-medium opacity-0 animate-reveal-up" style={{ animationDelay: "0.1s" }}>
