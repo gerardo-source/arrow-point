@@ -26,32 +26,69 @@ const PoliticaDeCookies = () => {
             ref={contentRef}
             className={`space-y-6 text-sm md:text-base text-foreground/80 leading-relaxed transition-all duration-700 delay-200 ${contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
+            <p className="text-xs text-foreground/60">Última actualización: 15 de abril de 2026</p>
             <p>
-              Arrowpoint respeta su privacidad y está comprometido con el cumplimiento de la <strong>Ley General de Protección de Datos Personales (LGPDP)</strong> y sus disposiciones reglamentarias. Esta Política de Cookies explica cómo utilizamos cookies y tecnologías similares en nuestro sitio web para mejorar su experiencia. Las cookies son pequeños archivos de texto que se almacenan en su dispositivo. Al utilizar nuestro sitio, usted consiente el uso de cookies conforme a los términos de esta política.
+              En Arrowpoint, respetamos su privacidad y estamos comprometidos con la protección de sus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).
             </p>
             <p>
-              <strong>¿Qué son las Cookies?</strong> Las cookies son archivos de datos pequeños almacenados en su navegador o dispositivo que nos permiten reconocerlo en futuras visitas. Utilizamos cookies para mejorar la funcionalidad de nuestro sitio web, proporcionar un servicio más personalizado y recopilar información sobre cómo se utiliza nuestro sitio para optimizarlo continuamente.
+              Esta Política de Cookies explica cómo utilizamos cookies y tecnologías similares en nuestro sitio web.
             </p>
             <p>
-              <strong>Tipos de Cookies Utilizadas:</strong> Utilizamos cookies esenciales (necesarias para el funcionamiento del sitio), cookies de análisis (para entender el comportamiento de los usuarios mediante servicios como Google Analytics), cookies de preferencia (para recordar sus configuraciones) y cookies de marketing (para personalizar contenido y publicidad). Cada tipo de cookie tiene una finalidad específica en cumplimiento con la LGPDP.
+              <strong>¿Qué son las cookies?</strong>
             </p>
             <p>
-              <strong>Base Legal para el Tratamiento de Datos:</strong> El tratamiento de datos a través de cookies se fundamenta en el consentimiento informado que usted otorga al aceptar esta política, conforme a los artículos 6 y 8 de la LGPDP. Usted puede retirar su consentimiento en cualquier momento sin afectar la licitud del tratamiento previo.
+              Las cookies son pequeños archivos de texto que se almacenan en su dispositivo al visitar un sitio web. Estas permiten reconocer su navegador, recordar sus preferencias y mejorar su experiencia de navegación.
             </p>
             <p>
-              <strong>Sus Derechos (Derechos ARCO):</strong> Conforme a la LGPDP, usted tiene derecho a: (1) <strong>Acceso</strong> a sus datos personales y las finalidades de su tratamiento; (2) <strong>Rectificación</strong> de datos inexactos o incompletos; (3) <strong>Cancelación</strong> de datos cuando sea infundado su tratamiento; y (4) <strong>Oposición</strong> al tratamiento de datos. Para ejercer estos derechos, contacte a nuestro Responsable de Datos en: privacidad@arrowpoint.com.
+              <strong>Tipos de cookies que utilizamos</strong>
             </p>
             <p>
-              <strong>Control de Cookies:</strong> Puede controlar las cookies a través de su navegador web. La mayoría de navegadores permite rechazar cookies o ser alertado cuando se envían. También puede eliminar cookies almacenadas en su dispositivo en cualquier momento. Tenga en cuenta que desactivar cookies puede afectar la funcionalidad y experiencia del sitio.
+              <strong>Cookies esenciales</strong><br />
+              Necesarias para el funcionamiento del sitio web. No pueden desactivarse en nuestros sistemas.
             </p>
             <p>
-              <strong>Responsable del Tratamiento:</strong> Arrowpoint, con domicilio en México, es el responsable del tratamiento de sus datos personales conforme a la LGPDP. Para consultas sobre privacidad, derechos ARCO o esta política, contacte a: privacidad@arrowpoint.com o a través de nuestro formulario de privacidad en el sitio web.
+              <strong>Cookies de análisis</strong><br />
+              Nos permiten medir y analizar el uso del sitio web. Utilizamos herramientas como Google Analytics.
             </p>
             <p>
-              <strong>Datos de Terceros:</strong> Nuestro sitio puede contener enlaces a terceros (como Google Analytics) que tienen sus propias políticas de cookies. No somos responsables de sus prácticas. Le recomendamos revisar sus políticas de privacidad antes de interactuar con ellos.
+              <strong>Cookies de funcionalidad</strong><br />
+              Permiten recordar preferencias del usuario, como idioma o configuración.
             </p>
             <p>
-              <strong>Cambios a esta Política:</strong> Nos reservamos el derecho de actualizar esta política para reflejar cambios en nuestras prácticas, tecnología o requisitos legales. Los cambios entrarán en vigor al publicarse. Se recomienda revisar esta política periódicamente.
+              <strong>Cookies de marketing</strong><br />
+              Utilizadas para mostrar contenido relevante y medir campañas. Pueden involucrar plataformas de terceros como Meta Platforms y LinkedIn.
+            </p>
+            <p>
+              <strong>Base legal</strong>
+            </p>
+            <p>
+              El uso de cookies no esenciales se basa en su consentimiento, el cual puede ser otorgado o retirado en cualquier momento mediante las configuraciones disponibles en nuestro sitio.
+            </p>
+            <p>
+              <strong>Transferencia de datos</strong>
+            </p>
+            <p>
+              El uso de cookies puede implicar la transferencia de datos a terceros ubicados fuera de México, incluyendo Estados Unidos, donde las leyes de protección de datos pueden diferir de las aplicables en su país.
+            </p>
+            <p>
+              <strong>Control de cookies</strong>
+            </p>
+            <p>
+              Usted puede:
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Aceptar o rechazar cookies no esenciales mediante el banner de cookies</li>
+              <li>Configurar su navegador para bloquear o eliminar cookies</li>
+            </ul>
+            <p>
+              <strong>Derechos ARCO</strong>
+            </p>
+            <p>
+              Usted tiene derecho a Acceso, Rectificación, Cancelación y Oposición respecto a sus datos personales.
+            </p>
+            <p>
+              Para ejercer estos derechos, puede contactarnos en:<br />
+              📩 contacto@arrowpoint.com
             </p>
           </div>
         </div>
