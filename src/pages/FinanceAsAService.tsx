@@ -6,9 +6,8 @@ import ContactForm from "@/components/landing/ContactForm";
 import { TrendingUp, BarChart3, PieChart, FileText, Users, ShieldCheck } from "lucide-react";
 import gradientBg from "@/assets/gradient-bg.webp";
 import { Button } from "@/components/ui/button";
-import decorativeArrows from "@/assets/decorative-arrows.webp";
 import decorativeCircles from "@/assets/decorative-circles.webp";
-import ceoFinance from "@/assets/ceo-finance.webp";
+import financeServiceHero from "@/assets/finance-service-hero.webp";
 import cfoTeam from "@/assets/cfo-team.webp";
 import ceoIcon from "@/assets/icons/ceo.svg";
 import fundraisingIcon from "@/assets/icons/fundraising.svg";
@@ -67,15 +66,13 @@ const FinanceAsAService = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="px-6 pt-32 pb-10" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
+      <section className="px-6 pt-32 pb-10" style={{ marginTop: "var(--top-banner-height, 0px)", background: "#021538" }}>
         <div className="max-w-full mx-auto">
           <div
             ref={heroRef}
-            className={`relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
-            style={{ background: "#021538" }}
+            className={`relative rounded-3xl overflow-hidden px-8 py-6 md:py-10 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
           >
             <img src={decorativeCircles} alt="" className="absolute top-32 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
-            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
               Finance as a Service
@@ -84,8 +81,8 @@ const FinanceAsAService = () => {
               Conoce más sobre nuestro servicio y experiencia.
             </p>
 
-            <div className="relative z-10 mt-10">
-              <img src={ceoFinance} alt="Finance leader" className="w-60 md:w-72 object-contain" fetchPriority="high" loading="eager" />
+            <div className="relative z-10 mt-4">
+              <img src={financeServiceHero} alt="Análisis financiero" className="w-40 md:w-52 rounded-lg object-cover" fetchPriority="high" loading="eager" />
             </div>
           </div>
         </div>

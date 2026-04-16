@@ -12,34 +12,34 @@ import circlesBg from "@/assets/circles-testimonials.webp";
 
 const testimonials = [
   {
-    text: "Trabajar con Arrow Point fue transformacional. Redujimos nuestro time-to-market en un 40% y el equipo fue incredibly receptivo a nuestras necesidades específicas. Definitivamente recomendado.",
-    name: "Carlos Mendez",
+    text: "Antes de trabajar con Arrowpoint, nuestros números existían… pero no contaban una historia clara. Hoy tenemos visibilidad real de nuestro burn, runway y unit economics. Más importante aún, podemos tomar decisiones con confianza y comunicar mejor a inversionistas.",
+    name: "Founder",
+    role: "SaaS (Serie Seed)",
     photo: testimonial1,
   },
   {
-    text: "Me impresionó la calidad del servicio desde el primer día. Su experiencia en el sector es evidente y el resultado superó nuestras expectativas. Es raro encontrar partners tan comprometidos.",
-    name: "Sofia Reyes",
+    text: "Arrowpoint se volvió una extensión de nuestro equipo. No solo ordenaron nuestra información financiera, sino que nos ayudaron a entender qué sí importa. Pasamos de reaccionar a anticiparnos.",
+    name: "CEO",
+    role: "Startup en crecimiento (MX + US)",
     photo: testimonial2,
   },
   {
-    text: "El mejor decision que tomamos fue asociarnos con Arrow Point. El ROI fue evidente en los primeros 3 meses. Su equipo entiende la urgencia del startup life.",
-    name: "Miguel Torres",
+    text: "Teníamos data, pero no claridad. Arrowpoint transformó nuestros reportes en herramientas de decisión. Hoy tenemos control total sobre nuestros números y sabemos exactamente dónde ajustar para crecer.",
+    name: "COO",
+    role: "Marketplace",
     photo: testimonial3,
   },
   {
-    text: "Increíble atención al detalle y profesionalismo. Completaron el proyecto on-time y on-budget, cosa rara en esta industria. Definitivamente volvemos a trabajar con ellos.",
-    name: "Laura Gutiérrez",
+    text: "El mayor valor de Arrowpoint no es solo el reporte, es la tranquilidad. Sabes que los números están bien, que alguien los está pensando contigo y que puedes enfocarte en operar y crecer.",
+    name: "Founder",
+    role: "Fintech",
     photo: testimonial4,
   },
   {
-    text: "Arrow Point no solo nos ayudó a escalar nuestra plataforma, sino que también nos asesoró en decisiones arquitectónicas críticas. Son partners reales, no solo proveedores.",
-    name: "Juan Ortega",
+    text: "Habíamos intentado armar el área financiera internamente, pero siempre quedaban huecos. Arrowpoint llegó a estructurar todo de forma clara, práctica y sin complicaciones. Es justo el balance entre estrategia y ejecución.",
+    name: "Director de Finanzas",
+    role: "Empresa en transición",
     photo: testimonial5,
-  },
-  {
-    text: "Desde startups hasta empresas consolidadas, todos encontrarán valor aquí. Su flexibility y expertise en diferentes stacks los hace únicos en el mercado.",
-    name: "Andrea López",
-    photo: testimonial6,
   },
 ];
 
@@ -89,7 +89,10 @@ const TestimonialsSection = () => {
               <p className="text-muted-foreground text-base leading-relaxed">{item.text}</p>
               <div className="flex items-center gap-3">
                 <img src={item.photo} alt={item.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" width={48} height={48} />
-                <span className="font-semibold text-foreground">{item.name}</span>
+                <div>
+                  <span className="font-semibold text-foreground block">{item.name}</span>
+                  <span className="text-sm text-muted-foreground">{item.role}</span>
+                </div>
               </div>
             </div>
           ))}
@@ -114,7 +117,10 @@ const TestimonialsSection = () => {
               <p className="text-muted-foreground text-base leading-relaxed">{t.text}</p>
               <div className="flex items-center gap-3">
                 <img src={t.photo} alt={t.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" width={48} height={48} />
-                <span className="font-semibold text-foreground">{t.name}</span>
+                <div>
+                  <span className="font-semibold text-foreground block">{t.name}</span>
+                  <span className="text-sm text-muted-foreground">{t.role}</span>
+                </div>
               </div>
             </div>
           </div>
