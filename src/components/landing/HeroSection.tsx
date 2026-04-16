@@ -8,10 +8,10 @@ const HeroSection = () => {
       <div className="max-w-full mx-auto rounded-3xl p-8 md:p-10 bg-gradient-to-br from-primary/5 via-transparent to-transparent shadow-xl shadow-primary/10 backdrop-blur-sm">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Image - shows first on mobile via order */}
-        <div className="w-full flex items-center justify-center relative order-first md:order-last opacity-0 animate-reveal-right" style={{ animationDelay: "0.3s" }}>
-          <img src={heroImage} alt="Análisis financiero profesional" className="w-full max-w-xs md:max-w-lg object-cover rounded-2xl" fetchPriority="high" loading="eager" />
+        <div className="w-full flex items-center justify-center relative order-last md:order-last opacity-0 animate-reveal-right" style={{ animationDelay: "0.3s" }}>
+          <img src={heroImage} alt="Análisis financiero profesional" className="w-full max-w-sm md:max-w-md object-cover rounded-2xl" fetchPriority="high" loading="eager" />
         </div>
-        <div className="space-y-6 text-center md:text-left">
+        <div className="space-y-6 text-left order-first md:order-first">
           <Badge variant="secondary" className="text-foreground font-medium opacity-0 animate-reveal-up" style={{ animationDelay: "0.1s" }}>
             <span className="text-primary">★</span> Expertos en crecimiento financiero
           </Badge>
