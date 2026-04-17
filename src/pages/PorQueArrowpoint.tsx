@@ -119,10 +119,10 @@ const PorQueArrowpoint = () => {
       <section className="px-6 py-16 bg-primary/5">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
-            Entonces... ¿qué nos hace diferente?
+            Entonces… ¿qué cambia con Arrowpoint?
           </h2>
           <p className="text-muted-foreground text-center mb-12 md:text-lg max-w-3xl mx-auto">
-            No somos contadores. Convertimos tu contabilidad en las decisiones que necesitas tomar.
+            Dejamos de hablar de contabilidad… y empezamos a hablar de decisiones reales.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
