@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import ContactForm from "@/components/landing/ContactForm";
-import porqueHero from "@/assets/porque-hero.webp";
+import porqueHeroMeeting from "@/assets/porque-hero-meeting.webp";
 import porqueClarity from "@/assets/porque-clarity.webp";
 import porquePartner from "@/assets/porque-partner.webp";
 import gradientBg from "@/assets/gradient-bg.webp";
@@ -48,7 +48,7 @@ const PorQueArrowpoint = () => {
             </p>
 
             <div className="relative z-10 mt-12 max-w-sm">
-              <img src={porqueHero} alt="Arrowpoint team" className="w-full" fetchpriority="high" loading="eager" />
+              <img src={porqueHeroMeeting} alt="Founders discutiendo estrategia" className="w-full rounded-xl" fetchpriority="high" loading="eager" />
             </div>
           </div>
         </div>
