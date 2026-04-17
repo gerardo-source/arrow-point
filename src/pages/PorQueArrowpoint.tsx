@@ -140,7 +140,7 @@ const PorQueArrowpoint = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary"></span>
-                  No reportes. Decisiones.
+                  De números a decisiones
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   Convertimos tu contabilidad en insights. MRR, ARR, burn, runway. Lo que importa para crecer.
