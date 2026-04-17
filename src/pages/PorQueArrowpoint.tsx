@@ -211,7 +211,7 @@ const PorQueArrowpoint = () => {
         </div>
       </section>
 
-      {/* Outcomes Section - Text + Image */}
+      {/* Outcomes Section */}
       <section className="px-6 py-16 bg-background">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
@@ -221,53 +221,71 @@ const PorQueArrowpoint = () => {
             Cuando trabajas con Arrowpoint:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-6">
             <div
               ref={partnerTextRef}
-              className={`space-y-6 transition-all duration-700 ${partnerTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 ${partnerTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             >
-              <div>
-                <h3 className="font-semibold text-foreground mb-2 text-lg">
-                  Controlas tu runway
-                </h3>
-                <p className="text-muted-foreground">
-                  Sabes exacto cuándo se acaba el dinero. Eso te da espacio mental y tiempo para mover fichas.
-                </p>
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">1</div>
+                <div>
+                  <h3 className="font-semibold text-foreground text-lg">
+                    Controlas tu runway
+                  </h3>
+                </div>
               </div>
+              <p className="text-muted-foreground text-sm">
+                Sabes exacto cuándo se acaba el dinero. Eso te da espacio mental y tiempo para mover fichas.
+              </p>
+            </div>
 
-              <div>
-                <h3 className="font-semibold text-foreground mb-2 text-lg">
-                  Tomas decisiones rápido
-                </h3>
-                <p className="text-muted-foreground">
-                  "¿Cierro esta oficina? ¿Debo reducir CAC?" Ya tienes los números claros. No adivinas.
-                </p>
+            <div
+              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 delay-100`}
+            >
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">2</div>
+                <div>
+                  <h3 className="font-semibold text-foreground text-lg">
+                    Tomas decisiones rápido
+                  </h3>
+                </div>
               </div>
+              <p className="text-muted-foreground text-sm">
+                "¿Cierro esta oficina? ¿Debo reducir CAC?" Ya tienes los números claros. No adivinas.
+              </p>
+            </div>
 
-              <div>
-                <h3 className="font-semibold text-foreground mb-2 text-lg">
-                  Inversionistas confían en ti
-                </h3>
-                <p className="text-muted-foreground">
-                  Tu deck tiene números reales y defensibles. Los VC sienten que controlas tu negocio.
-                </p>
+            <div
+              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 delay-200`}
+            >
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">3</div>
+                <div>
+                  <h3 className="font-semibold text-foreground text-lg">
+                    Inversionistas confían en ti
+                  </h3>
+                </div>
               </div>
-
-              <div>
-                <h3 className="font-semibold text-foreground mb-2 text-lg">
-                  Identificas oportunidades
-                </h3>
-                <p className="text-muted-foreground">
-                  Ves qué es rentable, dónde creces con margen, en qué canales tienes mejor eficiencia.
-                </p>
-              </div>
+              <p className="text-muted-foreground text-sm">
+                Tu deck tiene números reales y defensibles. Los VC sienten que controlas tu negocio.
+              </p>
             </div>
 
             <div
               ref={partnerImgRef}
-              className={`rounded-2xl overflow-hidden aspect-[4/3] transition-all duration-700 delay-200 ${partnerImgVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 delay-300`}
             >
-              <img src={porquePartner} alt="Crecimiento con control" className="w-full h-full object-cover object-[center_30%]" />
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">4</div>
+                <div>
+                  <h3 className="font-semibold text-foreground text-lg">
+                    Identificas oportunidades
+                  </h3>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Ves qué es rentable, dónde creces con margen, en qué canales tienes mejor eficiencia.
+              </p>
             </div>
           </div>
         </div>
