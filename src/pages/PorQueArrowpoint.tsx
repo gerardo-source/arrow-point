@@ -181,6 +181,36 @@ const PorQueArrowpoint = () => {
         </div>
       </section>
 
+      {/* CTA Contact Section */}
+      <section className="py-16 px-6 relative overflow-hidden">
+        <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
+          <div
+            ref={ctaTextRef}
+            className={`space-y-6 text-white pl-4 md:pl-8 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+          >
+            <h2 className="text-3xl leading-tight md:text-5xl font-bold">
+              La claridad está<br />a una llamada.
+            </h2>
+            <p className="text-white/85 leading-relaxed text-base md:text-lg">
+              Agenda 30 minutos con nosotros. Te mostramos exacto qué está pasando con tus finanzas y qué podríamos hacer juntos.
+            </p>
+            <p className="text-white/70 text-sm">
+              ✓ Sin jargón contable<br />
+              ✓ Sin promesas vacías<br />
+              ✓ Solo números y realidad
+            </p>
+          </div>
+          <div
+            ref={ctaFormRef}
+            className={`relative z-10 transition-all duration-700 delay-200 ${ctaFormVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+          >
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
       {/* Outcomes Section - Text + Image */}
       <section className="px-6 py-16 bg-background">
         <div className="max-w-5xl mx-auto">
@@ -271,36 +301,6 @@ const PorQueArrowpoint = () => {
                 <span className="text-white/90 text-base">Equipos que necesitan claridad para board e inversionistas.</span>
               </li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Contact Section */}
-      <section className="py-16 px-6 relative overflow-hidden">
-        <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
-          <div
-            ref={ctaTextRef}
-            className={`space-y-6 text-white pl-4 md:pl-8 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
-          >
-            <h2 className="text-3xl leading-tight md:text-5xl font-bold">
-              La claridad está<br />a una llamada.
-            </h2>
-            <p className="text-white/85 leading-relaxed text-base md:text-lg">
-              Agenda 30 minutos con nosotros. Te mostramos exacto qué está pasando con tus finanzas y qué podríamos hacer juntos.
-            </p>
-            <p className="text-white/70 text-sm">
-              ✓ Sin jargón contable<br />
-              ✓ Sin promesas vacías<br />
-              ✓ Solo números y realidad
-            </p>
-          </div>
-          <div
-            ref={ctaFormRef}
-            className={`relative z-10 transition-all duration-700 delay-200 ${ctaFormVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-          >
-            <ContactForm />
           </div>
         </div>
       </section>
