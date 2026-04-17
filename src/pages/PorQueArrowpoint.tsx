@@ -108,7 +108,7 @@ const PorQueArrowpoint = () => {
                 <h3 className="text-lg font-semibold text-foreground">Crecimiento sin control</h3>
               </div>
               <p className="text-muted-foreground text-sm md:text-base">
-                Crecen en línea pero no ves el margen real. ¿Qué es rentable? ¿Dónde pierdes plata?
+                Tu revenue crece pero no ves el margen real. ¿Qué es rentable? ¿Dónde pierdes plata?
               </p>
             </div>
           </div>
