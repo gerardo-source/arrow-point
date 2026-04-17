@@ -122,7 +122,7 @@ const PorQueArrowpoint = () => {
             Entonces... ¿qué nos hace diferente?
           </h2>
           <p className="text-muted-foreground text-center mb-12 md:text-lg max-w-3xl mx-auto">
-            No somos contadores. No somos CFOs de corporativo. Somos startup people que entienden tu presión.
+            No somos contadores. No somos CFOs de corporativo. Convertimos tu contabilidad en las decisiones que necesitas tomar.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
