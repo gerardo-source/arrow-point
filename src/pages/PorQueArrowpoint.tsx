@@ -97,7 +97,7 @@ const PorQueArrowpoint = () => {
                 <h3 className="text-lg font-semibold text-foreground">Los inversionistas dudan</h3>
               </div>
               <p className="text-muted-foreground text-sm md:text-base">
-                Tu piso de pitch no tiene números claros. ¿MRR real? ¿CAC vs LTV? Improvisos no cierran rondas.
+                Tu pitch deck no tiene números claros. ¿MRR real? ¿CAC vs LTV? Improvisos no cierran rondas.
               </p>
             </div>
 
