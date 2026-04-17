@@ -28,93 +28,216 @@ const PorQueArrowpoint = () => {
       <TopBanner />
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="px-6 pt-32 pb-20" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
-        <div className="max-w-full mx-auto">
+      {/* Hero Section - Uncomfortable Hook */}
+      <section className="px-6 pt-32 pb-16" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
+        <div className="max-w-4xl mx-auto">
           <div
             ref={heroRef}
-            className={`relative rounded-3xl bg-primary overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
+            className={`relative rounded-3xl bg-primary overflow-hidden px-8 py-16 md:py-20 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
           >
             <img src={decorativeCircles} alt="" className="absolute top-28 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
             <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
 
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
-              ¿Por qué Arrowpoint?
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative z-10 leading-tight">
+              ¿Qué pasó con tu claridad financiera?
             </h1>
-            <p className="text-white/80 text-lg md:text-xl max-w-xl relative z-10">
-              Más que finanzas. Un socio que piensa como founder.
+            <p className="text-white/85 text-lg md:text-xl max-w-2xl relative z-10 leading-relaxed font-medium">
+              No pediste que números complejos te llevaran a malas decisiones.
+              <br />
+              Pero aquí estás.
             </p>
 
-            <div className="relative z-10 mt-10">
-              <img src={porqueHero} alt="Arrowpoint team" className="w-60 md:w-72" fetchPriority="high" loading="eager" />
+            <div className="relative z-10 mt-12 max-w-sm">
+              <img src={porqueHero} alt="Arrowpoint team" className="w-full" fetchpriority="high" loading="eager" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Description + Highlight */}
-      <section className="px-6 py-10 bg-primary/5">
+      {/* The Real Problems Section */}
+      <section className="px-6 py-16 bg-background">
         <div
           ref={descRef}
-          className={`max-w-3xl mx-auto text-center space-y-8 transition-all duration-700 ${descVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`max-w-5xl mx-auto transition-all duration-700 ${descVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-            CFOs con experiencia real en startups, background en Venture Capital y Silicon Valley, tecnología que escala contigo y un acompañamiento cercano que convierte números en decisiones.
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+            El problema que vives todos los días
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 md:text-lg">
+            Estos dilemas te suenan familiar:
           </p>
-          <div className="rounded-2xl bg-primary/10 px-8 py-8">
-            <p className="text-primary text-xl md:text-2xl font-medium leading-snug">
-              El equipo financiero que todo founder quisiera tener.<br />
-              <span className="font-bold">+20 startups en México, LATAM y EE.UU.</span>
-            </p>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* Problem 1 */}
+            <div className="rounded-2xl border border-primary/20 bg-primary/5 px-6 py-8">
+              <div className="flex gap-4 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">1</div>
+                <h3 className="text-lg font-semibold text-foreground">No sabes tu runway real</h3>
+              </div>
+              <p className="text-muted-foreground text-sm md:text-base">
+                ¿6 meses? ¿8? Tu contador dice 7. Tu intuición dice menos. Nadie sabe bien.
+              </p>
+            </div>
+
+            {/* Problem 2 */}
+            <div className="rounded-2xl border border-primary/20 bg-primary/5 px-6 py-8">
+              <div className="flex gap-4 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">2</div>
+                <h3 className="text-lg font-semibold text-foreground">Reportes que no te ayudan</h3>
+              </div>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Recibes reportes llenos de cuentas. Pero no te dicen: ¿cuándo se acaba el dinero? ¿A qué ritmo quemamos?
+              </p>
+            </div>
+
+            {/* Problem 3 */}
+            <div className="rounded-2xl border border-primary/20 bg-primary/5 px-6 py-8">
+              <div className="flex gap-4 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">3</div>
+                <h3 className="text-lg font-semibold text-foreground">Los inversionistas dudan</h3>
+              </div>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Tu piso de pitch no tiene números claros. ¿MRR real? ¿CAC vs LTV? Improvisos no cierran rondas.
+              </p>
+            </div>
+
+            {/* Problem 4 */}
+            <div className="rounded-2xl border border-primary/20 bg-primary/5 px-6 py-8">
+              <div className="flex gap-4 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">4</div>
+                <h3 className="text-lg font-semibold text-foreground">Crecimiento sin control</h3>
+              </div>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Crecen en línea pero no ves el margen real. ¿Qué es rentable? ¿Dónde pierdes plata?
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Clarity Section - Image + Text */}
-      <section className="px-6 py-10 bg-primary/5">
+      {/* What's Different - Arrowpoint vs Others */}
+      <section className="px-6 py-16 bg-primary/5">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+            Entonces... ¿qué nos hace diferente?
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 md:text-lg max-w-3xl mx-auto">
+            No somos contadores. No somos CFOs de corporativo. Somos startup people que entienden tu presión.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
             <div
               ref={clarityImgRef}
               className={`rounded-2xl overflow-hidden aspect-[4/3] transition-all duration-700 ${clarityImgVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             >
               <img src={porqueClarity} alt="Equipo trabajando" className="w-full h-full object-cover" />
             </div>
+
             <div
               ref={clarityTextRef}
-              className={`space-y-4 transition-all duration-700 delay-200 ${clarityTextVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+              className={`space-y-6 transition-all duration-700 delay-200 ${clarityTextVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
             >
-              <h2 className="text-2xl font-bold text-foreground leading-tight md:text-3xl">
-                Primero claridad, luego decisiones.
-              </h2>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                Convertimos números complejos en información clara y accionable para que tomes decisiones con seguridad.
-              </p>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary"></span>
+                  No reportes. Decisiones.
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Convertimos tu contabilidad en insights. MRR, ARR, burn, runway. Lo que importa para crecer.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary"></span>
+                  Experiencia startup real
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  CFOs que vivieron Seed, Series A, scaling. Silicon Valley y LATAM. Sabemos lo que necesitas porque lo vivimos.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary"></span>
+                  Socio, no proveedor
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Nos importa tu negocio. Acompañamiento cercano. Somos parte de tu equipo, no un outsourced.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary"></span>
+                  Tecnología que escala
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Sistemas que crecen contigo. Desde operaciones manuales a automatización a medida que escalan.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Partner Section - Text + Image */}
-      <section className="px-6 py-10 bg-primary/5">
+      {/* Outcomes Section - Text + Image */}
+      <section className="px-6 py-16 bg-background">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+            Y esto es lo que cambia
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 md:text-lg max-w-3xl mx-auto">
+            Cuando trabajas con Arrowpoint:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               ref={partnerTextRef}
-              className={`space-y-4 transition-all duration-700 ${partnerTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+              className={`space-y-6 transition-all duration-700 ${partnerTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
-                Más que un proveedor:<br />tu socio financiero.
-              </h2>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                No solo entregamos reportes. Pensamos contigo el negocio y te acompañamos como parte de tu equipo.
-              </p>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 text-lg">
+                  Controlas tu runway
+                </h3>
+                <p className="text-muted-foreground">
+                  Sabes exacto cuándo se acaba el dinero. Eso te da espacio mental y tiempo para mover fichas.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 text-lg">
+                  Tomas decisiones rápido
+                </h3>
+                <p className="text-muted-foreground">
+                  "¿Cierro esta oficina? ¿Debo reducir CAC?" Ya tienes los números claros. No adivinas.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 text-lg">
+                  Inversionistas confían en ti
+                </h3>
+                <p className="text-muted-foreground">
+                  Tu deck tiene números reales y defensibles. Los VC sienten que controlas tu negocio.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-2 text-lg">
+                  Identificas oportunidades
+                </h3>
+                <p className="text-muted-foreground">
+                  Ves qué es rentable, dónde creces con margen, en qué canales tienes mejor eficiencia.
+                </p>
+              </div>
             </div>
+
             <div
               ref={partnerImgRef}
               className={`rounded-2xl overflow-hidden aspect-[4/3] transition-all duration-700 delay-200 ${partnerImgVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
             >
-              <img src={porquePartner} alt="Socio financiero" className="w-full h-full object-cover object-[center_30%]" />
+              <img src={porquePartner} alt="Crecimiento con control" className="w-full h-full object-cover object-[center_30%]" />
             </div>
           </div>
         </div>
@@ -153,7 +276,7 @@ const PorQueArrowpoint = () => {
       </section>
 
       {/* CTA Contact Section */}
-      <section className="py-10 px-6 relative overflow-hidden">
+      <section className="py-16 px-6 relative overflow-hidden">
         <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
           <div
@@ -161,11 +284,16 @@ const PorQueArrowpoint = () => {
             className={`space-y-6 text-white pl-4 md:pl-8 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
           >
-            <h2 className="text-2xl leading-tight md:text-4xl font-bold">
-              Deja de adivinar.<br />Empieza a decidir<br />con confianza.
+            <h2 className="text-3xl leading-tight md:text-5xl font-bold">
+              La claridad está<br />a una llamada.
             </h2>
-            <p className="text-white/80 leading-relaxed text-base">
-              Agenda una llamada y ve cómo <br />Arrowpoint puede ser tu copiloto <br />financiero.
+            <p className="text-white/85 leading-relaxed text-base md:text-lg">
+              Agenda 30 minutos con nosotros. Te mostramos exacto qué está pasando con tus finanzas y qué podríamos hacer juntos.
+            </p>
+            <p className="text-white/70 text-sm">
+              ✓ Sin jargón contable<br />
+              ✓ Sin promesas vacías<br />
+              ✓ Solo números y realidad
             </p>
           </div>
           <div
