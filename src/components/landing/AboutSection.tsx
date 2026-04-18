@@ -42,7 +42,7 @@ const AboutSection = () => {
                   key={i}
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-10 w-auto object-contain flex-shrink-0 max-h-10"
+                  className={`${logo.className} w-auto object-contain flex-shrink-0 max-h-10`}
                 />
               ))}
             </div>

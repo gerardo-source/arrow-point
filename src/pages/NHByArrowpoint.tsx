@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -14,9 +13,16 @@ import flujoCajaIcon from "@/assets/icons/flujo-caja.svg";
 import bolsaDineroIcon from "@/assets/icons/bolsa-dinero.svg";
 import metricasIcon from "@/assets/icons/metricas.svg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useSEO } from "@/hooks/useSEO";
 
 const NHByArrowpoint = () => {
-  useEffect(() => { document.title = "NH by Arrowpoint │ Arrowpoint"; }, []);
+  useSEO({
+    title: "NH by Arrowpoint │ Dashboard Financiero para Startups",
+    description: "NH by Arrowpoint: La plataforma de gestión financiera diseñada para startups. Visualiza MRR, runway, flujo de caja y métricas en tiempo real.",
+    ogTitle: "NH by Arrowpoint - Dashboard Financiero",
+    ogDescription: "Software de gestión financiera para startups. Dashboard intuitivo con métricas, presupuestos y clarity financiera en tiempo real.",
+    keywords: "dashboard financiero, software gestión financiera, MRR, runway, startup metrics, NH Arrowpoint",
+  });
   const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
   const { ref: imgRef, isVisible: imgVisible } = useScrollReveal();
   const { ref: listRef, isVisible: listVisible } = useScrollReveal();

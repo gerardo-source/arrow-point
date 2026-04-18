@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -11,6 +10,7 @@ import decorativeCircles from "@/assets/decorative-circles.webp";
 import casosHero from "@/assets/casos-hero.webp";
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useSEO } from "@/hooks/useSEO";
 
 const casos = [
 {
@@ -31,7 +31,13 @@ const casos = [
 
 
 const CasosDeExito = () => {
-  useEffect(() => { document.title = "Casos de Éxito │ Arrowpoint"; }, []);
+  useSEO({
+    title: "Casos de Éxito │ Arrowpoint",
+    description: "Descubre los casos de éxito de startups que escalaron con Arrowpoint. Cómo conquistaron claridad financiera y cerraron rondas de inversión.",
+    ogTitle: "Casos de Éxito - Arrowpoint",
+    ogDescription: "Startups que confían en Arrowpoint para su clarity financiera, runway exacto y decisiones de scaling.",
+    keywords: "casos de éxito, startups exitosas, Finance as a Service, escalamiento startup",
+  });
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
   const { ref: acordeonRef, isVisible: acordeonVisible } = useScrollReveal();
