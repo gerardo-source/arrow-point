@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import ContactForm from "@/components/landing/ContactForm";
 import porqueClarity from "@/assets/porque-clarity.webp";
 import gradientBg from "@/assets/gradient-bg.webp";
@@ -7,9 +6,16 @@ import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useSEO } from "@/hooks/useSEO";
 
 const PorQueArrowpoint = () => {
-  useEffect(() => { document.title = "Por Qué Arrowpoint │ Arrowpoint"; }, []);
+  useSEO({
+    title: "¿Por Qué Arrowpoint? │ Finance as a Service",
+    description: "Descubre por qué Arrowpoint es diferente. Convertimos números complejos en decisiones claras para que controles tu runway, cierres rondas y crezcas con confianza.",
+    ogTitle: "¿Por Qué Elegir Arrowpoint?",
+    ogDescription: "Arrowpoint transforma tu contabilidad en insights accionables. De números a decisiones reales para founders y startups.",
+    keywords: "por qué Arrowpoint, Finance as a Service, CFO expertise, decisiones financieras, runway startup",
+  });
   const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
   const { ref: descRef, isVisible: descVisible } = useScrollReveal();
   const { ref: clarityImgRef, isVisible: clarityImgVisible } = useScrollReveal();
