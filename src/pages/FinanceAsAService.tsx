@@ -82,7 +82,7 @@ const FinanceAsAService = () => {
             </p>
 
             <div className="relative z-10 mt-4">
-              <img src={financeServiceHero} alt="Análisis financiero" className="w-40 md:w-52 rounded-lg object-cover" fetchPriority="high" loading="eager" />
+              <img src={financeServiceHero} alt="Análisis financiero" className="w-40 md:w-52 rounded-lg object-cover" fetchpriority="high" loading="eager" />
             </div>
           </div>
         </div>
