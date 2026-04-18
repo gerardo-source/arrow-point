@@ -29,7 +29,7 @@ const PorQueArrowpoint = () => {
       <Navbar />
 
       {/* Hero Section - Uncomfortable Hook */}
-      <section className="w-full bg-primary" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
+      <section className="w-full bg-primary pt-20 md:pt-32" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
         <div
           ref={heroRef}
           className={`relative overflow-hidden px-6 md:px-8 py-6 md:py-8 flex flex-col items-center text-center transition-all duration-700 max-w-5xl mx-auto ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
