@@ -29,10 +29,10 @@ const PorQueArrowpoint = () => {
       <Navbar />
 
       {/* Hero Section - Uncomfortable Hook */}
-      <section className="pt-32 pb-10 px-6" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
+      <section className="w-full bg-primary" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
         <div
           ref={heroRef}
-          className={`relative rounded-3xl bg-primary overflow-hidden px-6 md:px-8 py-10 md:py-12 flex flex-col items-center text-center transition-all duration-700 max-w-5xl mx-auto ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
+          className={`relative overflow-hidden px-6 md:px-8 py-6 md:py-8 flex flex-col items-center text-center transition-all duration-700 max-w-5xl mx-auto ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
         >
           <img src={decorativeCircles} alt="" className="absolute top-28 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
 
@@ -45,8 +45,8 @@ const PorQueArrowpoint = () => {
             Pero aquí estás.
           </p>
 
-          <div className="relative z-10 mt-8 max-w-xs">
-            <img src={porqueHeroMeeting} alt="Founders discutiendo estrategia" className="w-full rounded-xl" fetchpriority="high" loading="eager" />
+          <div className="relative z-10 mt-6 max-w-xs h-48 md:h-56 overflow-hidden rounded-lg">
+            <img src={porqueHeroMeeting} alt="Founders discutiendo estrategia" className="w-full h-full object-cover object-center" fetchpriority="high" loading="eager" />
           </div>
         </div>
       </section>
