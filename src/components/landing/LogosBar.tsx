@@ -15,9 +15,9 @@ export const clientLogos = [
   { src: kinedu, alt: "Kinedu", className: "h-10" },
   { src: michemix, alt: "Michemix", className: "h-10" },
   { src: sora, alt: "Sora", className: "h-10" },
-  { src: "https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2Fcf6534d6f23e40649b3480da21670b69?format=webp&width=800&height=1200", alt: "Avioneta", className: "h-10" },
-  { src: "https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F733f397f2d8049a1810c6307c72b56a6?format=webp&width=800&height=1200", alt: "Bonnus", className: "h-10" },
-  { src: "https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F434b4275b6de484d8d2b1fa7948df5e1?format=webp&width=800&height=1200", alt: "Lapzo", className: "h-10" },
+  { src: "https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2Fcf6534d6f23e40649b3480da21670b69?format=webp&width=800&height=1200", alt: "Avioneta", className: "h-8" },
+  { src: "https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F733f397f2d8049a1810c6307c72b56a6?format=webp&width=800&height=1200", alt: "Bonnus", className: "h-12" },
+  { src: "https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F434b4275b6de484d8d2b1fa7948df5e1?format=webp&width=800&height=1200", alt: "Lapzo", className: "h-12" },
   { src: "https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F55cbc3379d244fdab0f4d752dedea03e?format=webp&width=800&height=1200", alt: "Reserva Natural Chipinque", className: "h-10" },
 ];
 
@@ -57,7 +57,7 @@ const LogosBar = () => {
                 key={i}
                 src={logo.src}
                 alt={logo.alt}
-                className={`${logo.className} w-auto object-contain flex-shrink-0`}
+                className={`${logo.className} w-auto object-contain flex-shrink-0 max-h-10`}
               />
             ))}
           </div>
