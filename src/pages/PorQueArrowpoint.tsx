@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import ContactForm from "@/components/landing/ContactForm";
 import porqueClarity from "@/assets/porque-clarity.webp";
-import porquePartner from "@/assets/porque-partner.webp";
 import gradientBg from "@/assets/gradient-bg.webp";
 import decorativeArrows from "@/assets/decorative-arrows.webp";
 import TopBanner from "@/components/landing/TopBanner";
@@ -15,8 +14,6 @@ const PorQueArrowpoint = () => {
   const { ref: descRef, isVisible: descVisible } = useScrollReveal();
   const { ref: clarityImgRef, isVisible: clarityImgVisible } = useScrollReveal();
   const { ref: clarityTextRef, isVisible: clarityTextVisible } = useScrollReveal();
-  const { ref: partnerTextRef, isVisible: partnerTextVisible } = useScrollReveal();
-  const { ref: partnerImgRef, isVisible: partnerImgVisible } = useScrollReveal();
   const { ref: idealRef, isVisible: idealVisible } = useScrollReveal();
   const { ref: ctaTextRef, isVisible: ctaTextVisible } = useScrollReveal();
   const { ref: ctaFormRef, isVisible: ctaFormVisible } = useScrollReveal();
@@ -196,86 +193,6 @@ const PorQueArrowpoint = () => {
             className={`relative z-10 transition-all duration-700 delay-200 ${ctaFormVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
           >
             <ContactForm />
-          </div>
-        </div>
-      </section>
-
-      {/* Outcomes Section */}
-      <section className="px-6 py-16 bg-background">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
-            Y esto es lo que cambia
-          </h2>
-          <p className="text-muted-foreground text-center mb-12 md:text-lg max-w-3xl mx-auto">
-            Cuando trabajas con Arrowpoint:
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div
-              ref={partnerTextRef}
-              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 ${partnerTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">1</div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-lg">
-                    Controlas tu runway
-                  </h3>
-                </div>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                Sabes exacto cuándo se acaba el dinero. Eso te da espacio mental y tiempo para mover fichas.
-              </p>
-            </div>
-
-            <div
-              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 delay-100`}
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">2</div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-lg">
-                    Tomas decisiones rápido
-                  </h3>
-                </div>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                "¿Cierro esta oficina? ¿Debo reducir CAC?" Ya tienes los números claros. No adivinas.
-              </p>
-            </div>
-
-            <div
-              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 delay-200`}
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">3</div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-lg">
-                    Inversionistas confían en ti
-                  </h3>
-                </div>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                Tu deck tiene números reales y defensibles. Los VC sienten que controlas tu negocio.
-              </p>
-            </div>
-
-            <div
-              ref={partnerImgRef}
-              className={`rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-transparent p-8 transition-all duration-700 delay-300`}
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg flex-shrink-0">4</div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-lg">
-                    Identificas oportunidades
-                  </h3>
-                </div>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                Ves qué es rentable, dónde creces con margen, en qué canales tienes mejor eficiencia.
-              </p>
-            </div>
           </div>
         </div>
       </section>
