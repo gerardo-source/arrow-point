@@ -39,7 +39,10 @@ function Typewriter({ words }: { words: readonly string[] }) {
       <span>{text}</span>
       <span
         aria-hidden
-        className="ml-1 inline-block h-[0.8em] w-[5px] sm:w-[3px] translate-y-[0.05em] bg-primary animate-[blink_1s_steps(2,start)_infinite]"
+        className="ml-1 inline-block h-[0.8em] w-[5px] sm:w-[3px] translate-y-[0.05em] bg-primary"
+        style={{
+          animation: "blink 1s steps(2, start) infinite",
+        }}
       />
     </span>
   );
@@ -68,7 +71,7 @@ const HeroSection = () => {
             <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold text-balance leading-[1.05]">
               {t.hero.titleA}{" "}
               <span className="gradient-text">
-                <span className="inline-block min-w-[120px] sm:min-w-[140px] md:min-w-[160px] lg:min-w-[200px]">
+                <span className="inline-block min-w-[100px] sm:min-w-[120px] md:min-w-[140px] lg:min-w-[180px]">
                   <Typewriter words={t.hero.titleWords} />
                 </span>
               </span>{" "}
