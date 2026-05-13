@@ -21,7 +21,7 @@ const ContactSection = () => {
             </p>
 
             <a
-              href="https://cal.com/arrowpoint"
+              href="https://calendly.com/arrowpoint/arrowpoint-meeting"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
