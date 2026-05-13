@@ -37,7 +37,7 @@ const HeroSection = () => {
     <section 
       className="relative flex items-center px-6 py-20 md:py-32 min-h-[600px] md:min-h-[700px] overflow-hidden"
       style={{
-        backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F4c54f5001cb741cb952a3ecbeda0cf1c?format=webp')`,
+        backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F90cc9a3449dd4bd7b90ed8ad2b0b27d3?format=webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center right',
         backgroundAttachment: 'fixed'
