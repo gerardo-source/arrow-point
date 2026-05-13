@@ -68,7 +68,9 @@ const HeroSection = () => {
             <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold text-balance leading-[1.05]">
               {t.hero.titleA}{" "}
               <span className="gradient-text">
-                <Typewriter words={t.hero.titleWords} />
+                <span className="inline-block min-w-[120px] sm:min-w-[140px] md:min-w-[160px] lg:min-w-[200px]">
+                  <Typewriter words={t.hero.titleWords} />
+                </span>
               </span>{" "}
               {t.hero.titleB}
             </h1>
