@@ -441,7 +441,7 @@ export const translations = {
     hero: {
       eyebrow: "Finance as a Service · Fractional CFO",
       titleA: "The finance team your",
-      titleWords: ["organization", "startup", "SMB", "company", "NGO"],
+      titleWords: ["startup", "organization", "SMB", "company", "NGO"],
       titleB: "needs to scale with discipline.",
       subtitle:
         "Executive reporting, financial models, and a dedicated CFO, without hiring an in-house team.",
