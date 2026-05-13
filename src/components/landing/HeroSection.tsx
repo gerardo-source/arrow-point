@@ -21,7 +21,7 @@ function Typewriter({ words }: { words: readonly string[] }) {
         setPhase("typing");
         return;
       }
-      const t = setTimeout(() => setText(text.slice(0, -1)), 45);
+      const t = setTimeout(() => setText(text.slice(0, -1)), 40);
       return () => clearTimeout(t);
     }
     if (phase === "typing") {
@@ -29,7 +29,7 @@ function Typewriter({ words }: { words: readonly string[] }) {
         setPhase("holding");
         return;
       }
-      const t = setTimeout(() => setText(current.slice(0, text.length + 1)), 95);
+      const t = setTimeout(() => setText(current.slice(0, text.length + 1)), 70);
       return () => clearTimeout(t);
     }
   }, [text, wordIndex, phase, words]);
@@ -39,7 +39,7 @@ function Typewriter({ words }: { words: readonly string[] }) {
       <span>{text}</span>
       <span
         aria-hidden
-        className="ml-1 inline-block h-[0.8em] w-[3px] translate-y-[0.05em] bg-primary animate-[blink_1s_steps(2,start)_infinite]"
+        className="ml-1 inline-block h-[0.8em] w-[5px] sm:w-[3px] translate-y-[0.05em] bg-primary animate-[blink_1s_steps(2,start)_infinite]"
       />
     </span>
   );
