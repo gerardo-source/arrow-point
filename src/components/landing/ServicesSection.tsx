@@ -1,46 +1,81 @@
-import ceoIcon from "@/assets/icons/ceo.svg";
-import moneyIcon from "@/assets/icons/money.svg";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Check, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { cn } from "@/lib/utils";
 
 const ServicesSection = () => {
-  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
-  const { ref: cardsRef, isVisible: cardsVisible } = useScrollReveal();
+  const { t } = useLocale();
+  const navigate = useNavigate();
 
-  const services = [
-    {
-      title: "Finance as a Service",
-      icon: ceoIcon,
-      link: "/finance-as-a-service",
-      description:
-        "Estrategia, claridad y un CFO a tu lado. Reportes listos para board, modelos financieros, planeación de cash y acompañamiento en fundraising. Un socio que entiende startups y habla el idioma de inversionistas.",
-    },
-    {
-      title: "NH by Arrowpoint",
-      icon: moneyIcon,
-      link: "/nh-by-arrowpoint",
-      description:
-        "Claridad financiera mensual, sin complejidad. Procesamos tus números con BI y AI y te entregamos un reporte ejecutivo con las métricas que importan. Ideal para founders early stage que quieren control sin armar un equipo financiero.",
-    },
+  const tiers = [
+    { ...t.services.nh, popular: false, href: "/nh-by-arrowpoint" },
+    { ...t.services.faas, popular: true, href: "/finance-as-a-service" },
   ];
 
   return (
-    <section className="py-10 px-6 bg-primary/5" id="servicios">
-      <div className="mx-auto space-y-12">
-        <div ref={headerRef} className={`text-center space-y-3 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <span className="inline-block text-xs text-foreground font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full border border-border bg-background"><span className="text-primary">★</span> Servicios</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nuestros servicios</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Te ofrecemos un servicio a la medida de lo que tu empresa requiere.
+    <section id="servicios" className="relative py-20 sm:py-28 bg-secondary/40">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="text-xs uppercase tracking-[0.18em] text-primary font-semibold">
+            {t.services.eyebrow}
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
+            {t.services.title}
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground text-balance">
+            {t.services.subtitle}
           </p>
         </div>
-        <div ref={cardsRef} className={`flex flex-col gap-8 items-center transition-all duration-700 delay-200 ${cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          {services.map((s, i) => (
-            <div key={s.title} className="w-full max-w-4xl rounded-2xl border border-primary/30 bg-background p-10 space-y-5 hover:shadow-lg transition-shadow" style={{ transitionDelay: `${i * 150}ms` }}>
-              <img src={s.icon} alt={s.title} className="w-14 h-14" />
-              <h3 className="text-2xl font-bold text-foreground">{s.title}</h3>
-              <p className="text-muted-foreground text-base leading-relaxed">{s.description}</p>
-              <a href={s.link} className="inline-flex items-center text-primary font-medium text-base hover:underline">
-                Ver más →
+
+        <div className="mt-12 grid md:grid-cols-2 gap-5 lg:gap-6 max-w-4xl mx-auto">
+          {tiers.map((tier) => (
+            <div
+              key={tier.name}
+              className={cn(
+                "relative surface-card p-7 sm:p-8 flex flex-col",
+                tier.popular &&
+                  "ring-2 ring-primary/60 shadow-xl shadow-primary/10",
+              )}
+            >
+              {tier.popular && "badge" in tier && tier.badge && (
+                <span className="absolute -top-3 left-7 inline-flex items-center rounded-full bg-foreground text-background px-3 py-1 text-[11px] font-medium">
+                  {tier.badge}
+                </span>
+              )}
+
+              <h3 className="text-xl font-semibold">{tier.name}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{tier.tagline}</p>
+
+              <div className="mt-6 flex items-baseline gap-1">
+                <span className="text-3xl font-semibold tracking-tight">
+                  {tier.price}
+                </span>
+                <span className="text-sm text-muted-foreground">{tier.period}</span>
+              </div>
+
+              <ul className="mt-6 space-y-3 flex-1">
+                {tier.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2.5 text-sm">
+                    <span className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                      <Check className="h-2.5 w-2.5" strokeWidth={3} />
+                    </span>
+                    <span className="text-foreground/85">{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={tier.href}
+                onClick={(e) => { e.preventDefault(); navigate(tier.href); }}
+                className={cn(
+                  "mt-7 inline-flex items-center justify-center gap-1.5 rounded-full h-10 px-5 text-sm font-medium transition-opacity",
+                  tier.popular
+                    ? "bg-foreground text-background hover:opacity-90"
+                    : "border border-border hover:bg-accent text-foreground",
+                )}
+              >
+                {tier.cta}
+                <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           ))}

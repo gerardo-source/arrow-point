@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 interface SEOProps {
   title: string;
@@ -7,6 +7,46 @@ interface SEOProps {
   ogDescription?: string;
   ogImage?: string;
   keywords?: string;
+  locale?: "es" | "en";
+  canonical?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const SITE_URL = "https://www.arrowpointfinancial.com";
+
+function upsertMeta(selector: string, attr: "name" | "property", key: string, content: string) {
+  let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
+
+function upsertLink(rel: string, href: string, hreflang?: string) {
+  const sel = hreflang
+    ? `link[rel="${rel}"][hreflang="${hreflang}"]`
+    : `link[rel="${rel}"]:not([hreflang])`;
+  let el = document.querySelector(sel) as HTMLLinkElement | null;
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", rel);
+    if (hreflang) el.setAttribute("hreflang", hreflang);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("href", href);
+}
+
+function upsertJsonLd(id: string, data: Record<string, unknown> | Record<string, unknown>[]) {
+  let el = document.getElementById(id) as HTMLScriptElement | null;
+  if (!el) {
+    el = document.createElement("script");
+    el.id = id;
+    el.type = "application/ld+json";
+    document.head.appendChild(el);
+  }
+  el.textContent = JSON.stringify(data);
 }
 
 export const useSEO = ({
@@ -16,76 +56,38 @@ export const useSEO = ({
   ogDescription,
   ogImage,
   keywords,
+  locale = "es",
+  canonical,
+  jsonLd,
 }: SEOProps) => {
   useEffect(() => {
-    // Set title
     document.title = title;
+    document.documentElement.lang = locale;
 
-    // Update or create meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
+    upsertMeta("description", "name", "description", description);
+    if (keywords) upsertMeta("keywords", "name", "keywords", keywords);
 
-    // Update or create keywords
-    if (keywords) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute('content', keywords);
-    }
+    upsertMeta("og:title", "property", "og:title", ogTitle || title);
+    upsertMeta("og:description", "property", "og:description", ogDescription || description);
+    upsertMeta("og:locale", "property", "og:locale", locale === "en" ? "en_US" : "es_MX");
+    if (ogImage) upsertMeta("og:image", "property", "og:image", ogImage);
 
-    // Update og:title
-    let ogTitleTag = document.querySelector('meta[property="og:title"]');
-    if (!ogTitleTag) {
-      ogTitleTag = document.createElement('meta');
-      ogTitleTag.setAttribute('property', 'og:title');
-      document.head.appendChild(ogTitleTag);
-    }
-    ogTitleTag.setAttribute('content', ogTitle || title);
+    upsertMeta("twitter:title", "name", "twitter:title", ogTitle || title);
+    upsertMeta("twitter:description", "name", "twitter:description", ogDescription || description);
+    if (ogImage) upsertMeta("twitter:image", "name", "twitter:image", ogImage);
 
-    // Update og:description
-    let ogDescriptionTag = document.querySelector('meta[property="og:description"]');
-    if (!ogDescriptionTag) {
-      ogDescriptionTag = document.createElement('meta');
-      ogDescriptionTag.setAttribute('property', 'og:description');
-      document.head.appendChild(ogDescriptionTag);
-    }
-    ogDescriptionTag.setAttribute('content', ogDescription || description);
+    const canon =
+      canonical ||
+      (typeof window !== "undefined"
+        ? `${SITE_URL}${window.location.pathname}`
+        : SITE_URL);
+    upsertLink("canonical", canon);
+    upsertLink("alternate", canon, "es");
+    upsertLink("alternate", `${canon}${canon.includes("?") ? "&" : "?"}lang=en`, "en");
+    upsertLink("alternate", canon, "x-default");
 
-    // Update og:image
-    if (ogImage) {
-      let ogImageTag = document.querySelector('meta[property="og:image"]');
-      if (!ogImageTag) {
-        ogImageTag = document.createElement('meta');
-        ogImageTag.setAttribute('property', 'og:image');
-        document.head.appendChild(ogImageTag);
-      }
-      ogImageTag.setAttribute('content', ogImage);
+    if (jsonLd) {
+      upsertJsonLd("page-jsonld", jsonLd);
     }
-
-    // Update twitter:title
-    let twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (!twitterTitle) {
-      twitterTitle = document.createElement('meta');
-      twitterTitle.setAttribute('name', 'twitter:title');
-      document.head.appendChild(twitterTitle);
-    }
-    twitterTitle.setAttribute('content', ogTitle || title);
-
-    // Update twitter:description
-    let twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (!twitterDescription) {
-      twitterDescription = document.createElement('meta');
-      twitterDescription.setAttribute('name', 'twitter:description');
-      document.head.appendChild(twitterDescription);
-    }
-    twitterDescription.setAttribute('content', ogDescription || description);
-  }, [title, description, ogTitle, ogDescription, ogImage, keywords]);
+  }, [title, description, ogTitle, ogDescription, ogImage, keywords, locale, canonical, jsonLd]);
 };

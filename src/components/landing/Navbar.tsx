@@ -1,213 +1,147 @@
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import ceoIcon from "@/assets/icons/ceo-2.svg";
-import moneyIcon from "@/assets/icons/money-2.svg";
-import arrowpointLogo from "@/assets/arrowpoint-logo.png";
-import heroTeam from "@/assets/navbar-dropdown-image.webp";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-
-const megaMenuServices = [
-  {
-    customIcon: ceoIcon,
-    title: "Finance as a Service",
-    description: "Estrategia, claridad y un CFO a tu lado.",
-    href: "/finance-as-a-service",
-  },
-  {
-    customIcon: moneyIcon,
-    title: "NH by Arrowpoint",
-    description: "Claridad financiera mensual, sin complejidad.",
-    href: "/nh-by-arrowpoint",
-  },
-];
+import { useLocale } from "@/i18n/LocaleProvider";
+import { LangToggle, ThemeToggle } from "./ThemeLangToggle";
+import arrowpointLogo from "@/assets/arrowpoint-logo.png";
+import arrowpointLogoDark from "@/assets/PNG/Arrowpoint_Logo_Slogan_Blanco.png";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [megaOpen, setMegaOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const lastScrollY = useRef(0);
-  const megaRef = useRef<HTMLDivElement>(null);
-  const triggerRef = useRef<HTMLButtonElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useLocale();
 
   useEffect(() => {
-    const onScroll = () => {
-      const currentY = window.scrollY;
-      setScrolled(currentY > 10);
-      setVisible(currentY < lastScrollY.current || currentY < 10);
-      lastScrollY.current = currentY;
-    };
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const goAnchor = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
-    if (href.startsWith("#")) {
-      if (location.pathname !== "/") {
-        navigate("/");
-        setTimeout(() => {
-          document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-        }, 300);
-      } else {
+    setMobileOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
         document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-      }
+      }, 300);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // Close mega menu on outside click
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (
-        megaRef.current &&
-        !megaRef.current.contains(e.target as Node) &&
-        triggerRef.current &&
-        !triggerRef.current.contains(e.target as Node)
-      ) {
-        setMegaOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
-
-  const links = [
-    { label: "Casos de éxitos", href: "/casos-de-exito" },
+  const links: { label: string; href: string }[] = [
+    { label: t.nav.services, href: "#servicios" },
+    { label: t.nav.howItWorks, href: "#como" },
+    { label: t.nav.audience, href: "#para-quien" },
+    { label: t.nav.cases, href: "/casos-de-exito" },
   ];
 
   return (
     <nav
-      style={{ top: "var(--top-banner-height, 0px)" }}
-      className={`fixed left-0 right-0 z-50 bg-background/95 backdrop-blur transition-all duration-300 ${scrolled ? "border-b border-border shadow-sm" : ""} ${visible ? "translate-y-0" : "-translate-y-full"}`}
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        scrolled
+          ? "glass border-b border-border/80"
+          : "bg-transparent border-b border-transparent",
+      )}
     >
-      <div className="mx-auto px-6 flex items-center justify-between h-20">
-        {/* Logo placeholder */}
-        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }}>
-          <img src={arrowpointLogo} alt="Arrowpoint" className="h-8" />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-16">
+        <a
+          href="/"
+          onClick={(e) => { e.preventDefault(); navigate("/"); }}
+          className="flex items-center gap-2"
+          aria-label="Arrowpoint home"
+        >
+          <img src={arrowpointLogo} alt="Arrowpoint" className="h-6 w-auto dark:hidden" />
+          <img src={arrowpointLogoDark} alt="Arrowpoint" className="h-10 w-auto hidden dark:block" />
         </a>
 
-        {/* Desktop links */}
-        <div className="hidden lg:flex items-center gap-8">
-          <a
-            href="/por-que-arrowpoint"
-            onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); }}
-            className="text-base text-foreground/80 hover:text-primary transition-colors cursor-pointer"
-          >
-            ¿Por qué Arrowpoint?
-          </a>
-
-          {/* Servicios mega menu trigger */}
-          <button
-            ref={triggerRef}
-            onClick={() => setMegaOpen(!megaOpen)}
-            className="text-base text-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
-          >
-            Servicios
-            <svg
-              className={`w-3.5 h-3.5 transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={(e) => {
-                if (l.href.startsWith("/")) {
-                  e.preventDefault();
-                  navigate(l.href);
-                } else {
-                  handleAnchorClick(e, l.href);
-                }
-              }}
-              className="text-base text-foreground/80 hover:text-primary transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
-          <Button size="lg" asChild>
-            <a href="#contacto" onClick={(e) => handleAnchorClick(e, "#contacto")}>Contáctanos</a>
-          </Button>
+        <div className="hidden md:flex items-center gap-1 text-sm">
+          {links.map((l) =>
+            l.href.startsWith("/") ? (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={(e) => { e.preventDefault(); navigate(l.href); }}
+                className="px-3 py-2 rounded-md text-foreground/75 hover:text-foreground hover:bg-accent/60 transition-colors"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={(e) => goAnchor(e, l.href)}
+                className="px-3 py-2 rounded-md text-foreground/75 hover:text-foreground hover:bg-accent/60 transition-colors"
+              >
+                {l.label}
+              </a>
+            )
+          )}
         </div>
 
-
-
-        {/* Mobile toggle */}
-        <button className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2">
+          <LangToggle className="hidden sm:inline-flex" />
+          <ThemeToggle />
+          <a
+            href="#contacto"
+            onClick={(e) => goAnchor(e, "#contacto")}
+            className="hidden sm:inline-flex items-center justify-center rounded-full bg-foreground text-background px-4 h-9 text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            {t.nav.cta}
+          </a>
+          <button
+            type="button"
+            className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-border"
+            onClick={() => setMobileOpen((s) => !s)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+          </button>
+        </div>
       </div>
 
-      {/* Full-width mega menu banner */}
-      {megaOpen && (
-        <div
-          ref={megaRef}
-          className="w-full border-b border-border bg-background animate-fade-in"
-        >
-          <div className="mx-auto px-6 py-3 flex items-stretch justify-between gap-4">
-            <div className="flex items-center gap-4">
-              {megaMenuServices.map((s) => (
-                <a
-                  key={s.title}
-                  href={s.href}
-                  onClick={(e) => { e.preventDefault(); navigate(s.href); setMegaOpen(false); }}
-                  className="flex items-center gap-4 rounded-xl px-8 py-6 hover:bg-accent/50 transition-colors whitespace-nowrap"
-                >
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white shadow-md">
-                    <img src={s.customIcon} alt="" className="h-9 w-9" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} />
-                  </div>
-                  <span className="text-base font-medium text-foreground">{s.title}</span>
-                </a>
-              ))}
-            </div>
-            <div className="hidden lg:block w-[45%] h-44 rounded-lg overflow-hidden">
-              <img src={heroTeam} alt="Equipo" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-b border-border bg-background px-4 pb-4 space-y-3">
-          <a
-            href="/por-que-arrowpoint"
-            className="block text-sm text-foreground/80 hover:text-primary pt-2"
-            onClick={(e) => { e.preventDefault(); navigate("/por-que-arrowpoint"); setMobileOpen(false); }}
-          >
-            ¿Por qué Arrowpoint?
-          </a>
-          <div className="border-t border-border my-2" />
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Servicios</p>
-          {megaMenuServices.map((s) => (
+        <div className="md:hidden border-t border-border bg-background">
+          <div className="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-1">
+            {links.map((l) =>
+              l.href.startsWith("/") ? (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={(e) => { e.preventDefault(); navigate(l.href); setMobileOpen(false); }}
+                  className="px-2 py-3 rounded-md text-foreground/85 hover:bg-accent"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={(e) => goAnchor(e, l.href)}
+                  className="px-2 py-3 rounded-md text-foreground/85 hover:bg-accent"
+                >
+                  {l.label}
+                </a>
+              )
+            )}
+            <div className="flex items-center gap-2 pt-3">
+              <LangToggle />
+            </div>
             <a
-              key={s.title}
-              href={s.href}
-              className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary pl-2"
-              onClick={() => setMobileOpen(false)}
+              href="#contacto"
+              onClick={(e) => goAnchor(e, "#contacto")}
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-foreground text-background px-4 h-10 text-sm font-medium"
             >
-              <img src={s.customIcon} alt="" className="h-4 w-4" style={{ filter: "invert(28%) sepia(99%) saturate(4975%) hue-rotate(213deg) brightness(101%) contrast(98%)" }} />
-              {s.title}
+              {t.nav.cta}
             </a>
-          ))}
-          <div className="border-t border-border my-2" />
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="block text-sm text-foreground/80 hover:text-primary" onClick={() => setMobileOpen(false)}>
-              {l.label}
-            </a>
-          ))}
-          <Button size="sm" className="w-full" asChild>
-            <a href="#contacto" onClick={() => setMobileOpen(false)}>Contáctanos</a>
-          </Button>
+          </div>
         </div>
       )}
     </nav>

@@ -1,25 +1,38 @@
-import gradientBg from "@/assets/gradient-bg.webp";
 import ContactForm from "@/components/landing/ContactForm";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 const ContactSection = () => {
-  const { ref: textRef, isVisible: textVisible } = useScrollReveal();
-  const { ref: formRef, isVisible: formVisible } = useScrollReveal();
+  const { t } = useLocale();
 
   return (
-    <section className="py-10 px-6 relative overflow-hidden" id="contacto">
-      <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
-        <div ref={textRef} className={`space-y-6 text-white pl-4 md:pl-8 transition-all duration-700 ${textVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`} style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}>
-          <h2 className="text-2xl leading-tight md:text-4xl font-bold">
-            Deja de adivinar.<br />Empieza a decidir<br />con confianza.
-          </h2>
-          <p className="text-white/80 leading-relaxed text-base">
-            Agenda una llamada y ve cómo <br />Arrowpoint puede ser tu copiloto <br />financiero.
-          </p>
-        </div>
-        <div ref={formRef} className={`transition-all duration-700 delay-200 ${formVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
-          <ContactForm />
+    <section id="contacto" className="relative py-20 sm:py-28 bg-secondary/40">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 grid-bg opacity-40" />
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="surface-card p-7 sm:p-10 lg:p-12 grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <div>
+            <span className="text-xs uppercase tracking-[0.18em] text-primary font-semibold">
+              {t.contact.eyebrow}
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-balance leading-tight">
+              {t.contact.title}
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground text-balance">
+              {t.contact.subtitle}
+            </p>
+
+            <a
+              href="https://cal.com/arrowpoint"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+            >
+              {t.contact.bookCta}
+            </a>
+          </div>
+
+          <div>
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>
