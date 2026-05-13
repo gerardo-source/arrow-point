@@ -1,54 +1,47 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 const CookieBanner = () => {
+  const { t } = useLocale();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {
-      setVisible(true);
-    }
+    if (!localStorage.getItem("cookie-consent")) setVisible(true);
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem("cookie-consent", "accepted");
-    setVisible(false);
-  };
-
-  const handleReject = () => {
-    localStorage.setItem("cookie-consent", "rejected");
+  const decide = (value: "accepted" | "rejected") => {
+    localStorage.setItem("cookie-consent", value);
     setVisible(false);
   };
 
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-sm border-t border-border px-6 py-4 animate-in slide-in-from-bottom duration-500">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-        <p className="text-sm text-white/80 text-center sm:text-left flex-1">
-          Usamos cookies para mejorar tu experiencia. Consulta nuestra{" "}
-          <Link to="/politica-de-cookies" className="underline text-white hover:text-primary-foreground transition-colors">
-            Política de Cookies
-          </Link>.
+    <div className="fixed inset-x-3 sm:inset-x-6 bottom-3 sm:bottom-4 z-50 mx-auto max-w-3xl rounded-2xl border border-border bg-card/95 backdrop-blur p-4 shadow-2xl">
+      <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+        <p className="text-sm text-foreground/80 text-center sm:text-left flex-1">
+          {t.cookies.message}{" "}
+          <Link to="/politica-de-cookies" className="underline font-medium text-foreground hover:text-primary transition-colors">
+            {t.cookies.policy}
+          </Link>
+          .
         </p>
-        <div className="flex items-center gap-3 shrink-0">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleReject}
-            className="border-white/40 text-foreground bg-white hover:bg-white/80"
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            onClick={() => decide("rejected")}
+            className="inline-flex items-center justify-center rounded-full border border-border px-4 h-9 text-sm font-medium text-foreground hover:bg-accent transition-colors"
           >
-            Rechazar
-          </Button>
-          <Button
-            size="sm"
-            onClick={handleAccept}
-            className="bg-primary hover:bg-primary/90"
+            {t.cookies.reject}
+          </button>
+          <button
+            type="button"
+            onClick={() => decide("accepted")}
+            className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-4 h-9 text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Aceptar
-          </Button>
+            {t.cookies.accept}
+          </button>
         </div>
       </div>
     </div>

@@ -1,122 +1,131 @@
-import { useState, FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { toast } from "@/hooks/use-toast";
 
-const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phoneRegex = /^\d{10}$/;
 
 const ContactForm = () => {
+  const { t, locale } = useLocale();
+  const [searchParams] = useSearchParams();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitting, setSubmitting] = useState(false);
 
-  const validate = () => {
-    const newErrors: Record<string, string> = {};
-    if (!name.trim() || !nameRegex.test(name.trim())) {
-      newErrors.name = "Solo letras";
+  useEffect(() => {
+    const planParam = searchParams.get("plan");
+    const serviceParam = searchParams.get("service");
+    if (serviceParam && (serviceParam === "faas" || serviceParam === "nh")) {
+      setService(serviceParam);
     }
-    if (!email.trim() || !emailRegex.test(email.trim())) {
-      newErrors.email = "Correo inválido";
+    if (planParam) {
+      const prefilled =
+        locale === "es"
+          ? `Hola, estoy interesado en el plan ${planParam} de Finance as a Service.`
+          : `Hi, I'm interested in the ${planParam} plan of Finance as a Service.`;
+      setMessage((prev) => (prev ? prev : prefilled));
     }
-    if (!phone.trim() || !phoneRegex.test(phone.trim())) {
-      newErrors.phone = "10 dígitos";
-    }
-    if (!message.trim()) {
-      newErrors.message = "Requerido";
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  }, [searchParams, locale]);
+
+  const requiredMsg = locale === "es" ? "Requerido" : "Required";
+  const invalidEmail = locale === "es" ? "Correo inválido" : "Invalid email";
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (!validate()) return;
+    const newErrors: Record<string, string> = {};
+    if (!name.trim()) newErrors.name = requiredMsg;
+    if (!email.trim() || !emailRegex.test(email.trim())) newErrors.email = invalidEmail;
+    if (!message.trim()) newErrors.message = requiredMsg;
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) return;
 
-    const subject = encodeURIComponent("Contacto desde ArrowPoint");
-    const body = encodeURIComponent(
-      `Nombre: ${name}\nCorreo: ${email}\nTeléfono: ${phone}\nServicio: ${service || "No especificado"}\n\nMensaje:\n${message}`
-    );
-    window.location.href = `mailto:contacto@arrowpoint.com?subject=${subject}&body=${body}`;
+    setSubmitting(true);
+    setTimeout(() => {
+      setSubmitting(false);
+      toast({ title: t.contact.success });
+      setName("");
+      setEmail("");
+      setPhone("");
+      setService("");
+      setMessage("");
+    }, 600);
   };
 
-  const inputBase = "rounded-lg px-4 py-3 bg-white text-black placeholder:text-[#9ca3af] text-sm outline-none";
-  const errorClass = "ring-2 ring-red-400";
+  const inputCls =
+    "h-11 w-full rounded-xl bg-background border border-border px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors";
 
   return (
-    <form className="space-y-4" onSubmit={handleSubmit} noValidate>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit} className="grid gap-3">
+      <div className="grid sm:grid-cols-2 gap-3">
         <div>
           <input
             type="text"
-            placeholder="Nombre"
+            placeholder={t.contact.name}
             value={name}
-            onChange={(e) => {
-              const v = e.target.value;
-              if (v === "" || nameRegex.test(v)) setName(v);
-            }}
-            className={`${inputBase} w-full ${errors.name ? errorClass : ""}`}
+            onChange={(e) => setName(e.target.value)}
+            className={inputCls}
+            aria-invalid={!!errors.name}
           />
-          {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
+          {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
         </div>
         <div>
           <input
             type="email"
-            placeholder="Correo"
+            placeholder={t.contact.email}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`${inputBase} w-full ${errors.email ? errorClass : ""}`}
+            className={inputCls}
+            aria-invalid={!!errors.email}
           />
-          {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+          {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <input
-            type="tel"
-            placeholder="Teléfono"
-            value={phone}
-            onChange={(e) => {
-              const v = e.target.value.replace(/\D/g, "").slice(0, 10);
-              setPhone(v);
-            }}
-            className={`${inputBase} w-full ${errors.phone ? errorClass : ""}`}
-          />
-          {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
-        </div>
+
+      <div className="grid sm:grid-cols-2 gap-3">
+        <input
+          type="tel"
+          placeholder={t.contact.phone}
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          className={inputCls}
+        />
         <div className="relative">
           <select
             value={service}
             onChange={(e) => setService(e.target.value)}
-            className={`rounded-lg px-4 py-3 pr-10 bg-white text-sm outline-none appearance-none w-full ${service ? "text-black" : "text-[#9ca3af]"}`}
+            className={`${inputCls} appearance-none pr-10 ${service ? "" : "text-muted-foreground"}`}
           >
-            <option value="" disabled>Servicio de interés</option>
-            <option value="faas">Finance as a Service</option>
-            <option value="nh">NH by Arrowpoint</option>
+            <option value="">{t.contact.service}</option>
+            <option value="faas">{t.services.faas.name}</option>
+            <option value="nh">{t.services.nh.name}</option>
           </select>
-          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9ca3af] pointer-events-none" />
+          <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         </div>
       </div>
+
       <div>
         <textarea
-          placeholder="Mensaje"
-          rows={5}
+          placeholder={t.contact.message}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className={`${inputBase} w-full resize-none ${errors.message ? errorClass : ""}`}
+          rows={4}
+          className="w-full rounded-xl bg-background border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/60 transition-colors resize-none"
+          aria-invalid={!!errors.message}
         />
-        {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
+        {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
       </div>
+
       <button
         type="submit"
-        className="flex items-center justify-center gap-2 rounded-lg bg-primary text-white px-6 py-3 text-sm font-medium hover:bg-primary/90 transition-colors w-full md:w-auto"
+        disabled={submitting}
+        className="mt-1 inline-flex items-center justify-center rounded-full bg-foreground text-background h-11 px-6 text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-60"
       >
-        Enviar
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
+        {submitting ? t.contact.sending : t.contact.send}
       </button>
     </form>
   );

@@ -1,37 +1,47 @@
-import { useEffect } from "react";
-import TopBanner from "@/components/landing/TopBanner";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
-
-const loremBlock = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+import { useSEO } from "@/hooks/useSEO";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 const AvisoDePrivacidad = () => {
-  useEffect(() => { document.title = "Aviso de Privacidad │ Arrowpoint"; }, []);
-  const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
-  const { ref: contentRef, isVisible: contentVisible } = useScrollReveal();
+  const { locale, t } = useLocale();
+  const p = t.pages.legal.privacy;
+
+  useSEO({
+    locale,
+    title:
+      locale === "es"
+        ? "Aviso de privacidad · Arrowpoint"
+        : "Privacy notice · Arrowpoint",
+    description: p.intro,
+  });
 
   return (
     <div className="min-h-screen bg-background">
-      <TopBanner />
       <Navbar />
 
-      <section className="px-6 py-10" style={{ marginTop: "calc(var(--top-banner-height, 0px) + 5rem)" }}>
-        <div className="max-w-full mx-auto">
-          <h1
-            ref={titleRef}
-            className={`text-3xl md:text-4xl font-bold text-foreground mb-8 transition-all duration-700 ${titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          >
-            Aviso de privacidad
+      <section className="relative pt-32 pb-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <span className="text-xs uppercase tracking-[0.18em] text-primary font-semibold">
+            Legal
+          </span>
+          <h1 className="mt-3 text-3xl sm:text-4xl font-semibold text-balance">
+            {p.title}
           </h1>
-          <div
-            ref={contentRef}
-            className={`space-y-6 text-sm md:text-base text-foreground/80 leading-relaxed transition-all duration-700 delay-200 ${contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          >
-            <p>{loremBlock}</p>
-            <p>{loremBlock}</p>
-            <p>{loremBlock}</p>
-            <p>{loremBlock}</p>
+          <p className="mt-3 text-xs text-muted-foreground">{p.lastUpdated}</p>
+          <p className="mt-6 text-base text-foreground/85 leading-relaxed">
+            {p.intro}
+          </p>
+
+          <div className="mt-10 space-y-8">
+            {p.sections.map((s, i) => (
+              <div key={i} className="border-l-2 border-primary/30 pl-5">
+                <h2 className="text-lg font-semibold text-foreground">{s.h}</h2>
+                <p className="mt-2 text-sm sm:text-base text-foreground/80 leading-relaxed">
+                  {s.p}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

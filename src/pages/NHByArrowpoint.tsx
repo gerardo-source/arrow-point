@@ -1,135 +1,89 @@
-import TopBanner from "@/components/landing/TopBanner";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import LogosBar from "@/components/landing/LogosBar";
-import ContactForm from "@/components/landing/ContactForm";
-import gradientBg from "@/assets/gradient-bg.webp";
-import decorativeArrows from "@/assets/decorative-arrows.webp";
-import decorativeCircles from "@/assets/decorative-circles.webp";
-import nhHero from "@/assets/nh-hero.webp";
-import nhSection from "@/assets/nh-section.webp";
-import ingresosGastosIcon from "@/assets/icons/ingresos-gastos.svg";
-import flujoCajaIcon from "@/assets/icons/flujo-caja.svg";
-import bolsaDineroIcon from "@/assets/icons/bolsa-dinero.svg";
-import metricasIcon from "@/assets/icons/metricas.svg";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import ContactSection from "@/components/landing/ContactSection";
+import { PageHero } from "@/components/landing/PageHero";
+import { HeroMockup } from "@/components/landing/HeroMockup";
 import { useSEO } from "@/hooks/useSEO";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { Check, ArrowRight } from "lucide-react";
 
 const NHByArrowpoint = () => {
+  const { locale, t } = useLocale();
+  const p = t.pages.nh;
+
   useSEO({
-    title: "NH by Arrowpoint │ Dashboard Financiero para Startups",
-    description: "NH by Arrowpoint: La plataforma de gestión financiera diseñada para startups. Visualiza MRR, runway, flujo de caja y métricas en tiempo real.",
-    ogTitle: "NH by Arrowpoint - Dashboard Financiero",
-    ogDescription: "Software de gestión financiera para startups. Dashboard intuitivo con métricas, presupuestos y clarity financiera en tiempo real.",
-    keywords: "dashboard financiero, software gestión financiera, MRR, runway, startup metrics, NH Arrowpoint",
+    locale,
+    title:
+      locale === "es"
+        ? "NH by Arrowpoint · Reporteo financiero mensual para startups early stage"
+        : "NH by Arrowpoint · Monthly financial reporting for early-stage startups",
+    description:
+      locale === "es"
+        ? "Reporte ejecutivo mensual con ingresos, gastos, flujo de caja, runway y métricas clave. Para startups early stage que aún no necesitan un CFO completo."
+        : "Monthly executive report with revenue, expenses, cash flow, runway and key metrics. For early-stage startups not ready for a full CFO yet.",
+    keywords:
+      "NH by Arrowpoint, reportes financieros startup, dashboard MRR runway, monthly reporting startup",
   });
-  const { ref: heroRef, isVisible: heroVisible } = useScrollReveal();
-  const { ref: imgRef, isVisible: imgVisible } = useScrollReveal();
-  const { ref: listRef, isVisible: listVisible } = useScrollReveal();
-  const { ref: ctaTextRef, isVisible: ctaTextVisible } = useScrollReveal();
-  const { ref: ctaFormRef, isVisible: ctaFormVisible } = useScrollReveal();
 
   return (
     <div className="min-h-screen bg-background">
-      <TopBanner />
       <Navbar />
+      <PageHero eyebrow={p.eyebrow} title={p.heroTitle} subtitle={p.heroSub} />
 
-      {/* Hero */}
-      <section className="px-6 pt-32 pb-10" style={{ marginTop: "var(--top-banner-height, 0px)" }}>
-        <div className="max-w-full mx-auto">
-          <div
-            ref={heroRef}
-            className={`relative rounded-3xl overflow-hidden px-8 py-16 md:py-24 flex flex-col items-center text-center transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.97]"}`}
-            style={{ background: "#021538" }}
-          >
-            <img src={decorativeCircles} alt="" className="absolute top-48 -right-60 w-[28rem] h-[28rem] opacity-15 pointer-events-none" />
-            <img src={decorativeArrows} alt="" className="absolute bottom-8 left-8 w-14 h-14 md:w-24 md:h-24 pointer-events-none brightness-0 invert" />
-
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">
-              NH by Arrowpoint
-            </h1>
-            <p className="text-white/60 text-base md:text-lg max-w-xl relative z-10">
-              Claridad financiera mensual, sin complicaciones.<br />
-              El primer paso para entender tus números y empezar a tomar decisiones con métricas reales.
-            </p>
-
-            <div className="relative z-10 mt-10">
-              <img src={nhHero} alt="NH by Arrowpoint" className="w-60 md:w-72 object-contain" fetchpriority="high" loading="eager" />
+      {/* About + features */}
+      <section className="relative py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div className="lg:col-span-6 space-y-5">
+              <p className="text-foreground leading-relaxed">{p.aboutP1}</p>
+              <p className="text-foreground leading-relaxed">{p.aboutP2}</p>
+              <ul className="grid sm:grid-cols-2 gap-3 pt-2">
+                {p.features.map((f) => (
+                  <li
+                    key={f}
+                    className="flex items-center gap-3 surface-card px-4 py-3 text-sm"
+                  >
+                    <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                      <Check className="h-3 w-3" strokeWidth={3} />
+                    </span>
+                    <span className="font-medium">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="lg:col-span-6">
+              <HeroMockup />
             </div>
           </div>
         </div>
       </section>
 
-      {/* About NH Section */}
-      <section className="px-4 py-10 bg-primary/5">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div
-            ref={imgRef}
-            className={`w-full aspect-[3/1] rounded-xl overflow-hidden transition-all duration-700 ${imgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          >
-            <img src={nhSection} alt="Análisis financiero" className="w-full h-full object-cover" />
-          </div>
-          <div className={`space-y-4 transition-all duration-700 ${imgVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <p className="text-foreground leading-relaxed">
-              NH es nuestro servicio de reporteo financiero por suscripción para startups early stage que aún no necesitan un CFO completo, pero sí visibilidad clara y constante.
-            </p>
-            <p className="text-foreground leading-relaxed">
-              Procesamos tu información con tecnología, BI e inteligencia artificial y te entregamos un reporte ejecutivo mensual con:
-            </p>
-          </div>
-          <div
-            ref={listRef}
-            className={`flex flex-col items-center gap-3 py-6 transition-all duration-700 ${listVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          >
-            {[
-              { num: 1, text: "Ingresos y gastos", icon: ingresosGastosIcon },
-              { num: 2, text: "Flujo de caja", icon: flujoCajaIcon },
-              { num: 3, text: "Runway", icon: bolsaDineroIcon },
-              { num: 4, text: "Principales métricas de desempeño", icon: metricasIcon },
-            ].map((item) => (
-              <div key={item.num} className="flex flex-col md:flex-row items-center gap-3 md:gap-5 rounded-2xl border border-primary bg-transparent px-6 py-4 w-full max-w-lg text-center md:text-left">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  {item.icon ? (
-                    <img src={item.icon} alt="" className="w-8 h-8" style={{ filter: "brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(4626%) hue-rotate(212deg) brightness(101%) contrast(105%)" }} />
-                  ) : (
-                    <span className="text-primary font-bold text-base">{item.num}</span>
-                  )}
-                </div>
-                <span className="text-primary text-sm font-semibold">{item.num}. {item.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Empresas que confían */}
-      <LogosBar />
-
-      {/* CTA Contact Form */}
-      <section className="py-10 px-6 relative overflow-hidden">
-        <img src={gradientBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10">
-          <div
-            ref={ctaTextRef}
-            className={`space-y-6 text-white pl-4 md:pl-8 transition-all duration-700 ${ctaTextVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
-          >
-            <h2 className="text-2xl leading-tight md:text-4xl font-bold">
-              Deja de adivinar.<br />Empieza a decidir<br />con confianza.
+      {/* Upsell to FaaS */}
+      <section className="relative py-16 sm:py-20 bg-secondary/40">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="surface-card p-8 sm:p-10 relative overflow-hidden">
+            <div
+              aria-hidden
+              className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/10 blur-2xl"
+            />
+            <h2 className="text-2xl sm:text-3xl font-semibold text-balance">
+              {p.plansTitle}
             </h2>
-            <p className="text-white/80 leading-relaxed text-base">
-              Agenda una llamada y ve cómo <br />Arrowpoint puede ser tu copiloto <br />financiero.
-            </p>
-          </div>
-          <div
-            ref={ctaFormRef}
-            className={`relative z-10 transition-all duration-700 delay-200 ${ctaFormVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-          >
-            <ContactForm />
+            <p className="mt-3 text-base text-muted-foreground">{p.plansSub}</p>
+            <Link
+              to="/finance-as-a-service"
+              className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-foreground text-background h-11 px-5 text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              Finance as a Service <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
 
+      <LogosBar />
+      <ContactSection />
       <Footer />
     </div>
   );

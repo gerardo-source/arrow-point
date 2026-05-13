@@ -1,71 +1,122 @@
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from "lucide-react";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { HeroMockup } from "./HeroMockup";
 
-const heroVariants = [
-  {
-    headline: "Estás construyendo el futuro.",
-    highlightedText: "Tus finanzas deben ir al mismo ritmo.",
-    description: "Desde reportes mensuales hasta estrategia de fundraising, Arrowpoint es tu copiloto financiero para tomar decisiones con datos, no con suposiciones.",
-  },
-  {
-    headline: "Decisiones financieras más inteligentes,",
-    highlightedText: "respaldadas por expertos",
-    description: "Impulsa el crecimiento de tu empresa con reporteo financiero claro, análisis estratégico y acompañamiento continuo de un equipo de CFOs",
-  },
-  {
-    headline: "No necesitas más reportes.",
-    highlightedText: "Necesitas entender tu negocio.",
-    description: "Te damos visibilidad real de tu empresa: crecimiento, rentabilidad y caja en un solo lugar, para que tomes decisiones con seguridad.",
-  },
-  {
-    headline: "Toma mejores decisiones financieras",
-    highlightedText: "con un equipo de CFOs detrás de ti",
-    description: "Convierte tus datos financieros en claridad: entiende tu crecimiento, controla tu burn y toma decisiones con confianza frente a inversionistas y tu equipo.",
-  },
-];
-
-const HeroSection = () => {
-  const [textVariant, setTextVariant] = useState(heroVariants[0]);
+function Typewriter({ words }: { words: readonly string[] }) {
+  const [text, setText] = useState(words[0] ?? "");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [phase, setPhase] = useState<"holding" | "deleting" | "typing">("holding");
 
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * heroVariants.length);
-    setTextVariant(heroVariants[randomIndex]);
-  }, []);
+    const current = words[wordIndex];
+    if (phase === "holding") {
+      const t = setTimeout(() => setPhase("deleting"), 1800);
+      return () => clearTimeout(t);
+    }
+    if (phase === "deleting") {
+      if (text === "") {
+        const next = (wordIndex + 1) % words.length;
+        setWordIndex(next);
+        setPhase("typing");
+        return;
+      }
+      const t = setTimeout(() => setText(text.slice(0, -1)), 45);
+      return () => clearTimeout(t);
+    }
+    if (phase === "typing") {
+      if (text === current) {
+        setPhase("holding");
+        return;
+      }
+      const t = setTimeout(() => setText(current.slice(0, text.length + 1)), 95);
+      return () => clearTimeout(t);
+    }
+  }, [text, wordIndex, phase, words]);
 
   return (
-    <section 
-      className="relative flex items-center px-6 py-20 md:py-32 min-h-[600px] md:min-h-[700px] overflow-hidden"
-      style={{
-        backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F90cc9a3449dd4bd7b90ed8ad2b0b27d3?format=webp')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center right',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      {/* Overlay oscuro para legibilidad del texto */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-      
-      {/* Contenido */}
-      <div className="max-w-full mx-auto relative z-10 w-full">
-        <div className="max-w-2xl space-y-6 text-left">
-          <Badge variant="secondary" className="text-foreground font-medium opacity-0 animate-reveal-up" style={{ animationDelay: "0.1s" }}>
-            <span className="text-primary">★</span> Expertos en crecimiento financiero
-          </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.2s" }}>
-            {textVariant.headline}{" "}
-            <span className="text-primary">{textVariant.highlightedText}</span>
-          </h1>
-          <p className="text-lg text-gray-200 max-w-lg opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.35s" }}>
-            {textVariant.description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-reveal-up" style={{ animationDelay: "0.5s" }}>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 w-full sm:w-auto" asChild>
-              <a href="#contacto">Contáctanos</a>
-            </Button>
-            <Button size="lg" className="w-full sm:w-auto" asChild>
-              <a href="https://calendly.com/arrowpoint/arrowpoint-meeting" target="_blank" rel="noopener noreferrer">Agendar videollamada</a>
-            </Button>
+    <span className="inline-flex items-baseline">
+      <span>{text}</span>
+      <span
+        aria-hidden
+        className="ml-1 inline-block h-[0.8em] w-[3px] translate-y-[0.05em] bg-primary animate-[blink_1s_steps(2,start)_infinite]"
+      />
+    </span>
+  );
+}
+
+const HeroSection = () => {
+  const { t } = useLocale();
+
+  return (
+    <section className="relative overflow-hidden pt-24 sm:pt-32 pb-12 sm:pb-16">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 grid-bg opacity-60" />
+        <div
+          className="absolute inset-0"
+          style={{ background: "var(--gradient-hero)" }}
+        />
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="lg:col-span-6">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              {t.hero.eyebrow}
+            </span>
+            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold text-balance leading-[1.05]">
+              {t.hero.titleA}{" "}
+              <span className="gradient-text">
+                <Typewriter words={t.hero.titleWords} />
+              </span>{" "}
+              {t.hero.titleB}
+            </h1>
+            <p className="mt-5 max-w-xl text-base sm:text-lg text-muted-foreground text-balance">
+              {t.hero.subtitle}
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <a
+                href="#contacto"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector("#contacto")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex items-center justify-center gap-1.5 rounded-full bg-foreground text-background h-11 px-5 text-sm font-medium hover:opacity-90 transition-opacity"
+              >
+                {t.hero.ctaPrimary}
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="#como"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector("#como")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex items-center gap-1 rounded-full h-11 px-4 text-sm font-medium text-foreground/80 hover:text-foreground"
+              >
+                {t.hero.ctaSecondary} →
+              </a>
+            </div>
+
+            <div className="mt-8 flex items-center gap-4 text-xs text-muted-foreground">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4].map((i) => (
+                  <span
+                    key={i}
+                    className="h-7 w-7 rounded-full ring-2 ring-background"
+                    style={{
+                      background: `linear-gradient(135deg, hsl(${(i * 47) % 360} 70% 60%), hsl(${(i * 47 + 60) % 360} 70% 55%))`,
+                    }}
+                  />
+                ))}
+              </div>
+              <span>{t.hero.proofLine}</span>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6">
+            <HeroMockup />
           </div>
         </div>
       </div>
