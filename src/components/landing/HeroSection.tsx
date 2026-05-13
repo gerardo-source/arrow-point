@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-modern-finance.webp";
 import { Badge } from "@/components/ui/badge";
 
 const heroVariants = [
@@ -30,31 +29,37 @@ const HeroSection = () => {
   const [textVariant, setTextVariant] = useState(heroVariants[0]);
 
   useEffect(() => {
-    // Selecciona un variant aleatorio cada vez que se carga la página
     const randomIndex = Math.floor(Math.random() * heroVariants.length);
     setTextVariant(heroVariants[randomIndex]);
   }, []);
 
   return (
-    <section className="flex items-center px-6 py-10">
-      <div className="max-w-full mx-auto rounded-3xl p-8 md:p-10 bg-gradient-to-br from-primary/5 via-transparent to-transparent shadow-xl shadow-primary/10 backdrop-blur-sm">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        {/* Image - shows first on mobile via order */}
-        <div className="w-full flex items-center justify-center relative order-last md:order-last opacity-0 animate-reveal-right" style={{ animationDelay: "0.3s" }}>
-          <img src={heroImage} alt="Análisis financiero profesional" className="w-full max-w-xs md:max-w-sm object-cover rounded-2xl opacity-90" fetchpriority="high" loading="eager" />
-        </div>
-        <div className="space-y-6 text-left order-first md:order-first">
+    <section 
+      className="relative flex items-center px-6 py-20 md:py-32 min-h-[600px] md:min-h-[700px] overflow-hidden"
+      style={{
+        backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc2875af6aa714a0197c2e45ceffc41ed%2F4c54f5001cb741cb952a3ecbeda0cf1c?format=webp')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center right',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Overlay oscuro para legibilidad del texto */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+      
+      {/* Contenido */}
+      <div className="max-w-full mx-auto relative z-10 w-full">
+        <div className="max-w-2xl space-y-6 text-left">
           <Badge variant="secondary" className="text-foreground font-medium opacity-0 animate-reveal-up" style={{ animationDelay: "0.1s" }}>
             <span className="text-primary">★</span> Expertos en crecimiento financiero
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.2s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.2s" }}>
             {textVariant.headline}{" "}
             <span className="text-primary">{textVariant.highlightedText}</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0 opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.35s" }}>
+          <p className="text-lg text-gray-200 max-w-lg opacity-0 animate-reveal-up text-left" style={{ animationDelay: "0.35s" }}>
             {textVariant.description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start opacity-0 animate-reveal-up" style={{ animationDelay: "0.5s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-reveal-up" style={{ animationDelay: "0.5s" }}>
             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 w-full sm:w-auto" asChild>
               <a href="#contacto">Contáctanos</a>
             </Button>
@@ -63,7 +68,6 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );
