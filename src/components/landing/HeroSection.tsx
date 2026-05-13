@@ -1,52 +1,7 @@
-import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { HeroMockup } from "./HeroMockup";
 
-function Typewriter({ words }: { words: readonly string[] }) {
-  const [text, setText] = useState(words[0] ?? "");
-  const [wordIndex, setWordIndex] = useState(0);
-  const [phase, setPhase] = useState<"holding" | "deleting" | "typing">("holding");
-
-  useEffect(() => {
-    const current = words[wordIndex];
-    if (phase === "holding") {
-      const t = setTimeout(() => setPhase("deleting"), 1800);
-      return () => clearTimeout(t);
-    }
-    if (phase === "deleting") {
-      if (text === "") {
-        const next = (wordIndex + 1) % words.length;
-        setWordIndex(next);
-        setPhase("typing");
-        return;
-      }
-      const t = setTimeout(() => setText(text.slice(0, -1)), 40);
-      return () => clearTimeout(t);
-    }
-    if (phase === "typing") {
-      if (text === current) {
-        setPhase("holding");
-        return;
-      }
-      const t = setTimeout(() => setText(current.slice(0, text.length + 1)), 70);
-      return () => clearTimeout(t);
-    }
-  }, [text, wordIndex, phase, words]);
-
-  return (
-    <span className="inline-flex items-baseline">
-      <span>{text}</span>
-      <span
-        aria-hidden
-        className="ml-1 inline-block h-[0.8em] w-[5px] sm:w-[3px] translate-y-[0.05em] bg-primary"
-        style={{
-          animation: "blink 1s steps(2, start) infinite",
-        }}
-      />
-    </span>
-  );
-}
 
 const HeroSection = () => {
   const { t } = useLocale();
@@ -70,11 +25,7 @@ const HeroSection = () => {
             </span>
             <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold text-balance leading-[1.05]">
               {t.hero.titleA}{" "}
-              <span className="gradient-text">
-                <span className="inline-block min-w-[100px] sm:min-w-[120px] md:min-w-[140px] lg:min-w-[180px]">
-                  <Typewriter words={t.hero.titleWords} />
-                </span>
-              </span>{" "}
+              <span className="gradient-text">{t.hero.titleWord}</span>{" "}
               {t.hero.titleB}
             </h1>
             <p className="mt-5 max-w-xl text-base sm:text-lg text-muted-foreground text-balance">

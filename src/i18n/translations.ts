@@ -12,13 +12,13 @@ export const translations = {
     hero: {
       eyebrow: "Finance as a Service · CFO fraccionado",
       titleA: "El equipo financiero que tu",
-      titleWords: ["startup", "ONG", "PyME", "empresa", "ONG"],
+      titleWord: "empresa",
       titleB: "necesita para escalar con disciplina.",
       subtitle:
         "Reportes ejecutivos, modelos financieros y un CFO dedicado, sin contratar un equipo in-house.",
       ctaPrimary: "Agenda 30 min con un CFO",
       ctaSecondary: "Ver cómo trabajamos",
-      proofLine: "Organizaciones que ya confían en nosotros",
+      proofLine: "Organizaciones",
       mockup: {
         runway: "Runway",
         runwayValue: "18.2 meses",
@@ -441,13 +441,13 @@ export const translations = {
     hero: {
       eyebrow: "Finance as a Service · Fractional CFO",
       titleA: "The finance team your",
-      titleWords: ["startup", "organization", "SMB", "company", "NGO"],
+      titleWord: "company",
       titleB: "needs to scale with discipline.",
       subtitle:
         "Executive reporting, financial models, and a dedicated CFO, without hiring an in-house team.",
       ctaPrimary: "Book 30 min with a CFO",
       ctaSecondary: "See how we work",
-      proofLine: "Organizations already trusting us",
+      proofLine: "Organizations",
       mockup: {
         runway: "Runway",
         runwayValue: "18.2 months",
