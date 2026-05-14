@@ -95,7 +95,7 @@ export const translations = {
         tagline: "Para startups en levantamiento o escalando: tu CFO dedicado.",
         price: "A medida",
         period: "según etapa",
-        cta: "Hablar con un CFO",
+        cta: "Saber más",
         badge: "Más elegido",
         features: [
           "Todo lo de NH +",
@@ -524,7 +524,7 @@ export const translations = {
         tagline: "For startups raising or scaling: your dedicated CFO.",
         price: "Custom",
         period: "based on stage",
-        cta: "Talk to a CFO",
+        cta: "Learn more",
         badge: "Most chosen",
         features: [
           "Everything in NH +",
