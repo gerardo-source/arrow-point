@@ -508,7 +508,7 @@ export const translations = {
       nh: {
         name: "NH by Arrowpoint",
         tagline: "For early-stage founders who need clarity without hiring a team.",
-        price: "From $1,500 USD",
+        price: "From $499",
         period: "/ month",
         cta: "Get started",
         features: [
