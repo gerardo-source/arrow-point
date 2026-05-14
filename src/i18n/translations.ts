@@ -693,8 +693,8 @@ export const translations = {
           {
             name: "Starter",
             title: "Board-ready executive reports",
-            price: "Starts at $24,000",
-            period: "MXN / month",
+            price: "Starts at $1,450",
+            period: "USD / month",
             idealLabel: "Best for companies that:",
             ideal: ["Want basic financial visibility", "Need to understand how the month closed", "Don't need frequent follow-up"],
             includesLabel: "Includes:",
@@ -704,8 +704,8 @@ export const translations = {
           {
             name: "Basic",
             title: "Operations with visibility",
-            price: "Starts at $39,000",
-            period: "MXN / month",
+            price: "Starts at $1,950",
+            period: "USD / month",
             idealLabel: "Best for companies that:",
             ideal: ["Are actively growing", "Need financial order", "Want closer support"],
             includesLabel: "Includes:",
@@ -715,8 +715,8 @@ export const translations = {
           {
             name: "Standard",
             title: "Control and decision-making",
-            price: "Starts at $49,000",
-            period: "MXN / month",
+            price: "Starts at $2,450",
+            period: "USD / month",
             idealLabel: "Best for companies that:",
             ideal: ["Already make data-driven decisions", "Need deeper financial detail", "Want real business control"],
             includesLabel: "Includes:",
