@@ -508,7 +508,7 @@ export const translations = {
       nh: {
         name: "NH by Arrowpoint",
         tagline: "For early-stage founders who need clarity without hiring a team.",
-        price: "From $499",
+        price: "Starts at $499 USD",
         period: "/ month",
         cta: "Get started",
         features: [
@@ -693,7 +693,7 @@ export const translations = {
           {
             name: "Starter",
             title: "Board-ready executive reports",
-            price: "From $24,000",
+            price: "Starts at $24,000",
             period: "MXN / month",
             idealLabel: "Best for companies that:",
             ideal: ["Want basic financial visibility", "Need to understand how the month closed", "Don't need frequent follow-up"],
@@ -704,7 +704,7 @@ export const translations = {
           {
             name: "Basic",
             title: "Operations with visibility",
-            price: "From $39,000",
+            price: "Starts at $39,000",
             period: "MXN / month",
             idealLabel: "Best for companies that:",
             ideal: ["Are actively growing", "Need financial order", "Want closer support"],
@@ -715,7 +715,7 @@ export const translations = {
           {
             name: "Standard",
             title: "Control and decision-making",
-            price: "From $49,000",
+            price: "Starts at $49,000",
             period: "MXN / month",
             idealLabel: "Best for companies that:",
             ideal: ["Already make data-driven decisions", "Need deeper financial detail", "Want real business control"],
