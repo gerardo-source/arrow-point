@@ -341,7 +341,7 @@ export const translations = {
           {
             tag: "Marketplace · Serie A",
             title: "Cash burn bajo control sin frenar el crecimiento",
-            metric: "−38%",
+            metric: "-38%",
             metricLabel: "reducción de burn",
             desc: "Análisis profundo de unit economics y reasignación de presupuesto. Mantuvieron crecimiento bajando quema.",
           },
@@ -770,7 +770,7 @@ export const translations = {
           {
             tag: "Marketplace · Series A",
             title: "Cash burn under control without slowing growth",
-            metric: "−38%",
+            metric: "-38%",
             metricLabel: "burn reduction",
             desc: "Deep unit economics analysis and budget reallocation. Kept growth while lowering burn.",
           },
