@@ -52,12 +52,12 @@ export const translations = {
       steps: [
         {
           title: "Diagnóstico",
-          duration: "Semana 1",
+          duration: "Al inicio",
           desc: "Auditamos tus números, identificamos huecos y definimos KPIs clave por etapa.",
         },
         {
           title: "Onboarding",
-          duration: "Semana 2",
+          duration: "Seguido",
           desc: "Conectamos tu contabilidad, BI y herramientas. Construimos tu modelo financiero base.",
         },
         {
@@ -95,7 +95,7 @@ export const translations = {
         tagline: "Para startups en levantamiento o escalando: tu CFO dedicado.",
         price: "A medida",
         period: "según etapa",
-        cta: "Hablar con un CFO",
+        cta: "Saber más",
         badge: "Más elegido",
         features: [
           "Todo lo de NH +",
@@ -341,7 +341,7 @@ export const translations = {
           {
             tag: "Marketplace · Serie A",
             title: "Cash burn bajo control sin frenar el crecimiento",
-            metric: "−38%",
+            metric: "-38%",
             metricLabel: "reducción de burn",
             desc: "Análisis profundo de unit economics y reasignación de presupuesto. Mantuvieron crecimiento bajando quema.",
           },
@@ -481,12 +481,12 @@ export const translations = {
       steps: [
         {
           title: "Diagnosis",
-          duration: "Week 1",
+          duration: "Initial",
           desc: "We audit your numbers, find gaps and define stage-specific KPIs.",
         },
         {
           title: "Onboarding",
-          duration: "Week 2",
+          duration: "Next",
           desc: "We connect your accounting, BI and tooling. Build your base financial model.",
         },
         {
@@ -496,7 +496,7 @@ export const translations = {
         },
         {
           title: "Fundraising support",
-          duration: "Whenever you need it",
+          duration: "As needed",
           desc: "Data room, projections, term sheet review and due diligence with your lead VC.",
         },
       ],
@@ -508,7 +508,7 @@ export const translations = {
       nh: {
         name: "NH by Arrowpoint",
         tagline: "For early-stage founders who need clarity without hiring a team.",
-        price: "From $1,500 USD",
+        price: "Starts at $499 USD",
         period: "/ month",
         cta: "Get started",
         features: [
@@ -524,7 +524,7 @@ export const translations = {
         tagline: "For startups raising or scaling: your dedicated CFO.",
         price: "Custom",
         period: "based on stage",
-        cta: "Talk to a CFO",
+        cta: "Learn more",
         badge: "Most chosen",
         features: [
           "Everything in NH +",
@@ -693,8 +693,8 @@ export const translations = {
           {
             name: "Starter",
             title: "Board-ready executive reports",
-            price: "From $24,000",
-            period: "MXN / month",
+            price: "Starts at $1,450",
+            period: "USD / month",
             idealLabel: "Best for companies that:",
             ideal: ["Want basic financial visibility", "Need to understand how the month closed", "Don't need frequent follow-up"],
             includesLabel: "Includes:",
@@ -704,8 +704,8 @@ export const translations = {
           {
             name: "Basic",
             title: "Operations with visibility",
-            price: "From $39,000",
-            period: "MXN / month",
+            price: "Starts at $1,950",
+            period: "USD / month",
             idealLabel: "Best for companies that:",
             ideal: ["Are actively growing", "Need financial order", "Want closer support"],
             includesLabel: "Includes:",
@@ -715,8 +715,8 @@ export const translations = {
           {
             name: "Standard",
             title: "Control and decision-making",
-            price: "From $49,000",
-            period: "MXN / month",
+            price: "Starts at $2,450",
+            period: "USD / month",
             idealLabel: "Best for companies that:",
             ideal: ["Already make data-driven decisions", "Need deeper financial detail", "Want real business control"],
             includesLabel: "Includes:",
@@ -770,7 +770,7 @@ export const translations = {
           {
             tag: "Marketplace · Series A",
             title: "Cash burn under control without slowing growth",
-            metric: "−38%",
+            metric: "-38%",
             metricLabel: "burn reduction",
             desc: "Deep unit economics analysis and budget reallocation. Kept growth while lowering burn.",
           },
