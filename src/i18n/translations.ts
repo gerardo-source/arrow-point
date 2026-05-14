@@ -52,12 +52,12 @@ export const translations = {
       steps: [
         {
           title: "Diagnóstico",
-          duration: "Semana 1",
+          duration: "Al inicio",
           desc: "Auditamos tus números, identificamos huecos y definimos KPIs clave por etapa.",
         },
         {
           title: "Onboarding",
-          duration: "Semana 2",
+          duration: "Seguido",
           desc: "Conectamos tu contabilidad, BI y herramientas. Construimos tu modelo financiero base.",
         },
         {
@@ -481,12 +481,12 @@ export const translations = {
       steps: [
         {
           title: "Diagnosis",
-          duration: "Week 1",
+          duration: "Initial",
           desc: "We audit your numbers, find gaps and define stage-specific KPIs.",
         },
         {
           title: "Onboarding",
-          duration: "Week 2",
+          duration: "Next",
           desc: "We connect your accounting, BI and tooling. Build your base financial model.",
         },
         {
@@ -496,7 +496,7 @@ export const translations = {
         },
         {
           title: "Fundraising support",
-          duration: "Whenever you need it",
+          duration: "As needed",
           desc: "Data room, projections, term sheet review and due diligence with your lead VC.",
         },
       ],
